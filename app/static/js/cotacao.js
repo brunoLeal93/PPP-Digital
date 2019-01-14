@@ -1,58 +1,4 @@
-{% extends 'base.html'%}
-
-{% block title%} Cotação{%endblock%}
-
-{% block content %}
-	
-	<div class="container-fluid">
-
-        <div class="row">
-            <div class="col-lg-4"></div>
-            <form method="POST" enctype="multipart/form-data">
-                {{ form.csrf_token }}
-                </br>
-				<!--div class="row"><h3>Cotação</h3></div-->
-				<!-- TXT Busca e Button-->
-                </br>
-				<div class="row">
-					<div class="col-10"> {{form.txtBusca(class_="form-control")}} </div>
-					<div class="col-2"><button type="submit"  class="btn btn-default">Buscar</button></div>
-
-				</div>
-				</br>
-				<!--Radiobutton tipo de visualização-->
-                {% for subfield in  form.rdPesquisaPor %}
-                    <tr>
-                        <td>{{subfield}}</td>
-                        <td>{{subfield.label}}</td>
-                    </tr>
-                {% endfor %}
-
-				</br>
-
-            </form>
-        </div>
-	        <div class="col-12"> 
-		        <table id="tb_cot" class="display" style="width:100%">
-			        <thead>
-				        <tr>
-				                
-					        <th>Fonte</th>
-					        <th>Mercado</th>
-					        <th>Tipo Ativo</th>
-					        
-				        </tr>
-			        </thead>
-		        </table>
-		    </div>
-		    
-		</div>		
-	</div>
-{% endblock %}
-
-{% block scripts %}
-	<script>
-		function format(d){
+function format(d){
         return 'teste'
     }
 
@@ -77,8 +23,7 @@ $(document).ready(function() {
                     { "data": "_id" },
                     {
                         "data": "mercados",
-
-                        "render": function(data, row, meta){
+                        "render": function(data){
                                     var strMerc = '';
                                     var i = 0;
                                     var tam=data.length;
@@ -87,9 +32,9 @@ $(document).ready(function() {
 
                                         if( i == tam-1){
 
-                                            strMerc = strMerc+'<a href="'+urlBase.replace('XXXX', meta.row) +'">'+data[i]+'</a>';
+                                            strMerc = strMerc+"<a href=\""+urlBase.replace('XXXX', data[i]) +"\">"+data[i]+"</a>";
                                         }else{
-                                            strMerc = strMerc+"<a href=\""+urlBase.replace('XXXX', row) +"\">"+data[i]+"</a> | ";
+                                            strMerc = strMerc+"<a href=\""+urlBase.replace('XXXX', data[i]) +"\">"+data[i]+"</a> | ";
                                         }
                                     };
 
@@ -97,20 +42,19 @@ $(document).ready(function() {
                                 }
                     },
                     { "data": "tp_instr",
-                        "render": function(data, row, meta){
+                        "render": function(data){
                                     var strInstr = '';
-											var i = 0;
+                                    var i = 0;
                                     var tam=data.length;
-                                    var urlBase = "{{ url_for('cotacao', TpInst = 'XXXX') }}";
                                     for(i=0; i < tam ; i++){
 
                                         if( i == tam-1){
-
-                                            strInstr = strInstr+'<a href="'+urlBase.replace('XXXX', meta.row) +'">'+data[i]+'</a>';
+                                            strInstr = strInstr +'<a href="{{url_for(cotacao, tpInst=data[i])}}">'+data[i]+'</a>';
                                         }else{
-                                            strInstr= strInstr+"<a href=\""+urlBase.replace('XXXX', meta.row) +"\">"+data[i]+"</a> | ";
+                                            strInstr = strInstr +'<a href="{{url_for(cotacao, tpInst=data[i])}}">'+data[i]+'</a> | ';
                                         }
                                     };
+
                                     return strInstr;
                                 }
                     }
@@ -136,5 +80,3 @@ $(document).ready(function() {
     } );
 
 } );
-	</script>
-{% endblock %}

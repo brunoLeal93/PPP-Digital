@@ -5,7 +5,7 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
-		<title>{% block tilte %}{% endblock %} - PPP Digital</title>
+		<title>{% block title %}{% endblock %} - PPP Digital</title>
 	</head>
 	<body style="padding-top: 40px">
 		{%block nav %}
@@ -22,11 +22,11 @@
 		          Financeiro
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="bcpro.html">Terminal</a>
+		          <a class="dropdown-item" href={{url_for('bpro_terminal')}}>Terminal</a>
 		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Web</a>
+		          <a class="dropdown-item" href={{url_for('bpro_web')}}>Web</a>
 		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Wallboard</a>
+		          <a class="dropdown-item" href={{url_for('bpro_wallboard')}}>Wallboard</a>
 		          <!--div class="dropdown-divider"></div>
 		          <a class="dropdown-item" href="#">Something else here</a-->
 		        </div>
@@ -36,20 +36,20 @@
 		          Agronegócios
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="bcagro.html">Terminal</a>
+		          <a class="dropdown-item" href={{url_for('bagro_terminal')}}>Terminal</a>
 		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Web</a>
+		          <a class="dropdown-item" href={{url_for('bagro_web')}}>Web</a>
 		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Wallboard</a>
+		          <a class="dropdown-item" href={{url_for('bagro_wallboard')}}>Wallboard</a>
 		          <!--div class="dropdown-divider"></div>
 		          <a class="dropdown-item" href="#">Something else here</a-->
 		        </div>
 		    </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Político</a>
+	        <a class="nav-link" href={{url_for('bpol')}}>Político</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Trading News</a>
+	        <a class="nav-link" href={{url_for('tradingnews')}}>Trading News</a>
 	      </li>
 	      <li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

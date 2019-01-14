@@ -17,6 +17,47 @@ class Cotacao():
         vet = list(coll.aggregate(pipeline))
         return vet
 
+    def buscaAtivo(self, texto):
+        self.texto = texto
+
+        coll = db.Cotacao
+
+        pipeline = [
+            {
+                "$match":{ "$text": { "$search": texto}}
+            },
+            {
+                "$group": {
+                    "_id": "$fonte",
+                    "mercados": {"$addToSet": "$mercado"},
+                    "tp_instr": {"$addToSet": "$tp_instrumento"},
+                    "tickers": {"$addToSet": "$ticker"}
+                }
+            }
+        ]
+
+        vet = []#list(coll.aggregate(pipeline))
+
+        if vet == []:
+            print('/*.'+ texto + '*./')
+            pipeline = [
+                {
+                    "$match": {"fonte": {"$regex": '/'+ texto + '*./', "$options": "i"}}# "/.*cba.*/"}
+                },
+                {
+                    "$group": {
+                        "_id": "$fonte",
+                        "mercados": {"$addToSet": "$mercado"},
+                        "tp_instr": {"$addToSet": "$tp_instrumento"},
+                        "tickers": {"$addToSet": "$ticker"}
+                    }
+                }
+            ]
+
+            vet = list(coll.aggregate(pipeline))
+            return vet
+        return vet
+
 #a = Cotacao().cotVisuPrin()
 
 #print(a)
