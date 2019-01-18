@@ -1,3 +1,134 @@
+{% extends 'base.html'%}
+
+{% block title%} BAGRO: Terminal{%endblock%}
+
+{% block content %}
+<div class="container-fluid">
+      </br>
+      <h1 class="text-success">Broadcast Agro</h1>
+      <p>Notícias, análises, preços, projeções e ferramentas integradas em uma única solução para apoiar profissionais que atuam no agronegócio, desde o produtor ao trader, com informações relevantes que impactam o preço das commodities.</p>
+      <p>Ao se tornar usuário do Broadcast Agro, independentemente do pacote adquirido, as seguintes cotações e funcionalidades estão inclusas:</p>
+
+      <!--Cotações-->
+      <div class="container-fluid">
+        <div class="row">
+        <div class="col-6">
+        <p><h4 class="text-success">Cotações</h4></p>
+        <ul>
+          <p><b><ins>Ações</ins> - </b><font size="2">BOVESPA, NYSE, NYSE Amex, Nasdaq, Bolsa de Madri e Índices Mundiais<font color="red">¹</font>.</font></p>
+          <p><b><ins>Derivativos</ins> - </b><font size="2">BM&F, CME, CBOT, NYMEX, COMEX, ICE US e  ICE Europe.</font></p>
+          <p><b><ins>Câmbio</ins> - </b><font size="2">Taxas Broadcast, Principais Moedas Spot (USD), PTAX e mais de 20 Contribuidores<font color="red">²</font>.</font></p>
+          <p><b><ins>Commodities</ins> - </b><font size="2">Indicadores CEPEA, </font></p>
+          <p><b><ins>Renda Fixa</ins> - </b><font size="2">Taxas de Títulos Públicos Broadcast, Anbima e mais de 10 Contribuidores<font color="red">³</font>.</font></p>
+          <p><b><ins>Fundos</ins> - </b><font size="2">Imobiliários BM&F Bovespa.</font></p>
+          <p><b><ins>Taxas e Indicadores</ins> - </b><font size="2">Inflação, Juros, Poupança e Balança Comercial (Brasil).</font></p>
+        </ul>
+        <ul>
+        <sub><a href="#">¹ Acessar Lista de Índices</a></sub></br>
+        <sub><a href="contribuidores.html#headingTwo">² Acessar Lista de Contribuidores Câmbio</a></sub></br>
+        <sub><a href="contribuidores.html">³ Acessar Lista de Contribuidores R.Fixa</a></sub></br>
+        </ul>
+        </div>
+
+      <!--Fim Cotações-->
+      <!--Funcionalidades-->
+
+        <div class="col-6">
+      <p><h4 class="text-success">Funcionalidades</h4></p>
+        <ul>
+        <p><b><ins>Prinpais Ferramentas</ins> - </b><font size="2">Janela e painel de cotações, livro de ofertas, times & trades, players, ativoteca e busca de notícias.</font></p>
+        <p><b><ins>Análise Técnica</ins> - </b><font size="2">Estudos, Traçados e acesso à Base de Dados com histórico de ativos.</font></p>
+        <p><b><ins>AE Chat</ins> - </b><font size="2">Mensageria instantênea.</font></p>
+        <p><b><ins>Link com Excel</ins> - </b><font size="2">Tempo real e Histórico.</font></p>
+        <p><b><ins>Alertas</ins> - </b><font size="2">Cotações e Notícias.</font></p>
+        <p><b><ins>Precificação de opções</ins></b></p>
+        <p><b><ins>Calculadora de Títulos Públicos</ins></b></p>
+        <p><b><ins>Dados Macroeconômicos</ins></b></p>
+         </ul>
+       </div>
+     </div>
+      </div>
+      <!--Fim Funcionalidades-->
+      <!--Pacotes-->
+
+      <div class="container">
+        <p><h4>Pacotes</h4></p>
+      </div>
+
+      <!--Accordion wrapper-->
+      <div class="accordion md-accordion" id="accordionPacotes" role="tablist" aria-multiselectable="true">
+          <!-- Accordion card -->
+          <div class="card">
+          <!-- Card header -->
+          <div class="card-header" role="tab" id="headingTrade">
+            <a data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseTrade" aria-expanded="false" aria-controls="collapseTrade">
+              <h5 class="mb-0 text-success">
+                Broadcast Agro Trade <span style="float: right"> R$430</span>
+              </h5>
+            </a>
+          </div>
+          <!-- Card body -->
+          <div id="collapseTrade" class="collapse" role="tabpanel" aria-labelledby="headingTrade" data-parent="#accordionPacotes">
+            <div class="card-body">
+              <strong>Notícias</strong>
+              <ul>
+                <li>Conjuntura & Negócios</li>
+                <li>Newspaper</li>
+                <li>Broadcast TV</li>
+                <li>Relatórios de Research</li>
+                <li>Estadão (Economia, Jornal Digital)</li>
+                <li>Contribuidores - Agência Bovespa, CETIP, STJ, PR Newswire, CNA/Senar, CEAGESP</li>
+                <li>Releases</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <!-- Accordion card -->
+
+  <!-- Accordion card -->
+  <div class="card">
+
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingConj">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionPacotes" href="#collapseConj" aria-expanded="false" aria-controls="collapseConj">
+        <h5 class="mb-0 text-success"">
+          Broadcast Agro<span style="float: right"> R$900</span><i class="fa fa-angle-down rotate-icon"></i>
+        </h5>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseConj" class="collapse" role="tabpanel" aria-labelledby="headingConj" data-parent="#accordionPacotes">
+      <div class="card-body">
+        <p><strong>Broadcast Agro Trade (+)</strong></p>
+        <ul>
+          <strong>Cotações</strong>
+          <ul class="a">
+            <li>CDS (Credit Default Swap) - Índice Markit</li>
+          </ul>
+          <strong>Notícias</strong>
+          <ul class="a">
+            <li>Conjuntura & Finanças</li>
+            <li>Estadão (Política, Finanças)</li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+      <!--Fim Pacotes-->
+</div>
+
+<footer class="py-2 bg-dark">
+			<div class="container">
+				<p class="m-0 text-center text-white">Copyright &copy; PPP Digital 2018</p>
+			</div>
+</footer>
+{% endblock %}
 <!doctype html>
 <html lang="pt-BR">
   <head>
@@ -61,6 +192,7 @@
 
     <h1>Hello, world!</h1>
     <div class="container-fluid">
+      </br>
       <h1 class="text-success">Broadcast Agro</h1>
       <p>Notícias, análises, preços, projeções e ferramentas integradas em uma única solução para apoiar profissionais que atuam no agronegócio, desde o produtor ao trader, com informações relevantes que impactam o preço das commodities.</p>
       <p>Ao se tornar usuário do Broadcast Agro, independentemente do pacote adquirido, as seguintes cotações e funcionalidades estão inclusas:</p>

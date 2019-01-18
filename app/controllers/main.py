@@ -8,7 +8,7 @@ from app.models.Form import FiltroCot
 @app.route('/', methods=('GET', 'POST'))
 def home():
         
-        return render_template('index_v1.html')
+        return render_template('home.html')
 
 @app.route('/cotacao/<merc>', methods=('GET' , 'POST'))
 @app.route('/cotacao/<TpInst>', methods=('GET' , 'POST'))
@@ -45,7 +45,7 @@ def cotVisuPrin():
 
         return jsonify(data=results)
 
-@app.route('/Broadcast+/Terminal', methods=('GET' , 'POST'))
+@app.route('/bpro-terminal', methods=('GET' , 'POST'))
 def bpro_terminal():
         return render_template('bcpro.html')
 
@@ -57,17 +57,17 @@ def bpro_web():
 def bpro_wallboard():
         return render_template('bcpro.html')
 
-@app.route('/bagro-terminais', methods=('GET' , 'POST'))
+@app.route('/bagro-terminal', methods=('GET' , 'POST'))
 def bagro_terminal():
-        return render_template('bagro.html')
+        return render_template('bcagro.html')
 
 @app.route('/bagro-web', methods=('GET' , 'POST'))
 def bagro_web():
-        return render_template('bagro.html')
+        return render_template('bcagro.html')
 
 @app.route('/bagro-wallboard', methods=('GET' , 'POST'))
 def bagro_wallboard():
-        return render_template('bagro.html')
+        return render_template('bcagro.html')
 
 
 @app.route('/bpol', methods=('GET' , 'POST'))

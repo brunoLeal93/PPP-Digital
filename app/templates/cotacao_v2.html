@@ -4,50 +4,56 @@
 
 {% block content %}
 	
-	<div class="container-fluid">
+<div class="container-fluid">
 
-        <div class="row">
-            <div class="col-lg-4"></div>
-            <form method="POST" enctype="multipart/form-data">
-                {{ form.csrf_token }}
-                </br>
-				<!--div class="row"><h3>Cotação</h3></div-->
-				<!-- TXT Busca e Button-->
-                </br>
-				<div class="row">
-					<div class="col-10"> {{form.txtBusca(class_="form-control")}} </div>
-					<div class="col-2"><button type="submit"  class="btn btn-default">Buscar</button></div>
+	<div class="row">
+		<div class="col-lg-4"></div>
+		<form method="POST" enctype="multipart/form-data">
+			{{ form.csrf_token }}
+			</br>
+			<!--div class="row"><h3>Cotação</h3></div-->
+			<!-- TXT Busca e Button-->
+			</br>
+			<div class="row">
+				<div class="col-10"> {{form.txtBusca(class_="form-control")}} </div>
+				<div class="col-2"><button type="submit"  class="btn btn-default">Buscar</button></div>
 
-				</div>
-				</br>
-				<!--Radiobutton tipo de visualização-->
-                {% for subfield in  form.rdPesquisaPor %}
-                    <tr>
-                        <td>{{subfield}}</td>
-                        <td>{{subfield.label}}</td>
-                    </tr>
-                {% endfor %}
+			</div>
+			</br>
+			<!--Radiobutton tipo de visualização-->
+			{% for subfield in  form.rdPesquisaPor %}
+				<tr>
+					<td>{{subfield}}</td>
+					<td>{{subfield.label}}</td>
+				</tr>
+			{% endfor %}
 
-				</br>
+			</br>
 
-            </form>
-        </div>
-	        <div class="col-12"> 
-		        <table id="tb_cot" class="display" style="width:100%">
-			        <thead>
-				        <tr>
-				                
-					        <th>Fonte</th>
-					        <th>Mercado</th>
-					        <th>Tipo Ativo</th>
-					        
-				        </tr>
-			        </thead>
-		        </table>
-		    </div>
-		    
-		</div>		
+		</form>
 	</div>
+		<div class="col-12">
+			<table id="tb_cot" class="display" style="width:100%">
+				<thead>
+					<tr>
+
+						<th>Fonte</th>
+						<th>Mercado</th>
+						<th>Tipo Ativo</th>
+
+					</tr>
+				</thead>
+			</table>
+		</div>
+
+	</div>
+</div>
+</br>
+<footer class="py-2 bg-dark">
+	<div class="container">
+		<p class="m-0 text-center text-white">Copyright &copy; PPP Digital 2018</p>
+	</div>
+</footer>
 {% endblock %}
 
 {% block scripts %}
