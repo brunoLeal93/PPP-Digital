@@ -48,12 +48,7 @@
 
 	</div>
 </div>
-</br>
-<footer class="py-2 bg-dark">
-	<div class="container">
-		<p class="m-0 text-center text-white">Copyright &copy; PPP Digital 2018</p>
-	</div>
-</footer>
+
 {% endblock %}
 
 {% block scripts %}
@@ -112,7 +107,7 @@ $(document).ready(function() {
 
                                         if( i == tam-1){
 
-                                            strInstr = strInstr+'<a href="'+urlBase.replace('XXXX', meta.row) +'">'+data[i]+'</a>';
+                                            strInstr = strInstr+'<a href="'+urlBase.replace('XXXX', data[i]) +'">'+data[i]+'</a>';
                                         }else{
                                             strInstr= strInstr+"<a href=\""+urlBase.replace('XXXX', meta.row) +"\">"+data[i]+"</a> | ";
                                         }
@@ -123,7 +118,27 @@ $(document).ready(function() {
 
                 ],
         "order": [[0, 'asc']]
+
+
     });
+
+	$('#tb_cot tbody').on('click', 'tr', function () {
+        var row = table.row( this ).data();
+		$('a#calculate').bind('click', function() {
+		  $.getJSON($SCRIPT_ROOT + '/_add_numbers', {
+			a: row
+		  }, function(data) {
+			$("#result").text(data.result);
+		  });
+		  return false;
+		});
+    } );
+
+
+
+    $.post( '/cotacao', {
+    		TpInst: data['tp_instr']
+		});
 
     $('#tb_cot tbody').on('click', 'td.details-control', function () {
             var tr = $(this).closest('tr');
@@ -142,5 +157,6 @@ $(document).ready(function() {
     } );
 
 } );
+});
 	</script>
 {% endblock %}
