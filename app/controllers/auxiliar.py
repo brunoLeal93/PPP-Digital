@@ -36,13 +36,34 @@ class Cotacao():
             print(vet)
             return vet
 
-        if param1[2]=="2":
+        elif param1[2]=="2":
 
             pipeline = [
                 {
                     "$match": {
                         "fonte_ativo": param1[0],
                         "merc_ativo": param1[1]
+                    }
+                },
+
+                {
+                    "$group": {"_id": "$fonte_ativo", "mercados": {"$addToSet": "$merc_ativo"},
+                               "tp_instr": {"$addToSet": "$classe_ativo"}},
+
+                }
+            ]
+
+            vet = list(coll.aggregate(pipeline))
+            print(vet)
+            return vet
+
+        elif param1[2] == "3":
+
+            pipeline = [
+                {
+                    "$match": {
+                        "fonte_ativo": param1[0],
+                        "classe_ativo": param1[1]
                     }
                 },
 

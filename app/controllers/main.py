@@ -38,15 +38,16 @@ def n2(param):
         results = coll.cotVisuPrin()
         teste = coll.nivel2(param)
         param1= param.split('-')
-
+        ref=''
         if param1[2]=='1':
                 ref = 'Fonte: '+param1[0]+' Inf. Disponível: '+param1[1]
 
         elif param1[2]=='2':
                 ref = 'Fonte: '+param1[0]+'  Mercado: '+param1[1]
 
-        else:
-                ref = 'Fonte: ' + param1[0] + ' Mercado: ' + param1[1]
+        elif param1[2]==3:
+                ref = 'Fonte: ' + param1[0] + ' Classe Ativo: ' + param1[1]
+
         form = FiltroCot()
         data = form.data
         print(teste)

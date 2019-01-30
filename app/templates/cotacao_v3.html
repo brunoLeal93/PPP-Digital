@@ -41,6 +41,7 @@
 						<th>Inf. Disponíveis</th>
 						<th>Mercados</th>
 						<th>Classe dos Ativos</th>
+						<th></th>
 
 					</tr>
 				</thead>
@@ -64,6 +65,7 @@
 							<a href="{{ url_for('n2', param=x['_id']+'-'+y+'-3')}}">{{y}}</a> ,
 							{% endfor%}
 						</td>
+						<td> <a href="#">Ver Ativos</a> </td>
 					</tr>
 					{% endfor %}
 				</tbody>
