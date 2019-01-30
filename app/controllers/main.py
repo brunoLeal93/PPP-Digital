@@ -10,8 +10,7 @@ def home():
         
         return render_template('home.html')
 
-#@app.route('/cotacao/<param>', methods=('GET' , 'POST'))
-#@app.route('/cotacao/<TpInst>', methods=('GET' , 'POST'))
+
 @app.route('/cotacao', methods=('GET' , 'POST'))
 def cotacao():#(merc='', TpInst=''):
 
@@ -25,8 +24,17 @@ def cotacao():#(merc='', TpInst=''):
         results = coll.cotVisuPrin()
         print(results)
 
-        #print(param)
+        if request.method == 'POST':
+                opc = data['rdPesquisaPor']
+                print(data['rdPesquisaPor'])
+                texto = data['txtBusca']
+                print(texto)
+                # print(TpInst)
+                # print(data['tp_instr'])
+                results = Cotacao().buscaAtivo(texto)
+                print(results)
 
+                return render_template('n2_cotacao.html', results=results, form=form, opc=opc)
 
         return render_template('cotacao_v3.html', results=results, form=form)
 
@@ -64,7 +72,7 @@ def n2(param):
 
                 return render_template('n2_cotacao.html', results=results, form=form, opc=opc)
 
-        return render_template('n2_cotacao.html', results=teste, form=form, ref = ref, param1=param1)
+        return render_template('n2_cotacao.html', results=teste, form=form, param1=param1)
 
 
 @app.route('/cotVisuPrin')

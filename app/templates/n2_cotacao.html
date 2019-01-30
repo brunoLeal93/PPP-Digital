@@ -8,37 +8,29 @@
 </br>
 		</br>
 	<div class="row">
-
-		<div class="col-lg-4"><h3>{{ ref }}</h3></div>
-
-		<!--<form method="POST" enctype="multipart/form-data">
+		{% if param1[2]=='1'%}
+		<div class="col-lg-4"><h3>Fonte: {{param1[0]}}</br>Inf. Disponível: {{param1[1]}} </h3></div>
+		{% elif param1[2]=='2'%}
+		<div class="col-lg-4"><h3>Fonte: {{param1[0]}}</br>Mercado: {{param1[1]}} </h3></div>
+		{% elif param1[2]=='3'%}
+		<div class="col-lg-4"><h3>Fonte: {{param1[0]}}</br>C. Ativo: {{param1[1]}} </h3></div>
+		{% endif %}
+		<form method="POST" enctype="multipart/form-data">
 			{{ form.csrf_token }}
+			
 			</br>
-			<!--div class="row"><h3>Cotação</h3></div-->
-
-<!-- TXT Busca e Button
-
-
 			</br>
 
-		<div class="row">
+			<!-- TXT Busca e Button-->
+			<div class="row">
 				<div class="col-10"> {{form.txtBusca(class_="form-control")}} </div>
 				<div class="col-2"><button type="submit"  class="btn btn-default">Buscar</button></div>
-
 			</div>
 			</br>
-<!--Radiobutton tipo de visualização
-			{% for subfield in  form.rdPesquisaPor %}
-				<tr>
-					<td>{{subfield}}</td>
-					<td>{{subfield.label}}</td>
-
-				</tr>
-			{% endfor %}
 
 			</br>
 
-		</form> -->
+		</form>
 
 	</div>
 	{% if param1[2]=='1'%}
@@ -128,14 +120,31 @@
 
 						<td>{{x['_id']}}</td>
 						<td>
+							{%if len(x['inf_dispo']) > 1%}
+							{% for y in x['inf_dispo']%}
+							<a href="#">{{y}}</a> ,
+							{% endfor%}
+							{%else%}
+							{{y}}
+							{% endif %}
+						</td>
+						<td>
+							{%if len(x['mercados']) > 1%}
 							{% for y in x['mercados']%}
 							<a href="#">{{y}}</a> ,
 							{% endfor%}
+							{%else%}
+							{{y}}
+							{% endif %}
 						</td>
 						<td>
-							{% for y in x['tp_instr']%}
+							{%if len(x['tp_intr']) > 1%}
+							{% for y in x['tp_intr']%}
 							<a href="#">{{y}}</a> ,
 							{% endfor%}
+							{%else%}
+							{{y}}
+							{% endif %}
 						</td>
 						<td> <a href="#">Ver Ativos</a> </td>
 					</tr>

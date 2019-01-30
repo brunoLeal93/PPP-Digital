@@ -25,10 +25,12 @@ class Cotacao():
                     }
                 },
                 {
-                    "$group": {"_id": "$merc_ativo",
-                               "tp_serv":{"$addToSet": "$rt_delay"},
-                               "Serv": {"$addToSet": "$desc_serv"},
-                               "tp_instr": {"$addToSet": "$classe_ativo"}},
+                    "$group": {
+                            "_id": "$fonte_ativo",
+                            "inf_dispo": {"$addToSet": "$inf_disp"},
+                            "mercados": {"$addToSet": "$merc_ativo"},
+                            "tp_instr": {"$addToSet": "$classe_ativo"}
+                            },
 
                 }
             ]
@@ -47,8 +49,12 @@ class Cotacao():
                 },
 
                 {
-                    "$group": {"_id": "$fonte_ativo", "mercados": {"$addToSet": "$merc_ativo"},
-                               "tp_instr": {"$addToSet": "$classe_ativo"}},
+                    "$group": {
+                            "_id": "$fonte_ativo",
+                            "inf_dispo": {"$addToSet": "$inf_disp"},
+                            "mercados": {"$addToSet": "$merc_ativo"},
+                            "tp_instr": {"$addToSet": "$classe_ativo"}
+                            },
 
                 }
             ]
@@ -68,8 +74,12 @@ class Cotacao():
                 },
 
                 {
-                    "$group": {"_id": "$fonte_ativo", "mercados": {"$addToSet": "$merc_ativo"},
-                               "tp_instr": {"$addToSet": "$classe_ativo"}},
+                    "$group": {
+                            "_id": "$fonte_ativo",
+                            "inf_dispo": {"$addToSet": "$inf_disp"},
+                            "mercados": {"$addToSet": "$merc_ativo"},
+                            "tp_instr": {"$addToSet": "$classe_ativo"}
+                            },
 
                 }
             ]
@@ -133,6 +143,17 @@ class Cotacao():
             vet = list(coll.aggregate(pipeline))
             return vet
         return vet
+
+    def verAtivos(self,param):
+        # Se for acionado no N1, o param será: Fonte
+        # Se for acionado no N2, o param será: Fonte-[Inf.Disp, Merc, C.Ativos]-[1,2,3]
+        # Se for acionado no N3, o param será: Fonte-[Inf.Disp, Merc, C.Ativos]-[1,2,3]
+        self.param = param
+        param1= param.split('-')
+
+
+        coll = db.Cotacao
+
 
 a = Cotacao().cotVisuPrin()
 
