@@ -12,42 +12,50 @@ class Cotacao():
 
         print(param1)
         coll = db.Cotacao
+        print(param1[0])
+        print(param1[1])
+        print(type(param1[2]))
 
-        if param1[2] == 1:
+        if param1[2] == "1":
             pipeline = [
                 {
                     "$match": {
                         "fonte_ativo": param1[0],
-                        "inf_dispo": param1[1]
+                        #"inf_disp": param1[1]
                     }
                 },
                 {
-                    "$group": {"_id": "$fonte_ativo", "mercados": {"$addToSet": "$merc_ativo"},
+                    "$group": {"_id": "$merc_ativo",
+                               "tp_serv":{"$addToSet": "$rt_delay"},
+                               "Serv": {"$addToSet": "$desc_serv"},
                                "tp_instr": {"$addToSet": "$classe_ativo"}},
 
                 }
             ]
+            vet = list(coll.aggregate(pipeline))
+            print(vet)
+            return vet
 
-        if param1[2]==2:
+        if param1[2]=="2":
 
             pipeline = [
                 {
-                    "$match":{
-                        "fonte_ativo":param1[0],
-                        "merc_ativo":param1[1]
-                        }
+                    "$match": {
+                        "fonte_ativo": param1[0],
+                        "merc_ativo": param1[1]
+                    }
                 },
+
                 {
                     "$group": {"_id": "$fonte_ativo", "mercados": {"$addToSet": "$merc_ativo"},
                                "tp_instr": {"$addToSet": "$classe_ativo"}},
 
-
                 }
             ]
 
-        vet = list(coll.aggregate(pipeline))
-        print(vet)
-        return vet
+            vet = list(coll.aggregate(pipeline))
+            print(vet)
+            return vet
 
     def cotVisuPrin(self):
         coll = db.Cotacao

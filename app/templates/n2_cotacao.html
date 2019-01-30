@@ -5,22 +5,29 @@
 {% block content %}
 
 <div class="container-fluid">
-
+</br>
+		</br>
 	<div class="row">
-		<div class="col-lg-4"></div>
-		<form method="POST" enctype="multipart/form-data">
+
+		<div class="col-lg-4"><h3>{{ ref }}</h3></div>
+
+		<!--<form method="POST" enctype="multipart/form-data">
 			{{ form.csrf_token }}
 			</br>
 			<!--div class="row"><h3>Cotação</h3></div-->
-			<!-- TXT Busca e Button-->
+
+<!-- TXT Busca e Button
+
+
 			</br>
-			<div class="row">
+
+		<div class="row">
 				<div class="col-10"> {{form.txtBusca(class_="form-control")}} </div>
 				<div class="col-2"><button type="submit"  class="btn btn-default">Buscar</button></div>
 
 			</div>
 			</br>
-			<!--Radiobutton tipo de visualização-->
+<!--Radiobutton tipo de visualização
 			{% for subfield in  form.rdPesquisaPor %}
 				<tr>
 					<td>{{subfield}}</td>
@@ -31,8 +38,10 @@
 
 			</br>
 
-		</form>
+		</form> -->
+
 	</div>
+	{% if param1[2]=='1'%}
 		<div class="col-12">
 			<table id="tb_cot" class="display" style="width:100%">
 				<thead>
@@ -51,7 +60,7 @@
 						<td>{{x['_id']}}</td>
 						<td>
 							{% for y in x['mercados']%}
-							<a href="{{ url_for('n2', param=x['_id']+'-'+y)}}">{{y}}</a> ,
+							<a href="#">{{y}}</a> ,
 							{% endfor%}
 						</td>
 						<td>
@@ -64,7 +73,7 @@
 				</tbody>
 			</table>
 		</div>
-
+	{% endif %}
 	</div>
 </div>
 

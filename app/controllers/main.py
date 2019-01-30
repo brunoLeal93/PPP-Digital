@@ -37,9 +37,19 @@ def n2(param):
 
         results = coll.cotVisuPrin()
         teste = coll.nivel2(param)
+        param1= param.split('-')
+
+        if param1[2]=='1':
+                ref = 'Fonte: '+param1[0]+' Inf. Disponível: '+param1[1]
+
+        elif param1[2]=='2':
+                ref = 'Fonte: '+param1[0]+'  Mercado: '+param1[1]
+
+        else:
+                ref = 'Fonte: ' + param1[0] + ' Mercado: ' + param1[1]
         form = FiltroCot()
         data = form.data
-        #print(param)
+        print(teste)
 
         if request.method == 'POST':
                 opc = data['rdPesquisaPor']
@@ -53,7 +63,7 @@ def n2(param):
 
                 return render_template('n2_cotacao.html', results=results, form=form, opc=opc)
 
-        return render_template('n2_cotacao.html', results=teste, form=form)
+        return render_template('n2_cotacao.html', results=teste, form=form, ref = ref, param1=param1)
 
 
 @app.route('/cotVisuPrin')

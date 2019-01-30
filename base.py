@@ -71,6 +71,153 @@ def importaBase():
         if sheet.cell(column=1, row=row).value == None:
             break
     #print(vet)
+    #vetor de teste
+    vet = [
+        {
+            'tipo': 0,
+            'cod_ativo': "T1",
+            'cod_ativo_bolsa': "",
+            'desc_ativo': "Teste 1",
+            'fonte_ativo': "Fonte A",
+            'seg_fonte_ativo': "TESTE1",
+            'merc_ativo': "A VISTA",
+            'classe_ativo': "Ação",
+            'inf_disp': "Informações de Teste",
+            'servicos': {
+                'rt': [
+
+                    {
+                        'cod_pag': 1,
+                        'cod_serv': "BC-01 ",
+                        'desc_serv': "teste internacional",
+                        'vlr_serv': "",
+                        'vlr_fee': "U$60,00"
+                    },
+
+                ],
+                'delay': [
+
+                    {
+                        'cod_pag': 2,
+                        'cod_serv': "BC-100 ",
+                        'desc_serv': "Pacote Trade",
+                        'vlr_serv': "R$ 280,00",
+                        'vlr_fee': ""
+                    },
+                    {
+                        'cod_pag': 2,
+                        'cod_serv': "BC-200 ",
+                        'desc_serv': "Pacote Conjuntura",
+                        'vlr_serv': "R$ 460,00",
+                        'vlr_fee': ""
+                    },{
+                        'cod_pag': 2,
+                        'cod_serv': "BC-300 ",
+                        'desc_serv': "Pacote Mercados",
+                        'vlr_serv': "R$ 710,00",
+                        'vlr_fee': ""
+                    },
+
+                ],
+            }
+        },
+        {
+            'tipo': 1,
+            'cod_ativo': "T2",
+            'cod_ativo_bolsa': "X2",
+            'desc_ativo': "Teste 2",
+            'fonte_ativo': "Fonte A",
+            'seg_fonte_ativo': "TESTE1",
+            'merc_ativo': "Futuro",
+            'classe_ativo': "Ação",
+            'inf_disp': "Informações de Teste",
+            'servicos': {
+                'rt': [
+
+                    {
+                        'cod_pag': 1,
+                        'cod_serv': "BC-01 ",
+                        'desc_serv': "teste internacional",
+                        'vlr_serv': "",
+                        'vlr_fee': "U$60,00"
+                    },
+
+                ],
+                'delay': [
+
+                    {
+                        'cod_pag': 2,
+                        'cod_serv': "BC-100 ",
+                        'desc_serv': "Pacote Trade",
+                        'vlr_serv': "R$ 280,00",
+                        'vlr_fee': ""
+                    },
+                    {
+                        'cod_pag': 2,
+                        'cod_serv': "BC-200 ",
+                        'desc_serv': "Pacote Conjuntura",
+                        'vlr_serv': "R$ 460,00",
+                        'vlr_fee': ""
+                    }, {
+                        'cod_pag': 2,
+                        'cod_serv': "BC-300 ",
+                        'desc_serv': "Pacote Mercados",
+                        'vlr_serv': "R$ 710,00",
+                        'vlr_fee': ""
+                    },
+
+                ],
+            }
+        },
+        {
+            'tipo': 1,
+            'cod_ativo': "TF3",
+            'cod_ativo_bolsa': "",
+            'desc_ativo': "TesteF 3",
+            'fonte_ativo': "FonteF",
+            'seg_fonte_ativo': "TESTE Fonte 1",
+            'merc_ativo': "A Vista",
+            'classe_ativo': "Índice de Ação",
+            'inf_disp': "Informações de Fonte Teste 1",
+            'servicos': {
+                'rt': [
+
+                    {
+                        'cod_pag': 3,
+                        'cod_serv': "BC-01 ",
+                        'desc_serv': "teste internacional",
+                        'vlr_serv': "",
+                        'vlr_fee': "U$60,00"
+                    },
+
+                ],
+                'delay': [
+
+                    {
+                        'cod_pag': 2,
+                        'cod_serv': "BC-100 ",
+                        'desc_serv': "Pacote Trade",
+                        'vlr_serv': "R$ 280,00",
+                        'vlr_fee': ""
+                    },
+                    {
+                        'cod_pag': 2,
+                        'cod_serv': "BC-200 ",
+                        'desc_serv': "Pacote Conjuntura",
+                        'vlr_serv': "R$ 460,00",
+                        'vlr_fee': ""
+                    }, {
+                        'cod_pag': 2,
+                        'cod_serv': "BC-300 ",
+                        'desc_serv': "Pacote Mercados",
+                        'vlr_serv': "R$ 710,00",
+                        'vlr_fee': ""
+                    },
+
+                ],
+            }
+        },
+    ]
     coll.insert_many(vet)
 
 def cotVisuPrin():
