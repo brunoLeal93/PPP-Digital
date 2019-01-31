@@ -40,8 +40,9 @@
 					<tr>
 
 						<th>Fonte</th>
+						<th>Informações Disp.</th>
 						<th>Mercado</th>
-						<th>Tipo Ativo</th>
+						<th>Classe Ativo</th>
 						<th></th>
 
 					</tr>
@@ -51,17 +52,36 @@
 					<tr>
 
 						<td>{{x['_id']}}</td>
-						<td>
-							{% for y in x['mercados']%}
-							<a href="#">{{y}}</a> ,
+						<td>	
+							{% for y in x['inf_dispo'] %}
+								{{y}}
 							{% endfor%}
 						</td>
 						<td>
-							{% for y in x['tp_instr']%}
-							<a href="#">{{y}}</a> ,
-							{% endfor%}
+							{%if len(x['mercados']) > 1%}
+								{% for y in x['mercados']%}
+									<a href="{{ url_for('n3', param=param1[0]+'-'+param1[1]+'-'+y+'-1-2')}}">{{y}}</a> ,
+								{% endfor%}
+							{%else%}
+								{% for y in x['mercados']%}
+									{{y}}
+								{% endfor%}
+							{% endif %}
 						</td>
-						<td> <a href="#">Ver Ativos</a> </td>
+						<td>
+							{%if len(x['tp_intr']) > 1%}
+								{% for y in x['tp_intr']%}
+									<a href="{{ url_for('n3', param=param1[0]+'-'+param1[1]+'-'+y+'-1-3')}} ">{{y}}</a> ,
+								{% endfor%}
+							{%else%}
+								{% for y in x['tp_intr']%}
+									{{y}}
+								{% endfor%}
+							{% endif %}
+						</td>
+						<td> 
+							<a href="{{ url_for('verAtivos', param=param1[0]+'-'+param1[1]+'-'param1[2])}}">Ver Ativos</a>
+						</td>
 					</tr>
 					{% endfor %}
 				</tbody>
@@ -75,8 +95,9 @@
 					<tr>
 
 						<th>Fonte</th>
+						<th>Informações Disp.</th>
 						<th>Mercado</th>
-						<th>Tipo Ativo</th>
+						<th>Classe Ativo</th>
 						<th></th>
 					</tr>
 				</thead>
@@ -86,16 +107,33 @@
 
 						<td>{{x['_id']}}</td>
 						<td>
+							{%if len(x['inf_dispo']) > 1%}
+								{% for y in x['inf_dispo']%}
+									<a href="{{ url_for('n3', param=param1[0]+'-'+param1[1]+'-'+y+'-2-1')}}">{{y}}</a> ,
+								{% endfor%}
+							{%else%}
+								{% for y in x['inf_dispo']%}
+									{{y}}
+								{% endfor%}
+							{% endif %}
+						</td>
+						<td>
 							{% for y in x['mercados']%}
-							<a href="#">{{y}}</a> ,
+								{{y}}
 							{% endfor%}
 						</td>
 						<td>
-							{% for y in x['tp_instr']%}
-							<a href="#">{{y}}</a> ,
-							{% endfor%}
+							{%if len(x['tp_instr']) > 1%}
+								{% for y in x['tp_instr']%}
+									<a href="{{ url_for('n3', param=param1[0]+'-'+param1[1]+'-'+y+'-2-3')}}">{{y}}</a> ,
+								{% endfor%}
+							{%else%}
+								{% for y in x['tp_instr']%}
+									{{y}}
+								{% endfor%}
+							{% endif %}
 						</td>
-						<td> <a href="#">Ver Ativos</a> </td>
+						<td> <a href="{{ url_for('verAtivos', param=param1[0]+'-'+param1[1]+'-'param1[2])}}">Ver Ativos</a> </td>
 					</tr>
 					{% endfor %}
 				</tbody>
@@ -109,8 +147,9 @@
 					<tr>
 
 						<th>Fonte</th>
+						<th>Informações Disp.</th>
 						<th>Mercado</th>
-						<th>Tipo Ativo</th>
+						<th>Classe Ativo</th>
 						<th></th>
 					</tr>
 				</thead>
@@ -121,32 +160,32 @@
 						<td>{{x['_id']}}</td>
 						<td>
 							{%if len(x['inf_dispo']) > 1%}
-							{% for y in x['inf_dispo']%}
-							<a href="#">{{y}}</a> ,
-							{% endfor%}
+								{% for y in x['inf_dispo']%}
+									<a href="{{ url_for('n3', param=param1[0]+'-'+param1[1]+'-'+y+'-3-1)}}">{{y}}</a> ,
+								{% endfor%}
 							{%else%}
-							{{y}}
+								{% for y in x['inf_dispo']%}
+									{{y}}
+								{% endfor%}
 							{% endif %}
 						</td>
 						<td>
 							{%if len(x['mercados']) > 1%}
-							{% for y in x['mercados']%}
-							<a href="#">{{y}}</a> ,
-							{% endfor%}
+								{% for y in x['mercados']%}
+									<a href="{{ url_for('n3', param=param1[0]+'-'+param1[1]+'-'+y+'-3-2')}}">{{y}}</a> ,
+								{% endfor%}
 							{%else%}
-							{{y}}
+								{% for y in x['mercados']%}
+									{{y}}
+								{% endfor%}
 							{% endif %}
 						</td>
-						<td>
-							{%if len(x['tp_intr']) > 1%}
-							{% for y in x['tp_intr']%}
-							<a href="#">{{y}}</a> ,
+						<td> 
+							{% for y in x['tp_instr']%}
+								{{y}}
 							{% endfor%}
-							{%else%}
-							{{y}}
-							{% endif %}
 						</td>
-						<td> <a href="#">Ver Ativos</a> </td>
+						<td> <a href="{{ url_for('verAtivos', param=param1[0]+'-'+param1[1]+'-'param1[2])}}">Ver Ativos</a> </td>
 					</tr>
 					{% endfor %}
 				</tbody>

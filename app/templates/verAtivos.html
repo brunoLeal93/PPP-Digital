@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+
+{% block title%} Cotação{%endblock%}
+
+{% block content %}
+
+<div class="container-fluid">
+</br>
+		</br>
+	<div class="row">
+		<!--
+		{% if param1[2]=='1'%}
+		<div class="col-lg-4"><h3>Fonte: {{param1[0]}}</br>Inf. Disponível: {{param1[1]}} </h3></div>
+		{% elif param1[2]=='2'%}
+		<div class="col-lg-4"><h3>Fonte: {{param1[0]}}</br>Mercado: {{param1[1]}} </h3></div>
+		{% elif param1[2]=='3'%}
+		<div class="col-lg-4"><h3>Fonte: {{param1[0]}}</br>C. Ativo: {{param1[1]}} </h3></div>
+		{% endif %}
+		-->
+		<form method="POST" enctype="multipart/form-data">
+			{{ form.csrf_token }}			
+			</br>
+			</br>
+
+			<!-- TXT Busca e Button-->
+			<div class="row">
+				<div class="col-10"> {{form.txtBusca(class_="form-control")}} </div>
+				<div class="col-2"><button type="submit"  class="btn btn-default">Buscar</button></div>
+			</div>
+			</br>
+			</br>
+
+		</form>
+
+	</div>
+	
+		<div class="col-12">
+			<table id="tb_cot" class="display" style="width:100%">
+				<thead>
+					<tr>
+						<th></th>>
+						<th>Ativo</th>
+						<th>Descrição Ativo</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	
+	</div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="../static/js/cotacao_v2.js"></script>
+{% endblock %}

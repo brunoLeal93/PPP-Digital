@@ -38,6 +38,12 @@ def cotacao():#(merc='', TpInst=''):
 
         return render_template('cotacao_v3.html', results=results, form=form)
 
+@app.route('/cotVisuPrin')
+def cotVisuPrin():
+        coll = Cotacao()
+        results = coll.cotVisuPrin()
+
+        return jsonify(data=results)
 
 @app.route('/nivel2/<param>', methods=('GET', 'POST'))
 def n2(param):
@@ -75,12 +81,43 @@ def n2(param):
         return render_template('n2_cotacao.html', results=teste, form=form, param1=param1)
 
 
-@app.route('/cotVisuPrin')
-def cotVisuPrin():
+@app.route('/nivel3/<param>', methods=('GET', 'POST'))
+def n3(param):
         coll = Cotacao()
-        results = coll.cotVisuPrin()
 
-        return jsonify(data=results)
+        #results = coll.cotVisuPrin()
+        teste = coll.nivel3(param)
+        param1= param.split('-')
+
+        form = FiltroCot()
+        data = form.data
+        print(teste)
+
+        #if request.method == 'POST':
+        #        opc = data['rdPesquisaPor']
+        #        print(data['rdPesquisaPor'])
+        #        texto = data['txtBusca']
+        #        print(texto)
+        #        # print(TpInst)
+        #        # print(data['tp_instr'])
+        #        results = Cotacao().buscaAtivo(texto)
+        #        print(results)
+
+        #        return render_template('n3_cotacao.html', results=results, form=form, opc=opc)
+
+        return render_template('n3_cotacao.html', results=teste, form=form, param1=param1)
+
+
+@app.route('verAtivos/<param>', methods=('GET', 'POST'))
+def verAtivos(param):
+        coll = Cotacao()
+        results= coll.verAtivos(param)
+        param1 = param.split('-')
+        return render_template('verAtivos.html', results=results, param1=param1)
+
+
+ ####       
+
 
 @app.route('/bpro-terminal', methods=('GET' , 'POST'))
 def bpro_terminal():
