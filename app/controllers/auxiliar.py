@@ -86,7 +86,7 @@ class Cotacao():
             print(vet)
             return vet
 
-def nivel3(self, param):
+    def nivel3(self, param):
         self.param = param
 
         param1= param.split('-')
@@ -98,22 +98,22 @@ def nivel3(self, param):
         print(type(param1[2]))
 
         if param1[3] == "1" and param1[4]==2:
-            results = coll.find('fonte_ativo': param1[0], 'inf_disp':param1[1],'merc_ativo':param1[2])
+            results = coll.find({'fonte_ativo': param1[0], 'inf_disp':param1[1],'merc_ativo':param1[2]})
 
         elif param1[3] == "1" and param1[4]==3:
-            results = coll.find('fonte_ativo': param1[0], 'inf_disp':param1[1],'classe_ativo':param1[2])
+            results = coll.find({'fonte_ativo': param1[0], 'inf_disp':param1[1],'classe_ativo':param1[2]})
 
         elif param1[3] == "2" and param1[4]==1:
-            results = coll.find('fonte_ativo': param1[0], 'merc_ativo':param1[1],'inf_disp':param1[2])
+            results = coll.find({'fonte_ativo': param1[0], 'merc_ativo':param1[1],'inf_disp':param1[2]})
 
         elif param1[3] == "2" and param1[4]==3:
-            results = coll.find('fonte_ativo': param1[0], 'merc_ativo':param1[1],'classe_ativo':param1[2])
+            results = coll.find({'fonte_ativo': param1[0], 'merc_ativo':param1[1],'classe_ativo':param1[2]})
 
         elif param1[3] == "3" and param1[4]==1:
-            results = coll.find('fonte_ativo': param1[0], 'classe_ativo':param1[1],'inf_disp':param1[2])
+            results = coll.find({'fonte_ativo': param1[0], 'classe_ativo':param1[1],'inf_disp':param1[2]})
 
         elif param1[3] == "3" and param1[4]==2:
-            results = coll.find('fonte_ativo': param1[0], 'classe_ativo':param1[1],'merc_ativo':param1[2])
+            results = coll.find({'fonte_ativo': param1[0], 'classe_ativo':param1[1],'merc_ativo':param1[2]})
 
         #    pipeline = [
         #        {
@@ -136,7 +136,7 @@ def nivel3(self, param):
         #    print(vet)
         return results
 
-        elif param1[2]=="2":
+        if param1[2]=="2":
 
             pipeline = [
                 {
@@ -185,6 +185,7 @@ def nivel3(self, param):
             return vet
 
     def cotVisuPrin(self):
+
         coll = db.Cotacao
 
         pipeline= [
@@ -248,11 +249,11 @@ def nivel3(self, param):
 
         if len(param1) == 3:
             if param1[2] ==1:
-                results = coll.find('fonte_ativo': param1[0], 'inf_disp':param1[1])
+                results = coll.find({'fonte_ativo': param1[0], 'inf_disp':param1[1]})
             elif param1[2] ==2:
-                results = coll.find('fonte_ativo': param1[0], 'merc_ativo':param1[1])
+                results = coll.find({'fonte_ativo': param1[0], 'merc_ativo':param1[1]})
             elif param1[2] ==3:
-                results = coll.find('fonte_ativo': param1[0], 'classe_ativo':param1[1])    
+                results = coll.find({'fonte_ativo': param1[0], 'classe_ativo':param1[1]})    
 
         #elif len(param1) == 3:
         #    if param1[2] ==1:
