@@ -25,16 +25,16 @@ def cotacao():#(merc='', TpInst=''):
         print(results)
 
         if request.method == 'POST':
-                opc = data['rdPesquisaPor']
-                print(data['rdPesquisaPor'])
-                texto = data['txtBusca']
-                print(texto)
+                #opc = data['rdPesquisaPor']
+                #print(data['rdPesquisaPor'])
+                #texto = data['txtBusca']
+                #print(texto)
                 # print(TpInst)
                 # print(data['tp_instr'])
-                results = Cotacao().buscaAtivo(texto)
-                print(results)
+                #results = Cotacao().buscaAtivo(texto)
+                #print(results)
 
-                return render_template('n2_cotacao.html', results=results, form=form, opc=opc)
+                return render_template('n2_cotacao.html', results=results, form=form)
 
         return render_template('cotacao_v3.html', results=results, form=form)
 
@@ -51,7 +51,7 @@ def n2(param):
 
         results = coll.cotVisuPrin()
         teste = coll.nivel2(param)
-        param1= param.split('-')
+        param1 = param.split('-')
         ref=''
         if param1[2]=='1':
                 ref = 'Fonte: '+param1[0]+' Inf. Disponível: '+param1[1]
@@ -108,7 +108,7 @@ def n3(param):
         return render_template('n3_cotacao.html', results=teste, form=form, param1=param1)
 
 
-@app.route('verAtivos/<param>', methods=('GET', 'POST'))
+@app.route('/verAtivos/<param>', methods=('GET', 'POST'))
 def verAtivos(param):
         coll = Cotacao()
         results= coll.verAtivos(param)
