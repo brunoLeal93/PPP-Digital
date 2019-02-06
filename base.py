@@ -26,38 +26,40 @@ def importaBase():
         aux = row
         while sheet.cell(column=2, row=aux).value == sheet.cell(column=2, row=aux+1).value:
 
-            if sheet.cell(column=10, row=row).value == 'RT':
+            if sheet.cell(column=12, row=aux).value == 'RT':
 
                 doc = {
-                    'cod_pag': sheet.cell(column=11, row=aux).value,
-                    'cod_serv': sheet.cell(column=12, row=aux).value,
-                    'desc_serv': sheet.cell(column=13, row=aux).value,
-                    'vlr_serv': sheet.cell(column=14, row=aux).value,
-                    'vlr_fee': sheet.cell(column=15, row=aux).value
+                    'cod_pag': sheet.cell(column=13, row=aux).value,
+                    'cod_serv': sheet.cell(column=14, row=aux).value,
+                    'desc_serv': sheet.cell(column=15, row=aux).value,
+                    'vlr_serv': sheet.cell(column=16, row=aux).value,
+                    'vlr_fee': sheet.cell(column=17, row=aux).value
                 }
                 rt.append(doc)
             else:
                 doc = {
-                    'cod_pag': sheet.cell(column=11, row=aux).value,
-                    'cod_serv': sheet.cell(column=12, row=aux).value,
-                    'desc_serv': sheet.cell(column=13, row=aux).value,
-                    'vlr_serv': sheet.cell(column=14, row=aux).value,
-                    'vlr_fee': sheet.cell(column=15, row=aux).value
+                    'cod_pag': sheet.cell(column=13, row=aux).value,
+                    'cod_serv': sheet.cell(column=14, row=aux).value,
+                    'desc_serv': sheet.cell(column=15, row=aux).value,
+                    'vlr_serv': sheet.cell(column=16, row=aux).value,
+                    'vlr_fee': sheet.cell(column=17, row=aux).value
                 }
                 delay.append(doc)
 
-                aux = aux + 1
+            aux = aux + 1
 
         doc= {
-                'tipo': sheet.cell(column=1, row=row).value,
-                'cod_ativo':sheet.cell(column=2, row=row).value,
-                'cod_ativo_bolsa':sheet.cell(column=3, row=row).value,
-                'desc_ativo':sheet.cell(column=4, row=row).value,
-                'fonte_ativo':sheet.cell(column=5, row=row).value.upper(),
-                'seg_fonte_ativo':sheet.cell(column=6, row=row).value,
-                'merc_ativo':sheet.cell(column=7, row=row).value,
-                'classe_ativo':sheet.cell(column=8, row=row).value,
-                'inf_disp':sheet.cell(column=9, row=row).value,
+                'tipo': sheet.cell(column=1, row=aux).value,
+                'cod_ativo':sheet.cell(column=2, row=aux).value,
+                'cod_ativo_bolsa':sheet.cell(column=3, row=aux).value,
+                'desc_ativo':sheet.cell(column=4, row=aux).value,
+                'contrato_ativo':sheet.cell(column=5, row=aux).value,
+                'extensao_ativo':sheet.cell(column=6, row=aux).value,
+                'fonte_ativo':sheet.cell(column=7, row=aux).value.upper(),
+                'seg_fonte_ativo':sheet.cell(column=8, row=aux).value,
+                'merc_ativo':sheet.cell(column=9, row=aux).value,
+                'classe_ativo':sheet.cell(column=10, row=aux).value,
+                'inf_disp':sheet.cell(column=11, row=aux).value,
                 'servicos': {
                     'rt': rt,
                     'delay': delay,
