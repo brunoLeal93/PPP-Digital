@@ -113,7 +113,7 @@ def verAtivos(param):
         coll = Cotacao()
         results= coll.verAtivos(param)
         param1 = param.split('-')
-        return render_template('verAtivos.html', results=results, param1=param1)
+        return render_template('verAtivos.html', results=jsonify(data=results), param1=param1)
 
 
  ####       
