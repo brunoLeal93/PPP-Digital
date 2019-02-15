@@ -3,12 +3,20 @@ from app import app
 from app.controllers.auxiliar import Cotacao
 from app.models.Form import FiltroCot
 
+## CRIAR PAGINA PARA SE LOGAR
+@app.route('/login', methods=('GET', 'POST'))
+def login():
+        return render_template('index.html')
 
+@app.route('/Conteudo-vs-Pacotes')
+def ppp():
+        return render_template('ppp.html')
 @app.route('/Home', methods=('GET', 'POST'))
 @app.route('/', methods=('GET', 'POST'))
 def home():
-        
-        return render_template('home.html')
+        form = FiltroCot()
+
+        return render_template('index.html', form=form)
 
 
 @app.route('/cotacao', methods=('GET' , 'POST'))

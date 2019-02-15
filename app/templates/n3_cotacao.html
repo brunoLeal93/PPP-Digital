@@ -4,46 +4,13 @@
 
 {% block content %}
 
-<div class="container-fluid">
-</br>
-		</br>
-	<div class="row">
-		<!--
-		{% if param1[3]=='1'%}
-		<div class="col-lg-4">
-			<h3>
-				Fonte: {{param1[0]}}
-				</br>
-				Inf. Disponível: {{param1[1]}}
-				</br>
-				{{param1[2]}}
-			</h3>
-		</div>
-		{% elif param1[3]=='2'%}
-		<div class="col-lg-4">
-			<h3>
-				Fonte: {{param1[0]}}
-			</br>
-				Mercado: {{param1[1]}}
-			</br>
-				{{param1[2]}}
-			</h3>
-		</div>
-		{% elif param1[3]=='3'%}
-		<div class="col-lg-4">
-			<h3>
-				Fonte: {{param1[0]}}
-			</br>
-				C. Ativo: {{param1[1]}}
-			</br>
-				{{param1[2]}}
-			</h3>
-		</div>
-		{% endif %}
-	-->
-		<form method="POST" enctype="multipart/form-data">
+<div class="container">
+	<div class="row d-flex justify-content-center">
+
+		<div class="col-md-12">
+			<form method="POST" enctype="multipart/form-data">
 			{{ form.csrf_token }}
-			
+
 			</br>
 			</br>
 
@@ -57,6 +24,8 @@
 			</br>
 
 		</form>
+		</div>
+
 	</div>
 
 		<div class="col-12">
@@ -100,5 +69,7 @@
 {% endblock %}
 
 {% block scripts %}
-<script type="text/javascript" src="../static/js/cotacao_v2.js"></script>
+	<script type="text/javascript" src="../static/js/cotacao_v2.js"></script>
+
+
 {% endblock %}

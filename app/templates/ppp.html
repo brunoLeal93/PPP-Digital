@@ -1,0 +1,404 @@
+{% extends 'base.html'%}
+
+{% block title%} Conteúdo vs Pacotes {%endblock%}
+
+{%block css %}
+<style>
+    body{ padding-top: 100px}
+
+</style>
+{%endblock%}
+
+{% block content %}
+    <div class="content-fluid">
+        <form>
+            <div class="form-check form-check-inline">
+                <tr>
+                    <td><input type="checkbox" class="form-check-input" id="trade" checked></td>
+                    <td><label class="form-check-label" for="trade" >Trade</label></td>
+
+                    <td><input type="checkbox" class="form-check-input" id="trade-aai" checked></td>
+                    <td><label class="form-check-label" for="trade-aai">Trade AAI </label>&nbsp;&nbsp;</td>
+
+                    <td><input type="checkbox" class="form-check-input" id="conjuntura" checked></td>
+                    <td><label class="form-check-label" for="conjuntura">Conjuntura</label>&nbsp;&nbsp;</td>
+
+                    <td><input type="checkbox" class="form-check-input" id="mercados-bs" checked></td>
+                    <td><label class="form-check-label" for="mercados-bs">Mercados Buy-Side</label>&nbsp;&nbsp;</td>
+
+                    <td><input type="checkbox" class="form-check-input" id="mercados" checked></td>
+                    <td><label class="form-check-label" for="mercados">Mercados</label>&nbsp;&nbsp;</td>
+
+                    <td><input type="checkbox" class="form-check-input" id="news-bs" checked></td>
+                    <td><label class="form-check-label" for="news-bs">News Buy-Side</label>&nbsp;&nbsp;</td>
+
+                    <td><input type="checkbox" class="form-check-input" id="news" checked></td>
+                    <td><label class="form-check-label" for="news">News</label>&nbsp;&nbsp;</td>
+
+                    <td><input type="checkbox" class="form-check-input" id="analises" checked></td>
+                    <td><label class="form-check-label" for="analises">Análises</label></td>
+                </tr>
+            </div>
+        </form>
+        </br>    
+
+        <div class="row">
+            <div class="col-2">Conteúdos</div>
+            <div class="col text-center" id="trade-lb">Trade</div>
+            <div class="col text-center" id="trade-aai-lb">Trade AAI</div>
+            <div class="col text-center" id="conjuntura-lb">Conjuntura</div>
+            <div class="col text-center" id="mercados-bs-lb">Mercados</br>Buy-Side</div>
+            <div class="col text-center" id="mercados-lb">Mercados</div>
+            <div class="col text-center" id="news-bs-lb">News Buy-Side</div>
+            <div class="col text-center" id="news-lb">News</div>
+            <div class="col text-center" id="analises-lb">Análises</div>
+        </div>
+        
+        <div class="row">
+            <div class="col-2">
+                <p><a href="#Noticias-collapse" data-toggle="collapse" aria-controls="Noticias-collapse">Notícias</a></p>
+            </div>
+            <div class="col text-center" id="n-trade">S</div>
+            <div class="col text-center" id="n-trade-aai">S</div>
+            <div class="col text-center" id="n-mercados-bs">S</div>
+            <div class="col text-center" id="n-conjuntura">S</div>
+            <div class="col text-center" id="n-mercados">S</div>
+            <div class="col text-center" id="n-news-bs">S</div>
+            <div class="col text-center" id="n-news">S</div>
+            <div class="col text-center" id="n-analises">S</div>
+        </div>
+        <div class="collapse" id="Noticias-collapse">
+            <!--Bloco que deve se repetir com os demais cadernos-->
+            <div class="row">
+                <div class="col-2">
+                    &nbsp;&nbsp;<a href="#">AE News</a>
+                </div>
+                <div class="col text-center" id="n-aenews-trade">N</div>
+                <div class="col text-center" id="n-aenews-trade-aai">N</div>
+                <div class="col text-center" id="n-aenews-conjuntura">N</div>
+                <div class="col text-center" id="n-aenews-mercados-bs">N</div>
+                <div class="col text-center" id="n-aenews-mercados">N</div>
+                <div class="col text-center" id="n-aenews-news-bs">S</div>
+                <div class="col text-center" id="n-aenews-news">S</div>
+                <div class="col text-center" id="n-aenews-analises">S</div>
+            </div>
+            <!--Final do Bloco que deve se repetir com os demais cadernos-->
+            <div class="row">
+                
+                <div class="col-2">
+                    &nbsp;&nbsp;<a href="#">Empresas e Setores</a>
+                </div>
+                <div class="col text-center" id="n-empset-trade">N</div>
+                <div class="col text-center" id="n-empset-trade-aai">S</div>
+                <div class="col text-center" id="n-empset-conjuntura">N</div>
+                <div class="col text-center" id="n-empset-mercados-bs">S</div>
+                <div class="col text-center" id="n-empset-mercados">S</div>
+                <div class="col text-center" id="n-empset-news-bs">S</div>
+                <div class="col text-center" id="n-empset-news">S</div>
+                <div class="col text-center" id="n-empset-analises">S</div>
+            </div>
+        </br>
+        </div>
+        <!--Bloco Cotação-->
+        <div class="row">
+            <div class="col-2">
+                <p><a href="#Cotacao-collapse" data-toggle="collapse" aria-controls="Cotacao-collapse">Cotações</a></p>
+            </div>
+            <div class="col text-center" id="c-trade">S</div>
+            <div class="col text-center" id="c-trade-aai">S</div>
+            <div class="col text-center" id="c-mercados-bs">S</div>
+            <div class="col text-center" id="c-conjuntura">S</div>
+            <div class="col text-center" id="c-mercados">S</div>
+            <div class="col text-center" id="c-news-bs">S</div>
+            <div class="col text-center" id="c-news">S</div>
+            <div class="col text-center" id="c-analises">S</div>
+        </div>
+        
+        <div class="collapse" id="Cotacao-collapse">
+            
+            <div class="row">
+                <div class="col">
+                    <!--SubBloco Ações-->
+                    <div class="row">
+                        <div class="col-2">
+                            <p>&nbsp;&nbsp;<a href="#Cotacao-Acoes-collapse" data-toggle="collapse" aria-controls="Cotacao-Acoes-collapse">Ações</a></p>
+                        </div>
+                        <div class="col text-center" id="c-a-trade">S</div>
+                        <div class="col text-center" id="c-a-trade-aai">S</div>
+                        <div class="col text-center" id="c-a-mercados-bs">S</div>
+                        <div class="col text-center" id="c-a-conjuntura">S</div>
+                        <div class="col text-center" id="c-a-mercados">S</div>
+                        <div class="col text-center" id="c-a-news-bs">S</div>
+                        <div class="col text-center" id="c-a-news">S</div>
+                        <div class="col text-center" id="c-a-analises">S</div>
+                    </div>
+                    <div class="collapse" id="Cotacao-Acoes-collapse">
+                        <div class="row">
+                            <div class="col-2">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Bovespa</a>
+                            </div>
+                            <div class="col text-center" id="c-a-bov-trade">S</div>
+                            <div class="col text-center" id="c-a-bov-trade-aai">S</div>
+                            <div class="col text-center" id="c-a-bov-conjuntura">S</div>
+                            <div class="col text-center" id="c-a-bov-mercados-bs">S</div>
+                            <div class="col text-center" id="c-a-bov-mercados">S</div>
+                            <div class="col text-center" id="c-a-bov-news-bs">S</div>
+                            <div class="col text-center" id="c-a-bov-news">S</div>
+                            <div class="col text-center" id="c-a-bov-analises">S</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Nyse</a>
+                            </div>
+                            <div class="col text-center" id="c-a-nyse-trade">S</div>
+                            <div class="col text-center" id="c-a-nyse-trade-aai">S</div>
+                            <div class="col text-center" id="c-a-nyse-conjuntura">S</div>
+                            <div class="col text-center" id="c-a-nyse-mercados-bs">S</div>
+                            <div class="col text-center" id="c-a-nyse-mercados">S</div>
+                            <div class="col text-center" id="c-a-nyse-news-bs">S</div>
+                            <div class="col text-center" id="c-a-nyse-news">S</div>
+                            <div class="col text-center" id="c-a-nyse-analises">S</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Nyse Amex</a>
+                            </div>
+                            <div class="col text-center" id="c-a-nyseamex-trade">S</div>
+                            <div class="col text-center" id="c-a-nyseamex-trade-aai">S</div>
+                            <div class="col text-center" id="c-a-nyseamex-conjuntura">S</div>
+                            <div class="col text-center" id="c-a-nyseamex-mercados-bs">S</div>
+                            <div class="col text-center" id="c-a-nyseamex-mercados">S</div>
+                            <div class="col text-center" id="c-a-nyseamex-news-bs">S</div>
+                            <div class="col text-center" id="c-a-nyseamex-news">S</div>
+                            <div class="col text-center" id="c-a-nyseamex-analises">S</div>
+                        </div>
+                        </br>
+                    </div>
+                    <!--Final do SubBloco Ações-->
+                    
+                    <!--SubBloco Derivativos-->
+                    <div class="row">
+                        <div class="col-2">
+                            <p>&nbsp;&nbsp;<a href="#Cotacao-Derivativos-collapse" data-toggle="collapse" aria-controls="Cotacao-Derivativos-collapse">Derivativos</a></p>
+                        </div>
+                        <div class="col text-center" id="c-d-trade">S</div>
+                        <div class="col text-center" id="c-d-trade-aai">S</div>
+                        <div class="col text-center" id="c-d-mercados-bs">S</div>
+                        <div class="col text-center" id="c-d-conjuntura">S</div>
+                        <div class="col text-center" id="c-d-mercados">S</div>
+                        <div class="col text-center" id="c-d-news-bs">S</div>
+                        <div class="col text-center" id="c-d-news">S</div>
+                        <div class="col text-center" id="c-d-analises">S</div>
+                    </div>
+                    <div class="collapse" id="Cotacao-Derivativos-collapse">
+                        <div class="row">
+                            <div class="col-2">
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#">CBOT</a>
+                            </div>
+                            <div class="col text-center" id="c-d-cbot-trade">S</div>
+                            <div class="col text-center" id="c-d-cbot-trade-aai">S</div>
+                            <div class="col text-center" id="c-d-cbot-conjuntura">S</div>
+                            <div class="col text-center" id="c-d-cbot-mercados-bs">S</div>
+                            <div class="col text-center" id="c-d-cbot-mercados">S</div>
+                            <div class="col text-center" id="c-d-cbot-news-bs">S</div>
+                            <div class="col text-center" id="c-d-cbot-news">S</div>
+                            <div class="col text-center" id="c-d-cbot-analises">S</div>
+                        </div>
+                        
+                    </div>
+                    <!--Final SubBloco Derivativos-->    
+                </div>
+            </div>
+        </br>
+        </div>
+
+
+        <!--Final do Bloco Ações-->
+        <div class="row">
+            <div class="col-2">
+                <p><a href="#Ferramentas-collapse" data-toggle="collapse" aria-controls="Ferramentas-collapse">Ferramentas</a></p>
+            </div>
+            <div class="col text-center" id="f-trade">S</div>
+            <div class="col text-center" id="f-trade-aai">S</div>
+            <div class="col text-center" id="f-mercados-bs">S</div>
+            <div class="col text-center" id="f-conjuntura">S</div>
+            <div class="col text-center" id="f-mercados">S</div>
+            <div class="col text-center" id="f-news-bs">S</div>
+            <div class="col text-center" id="f-news">S</div>
+            <div class="col text-center" id="f-analises">S</div>
+        </div>
+
+        <div class="collapse" id="Ferramentas-collapse">
+            <!--Bloco que deve se repetir com os demais cadernos-->
+            <div class="row">
+                <div class="col-2">
+                    &nbsp;&nbsp;<a href="#">Gráfico</a>
+                </div>
+                <div class="col text-center" id="f-chart-trade">S</div>
+                <div class="col text-center" id="f-chart-trade-aai">S</div>
+                <div class="col text-center" id="f-chart-conjuntura">S</div>
+                <div class="col text-center" id="f-chart-mercados-bs">S</div>
+                <div class="col text-center" id="f-chart-mercados">S</div>
+                <div class="col text-center" id="f-chart-news-bs">S</div>
+                <div class="col text-center" id="f-chart-news">S</div>
+                <div class="col text-center" id="f-chart-analises">S</div>
+            </div>
+            <!--Final do Bloco que deve se repetir com os demais cadernos-->
+            <div class="row">
+                <div class="col-2">
+                    &nbsp;&nbsp;<a href="#">Link com Excel</a>
+                </div>
+                <div class="col text-center" id="f-linkexcel-trade">S</div>
+                <div class="col text-center" id="f-linkexcel-trade-aai">S</div>
+                <div class="col text-center" id="f-linkexcel-conjuntura">S</div>
+                <div class="col text-center" id="f-linkexcel-mercados-bs">S</div>
+                <div class="col text-center" id="f-linkexcel-mercados">S</div>
+                <div class="col text-center" id="f-linkexcel-news-bs">S</div>
+                <div class="col text-center" id="f-linkexcel-news">S</div>
+                <div class="col text-center" id="f-linkexcel-analises">S</div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+{%block scripts%}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fixed').addClass('is-sticky');
+    });
+
+
+
+    $('#trade').click(function() {
+        $("#trade-lb").toggle(this.checked);
+        $("#n-trade").toggle(this.checked);
+        $("#n-aenews-trade").toggle(this.checked);
+        $("#n-empset-trade").toggle(this.checked);
+        $("#c-trade").toggle(this.checked);
+        $("#c-a-trade").toggle(this.checked);
+        $("#c-a-bov-trade").toggle(this.checked);
+        $("#c-a-nyse-trade").toggle(this.checked);
+        $("#c-a-nyseamex-trade").toggle(this.checked);
+        $("#c-d-trade").toggle(this.checked);
+        $("#c-d-cbot-trade").toggle(this.checked);
+        $("#f-trade").toggle(this.checked);
+        $("#f-chart-trade").toggle(this.checked);
+        $("#f-linkexcel-trade").toggle(this.checked);
+    });
+    $('#trade-aai').click(function() {
+        $("#trade-aai-lb").toggle(this.checked);
+        $("#n-trade-aai").toggle(this.checked);
+        $("#n-aenews-trade-aai").toggle(this.checked);
+        $("#n-empset-trade-aai").toggle(this.checked);
+        $("#c-trade-aai").toggle(this.checked);
+        $("#c-a-trade-aai").toggle(this.checked);
+        $("#c-a-bov-trade-aai").toggle(this.checked);
+        $("#c-a-nyse-trade-aai").toggle(this.checked);
+        $("#c-a-nyseamex-trade-aai").toggle(this.checked);
+        $("#c-d-trade-aai").toggle(this.checked);
+        $("#c-d-cbot-trade-aai").toggle(this.checked);
+        $("#f-trade-aai").toggle(this.checked);
+        $("#f-chart-trade-aai").toggle(this.checked);
+        $("#f-linkexcel-trade-aai").toggle(this.checked);
+    });
+    $('#conjuntura').click(function() {
+        $("#conjuntura-lb").toggle(this.checked);
+        $("#n-conjuntura").toggle(this.checked);
+        $("#n-aenews-conjuntura").toggle(this.checked);
+        $("#n-empset-conjuntura").toggle(this.checked);
+        $("#c-conjuntura").toggle(this.checked);
+        $("#c-a-conjuntura").toggle(this.checked);
+        $("#c-a-bov-conjuntura").toggle(this.checked);
+        $("#c-a-nyse-conjuntura").toggle(this.checked);
+        $("#c-a-nyseamex-conjuntura").toggle(this.checked);
+        $("#c-d-conjuntura").toggle(this.checked);
+        $("#c-d-cbot-conjuntura").toggle(this.checked);
+        $("#f-conjuntura").toggle(this.checked);
+        $("#f-chart-conjuntura").toggle(this.checked);
+        $("#f-linkexcel-conjuntura").toggle(this.checked);
+    });
+    $('#mercados-bs').click(function() {
+        $("#mercados-bs-lb").toggle(this.checked);
+        $("#n-mercados-bs").toggle(this.checked);
+        $("#n-aenews-mercados-bs").toggle(this.checked);
+        $("#n-empset-mercados-bs").toggle(this.checked);
+        $("#c-mercados-bs").toggle(this.checked);
+        $("#c-a-mercados-bs").toggle(this.checked);
+        $("#c-a-bov-mercados-bs").toggle(this.checked);
+        $("#c-a-nyse-mercados-bs").toggle(this.checked);
+        $("#c-a-nyseamex-mercados-bs").toggle(this.checked);
+        $("#c-d-mercados-bs").toggle(this.checked);
+        $("#c-d-cbot-mercados-bs").toggle(this.checked);
+        $("#f-mercados-bs").toggle(this.checked);
+        $("#f-chart-mercados-bs").toggle(this.checked);
+        $("#f-linkexcel-mercados-bs").toggle(this.checked);
+    });
+    $('#mercados').click(function() {
+        $("#mercados-lb").toggle(this.checked);
+        $("#n-mercados").toggle(this.checked);
+        $("#n-aenews-mercados").toggle(this.checked);
+        $("#n-empset-mercados").toggle(this.checked);
+        $("#c-mercados").toggle(this.checked);
+        $("#c-a-mercados").toggle(this.checked);
+        $("#c-a-bov-mercados").toggle(this.checked);
+        $("#c-a-nyse-mercados").toggle(this.checked);
+        $("#c-a-nyseamex-mercados").toggle(this.checked);
+        $("#c-d-mercados").toggle(this.checked);
+        $("#c-d-cbot-mercados").toggle(this.checked);
+        $("#f-mercados").toggle(this.checked);
+        $("#f-chart-mercados").toggle(this.checked);
+        $("#f-linkexcel-mercados").toggle(this.checked);
+    });
+    $('#news-bs').click(function() {
+        $("#news-bs-lb").toggle(this.checked);
+        $("#n-news-bs").toggle(this.checked);
+        $("#n-aenews-news-bs").toggle(this.checked);
+        $("#n-empset-news-bs").toggle(this.checked);
+        $("#c-news-bs").toggle(this.checked);
+        $("#c-a-news-bs").toggle(this.checked);
+        $("#c-a-bov-news-bs").toggle(this.checked);
+        $("#c-a-nyse-news-bs").toggle(this.checked);
+        $("#c-a-nyseamex-news-bs").toggle(this.checked);
+        $("#c-d-news-bs").toggle(this.checked);
+        $("#c-d-cbot-news-bs").toggle(this.checked);
+        $("#f-news-bs").toggle(this.checked);
+        $("#f-chart-news-bs").toggle(this.checked);
+        $("#f-linkexcel-news-bs").toggle(this.checked);
+    });
+    $('#news').click(function() {
+        $("#news-lb").toggle(this.checked);
+        $("#n-news").toggle(this.checked);
+        $("#n-aenews-news").toggle(this.checked);
+        $("#n-empset-news").toggle(this.checked);
+        $("#c-news").toggle(this.checked);
+        $("#c-a-news").toggle(this.checked);
+        $("#c-a-bov-news").toggle(this.checked);
+        $("#c-a-nyse-news").toggle(this.checked);
+        $("#c-a-nyseamex-news").toggle(this.checked);
+        $("#c-d-news").toggle(this.checked);
+        $("#c-d-cbot-news").toggle(this.checked);
+        $("#f-news").toggle(this.checked);
+        $("#f-chart-news").toggle(this.checked);
+        $("#f-linkexcel-news").toggle(this.checked);
+    });
+    $('#analises').click(function() {
+        $("#analises-lb").toggle(this.checked);
+        $("#n-analises").toggle(this.checked);
+        $("#n-aenews-analises").toggle(this.checked);
+        $("#n-empset-analises").toggle(this.checked);
+        $("#c-analises").toggle(this.checked);
+        $("#c-a-analises").toggle(this.checked);
+        $("#c-a-bov-analises").toggle(this.checked);
+        $("#c-a-nyse-analises").toggle(this.checked);
+        $("#c-a-nyseamex-analises").toggle(this.checked);
+        $("#c-d-analises").toggle(this.checked);
+        $("#c-d-cbot-analises").toggle(this.checked);
+        $("#f-analises").toggle(this.checked);
+        $("#f-chart-analises").toggle(this.checked);
+        $("#f-linkexcel-analises").toggle(this.checked);
+    });
+</script>
+
+{%endblock%}

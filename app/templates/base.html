@@ -1,89 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 	<head>
-		<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
-		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
-		<title>{% block title %}{% endblock %} - PPP Digital</title>
-	</head>
-	<body style="padding-top: 40px">
-		{%block nav %}
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-		<a class="navbar-brand" href="{{url_for('home')}}">
-			<img src="../static/img/logobc-branco.png" width="100px">
-		</a>
-		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" 	data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" 		aria-label="Toggle navigation">
-  		<span class="navbar-toggler-icon"></span>
-		</button>
-	    <ul class="navbar-nav ml-auto" >
-	    	<li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		          Financeiro
-		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href={{url_for('bpro_terminal')}}>Terminal</a>
-		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href={{url_for('bpro_web')}}>Web</a>
-		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href={{url_for('bpro_wallboard')}}>Wallboard</a>
-		          <!--div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Something else here</a-->
-		        </div>
-		    </li>
-		    <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		          Agronegócios
-		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href={{url_for('bagro_terminal')}}>Terminal</a>
-		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href={{url_for('bagro_web')}}>Web</a>
-		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href={{url_for('bagro_wallboard')}}>Wallboard</a>
-		          <!--div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Something else here</a-->
-		        </div>
-		    </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href={{url_for('bpol')}}>Político</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href={{url_for('tradingnews')}}>Trading News</a>
-	      </li>
-	      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		          Dados
-		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">Data feed</a>
-		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Ferramentas RI</a>
-		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">FTP/XML</a>
-		          <!--div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="#">Something else here</a-->
-		        </div>
-		    </li>
-		  <li class="nav-item">
-	        <a class="nav-link" href="{{url_for('cotacao')}}">Cotação</a>
-	      </li>
-	      
-	    </ul>
+		    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Colorlib">
+    <meta name="description" content="#">
+    <meta name="keywords" content="#">
 
-	    <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-	    </form>
-	</nav>{% endblock %}
+    	<title>{% block title %}{% endblock %} - PPP Digital</title>
+		<!--meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"-->
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+
+	{%block css %}{%endblock%}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    <!-- Simple line Icon -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/simple-line-icons.css')}}">
+    <!-- Themify Icon -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/themify-icons.css')}}">
+    <!-- Hover Effects -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/set1.css')}}">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+	</head>
+	<body id="body">
+		{%block nav %}
+		 <div class="nav-menu">
+        <div class="bg transition">
+            <div class="container-fluid fixed">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand" href="{{url_for('home')}}">PPP Digital</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-menu"></span>
+              </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Financeiro
+                     <span class="icon-arrow-down"></span>
+                   </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="{{url_for('bpro_terminal')}}">Terminais</a>
+                                            <a class="dropdown-item" href="#">Web</a>
+                                            <a class="dropdown-item" href="#">Wallboard</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Agronegócios
+                    <span class="icon-arrow-down"></span>
+                  </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href={{url_for('bagro_terminal')}}>Terminais</a>
+                                            <a class="dropdown-item" href="#">Web</a>
+                                            <a class="dropdown-item" href="#">Wallboard</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Político</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Trading News</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Data Feed</a>
+                                    </li>
+                                    <li><a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Área Restrita</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+		{% endblock %}
 		{%block content%}{% endblock %}
-		<div>
-			<footer class="py-2 bg-dark">
-				<div class="container">
-					<p class="m-0 text-center text-white">Copyright &copy; PPP Digital 2018</p>
-				</div>
-			</footer>
-		</div>
+		<footer class="main-block dark-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p>Copyright &copy; 2018 Listing. All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <ul>
+                            <li><a href="#"><span class="ti-facebook"></span></a></li>
+                            <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
+                            <li><a href="#"><span class="ti-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
         <script type=text/javascript>
             $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
@@ -93,6 +111,28 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 
-		{%block scripts%}{%endblock%}
+		<!-- jQuery, Bootstrap JS. -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>  -->
+		<script src="../static/js/popper.min.js"></script>
+{%block scripts%}
+		<script>
+			$(window).scroll(function() {
+				// 100 = The point you would like to fade the nav in.
+
+				if ($(window).scrollTop() > 100) {
+
+					$('.fixed').addClass('is-sticky');
+
+				} else {
+
+					$('.fixed').removeClass('is-sticky');
+
+				};
+			});
+		</script>
+{%endblock%}
 	</body>
 <html>
