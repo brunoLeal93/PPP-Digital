@@ -2,6 +2,13 @@
 
 {% block title%} Cotação{%endblock%}
 
+{%block css %}
+<style>
+    body{ padding-top: 100px}
+
+</style>
+{%endblock%}
+
 {% block content %}
 
 <div class="container">
@@ -69,7 +76,10 @@
 {% endblock %}
 
 {% block scripts %}
-	<script type="text/javascript" src="../static/js/cotacao_v2.js"></script>
-
+<script type="text/javascript" src="../static/js/cotacao_v2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fixed').addClass('is-sticky');
+    });
 
 {% endblock %}
