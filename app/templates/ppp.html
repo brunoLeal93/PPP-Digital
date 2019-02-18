@@ -18,7 +18,6 @@
                     <div class="form-group">
                         <label for="selectPlataforma">Selecione a Plataforma</label>
                         <select class="form-control" id="selectPlataforma">
-                            <option></option>
                             <option>Broadcast+</option>
                             <option>Broadcast Agro</option>
                             <option>Broadcast Web</option>
@@ -489,7 +488,7 @@
             <!--Bloco que deve se repetir com os demais cadernos-->
             <div class="row">
                 <div class="col-2">
-                    &nbsp;&nbsp;<a href="#">Agro</a>
+                    &nbsp;&nbsp;<a href="#">Broadcast Agro</a>
                 </div>
                 <div class="col text-center" id="add-agro-trade"><img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check"></div>
                 <div class="col text-center" id="add-agro-trade-aai"><img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check"></div>
@@ -503,16 +502,55 @@
             <!--Final do Bloco que deve se repetir com os demais cadernos-->
             <div class="row">
                 <div class="col-2">
-                    &nbsp;&nbsp;<a href="#">Político</a>
+                    &nbsp;&nbsp;<a href="#">Broadcast Político</a>
                 </div>
-                <div class="col text-center" id="f-linkexcel-trade"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-trade-aai"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-conjuntura"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-mercados-bs"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-mercados"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-news-bs"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-news"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-analises"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-pol-trade"><img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-pol-trade-aai"><img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-pol-conjuntura"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-pol-mercados-bs"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-pol-mercados"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-pol-news-bs"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-pol-news"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-pol-analises"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    &nbsp;&nbsp;<a href="#">Análise Fundamentalista</a>
+                </div>
+                <div class="col text-center" id="add-afund-trade"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-afund-trade-aai"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-afund-conjuntura"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-afund-mercados-bs"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-afund-mercados"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-afund-news-bs"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-afund-news"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-afund-analises"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    &nbsp;&nbsp;<a href="#">Deal Data</a>
+                </div>
+                <div class="col text-center" id="add-dd-trade"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-dd-trade-aai"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-dd-conjuntura"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-dd-mercados-bs"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-dd-mercados"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-dd-news-bs"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-dd-news"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-dd-analises"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    &nbsp;&nbsp;<a href="#">Fundos de Investimento</a>
+                </div>
+                <div class="col text-center" id="add-finvest-trade"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-finvest-trade-aai"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-finvest-conjuntura"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-finvest-mercados-bs"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-finvest-mercados"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-finvest-news-bs"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-finvest-news"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
+                <div class="col text-center" id="add-finvest-analises"><img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"></div>
             </div>
         </div>
 
