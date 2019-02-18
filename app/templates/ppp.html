@@ -12,32 +12,47 @@
 {% block content %}
     <div class="content-fluid">
         <form>
+                    
+            <div class="form-group">
+                <label for="selectPlataforma">Selecione a Plataforma</label>
+                <select class="form-control" id="selectPlataforma">
+                    <option>Broadcast+</option>
+                    <option>Broadcast Agro</option>
+                    <option>Broadcast Web</option>
+                </select>
+            </div>
+
             <div class="form-check form-check-inline">
-                <tr>
-                    <td><input type="checkbox" class="form-check-input" id="trade" checked></td>
-                    <td><label class="form-check-label" for="trade" >Trade</label></td>
-
-                    <td><input type="checkbox" class="form-check-input" id="trade-aai" checked></td>
-                    <td><label class="form-check-label" for="trade-aai">Trade AAI </label>&nbsp;&nbsp;</td>
-
-                    <td><input type="checkbox" class="form-check-input" id="conjuntura" checked></td>
-                    <td><label class="form-check-label" for="conjuntura">Conjuntura</label>&nbsp;&nbsp;</td>
-
-                    <td><input type="checkbox" class="form-check-input" id="mercados-bs" checked></td>
-                    <td><label class="form-check-label" for="mercados-bs">Mercados Buy-Side</label>&nbsp;&nbsp;</td>
-
-                    <td><input type="checkbox" class="form-check-input" id="mercados" checked></td>
-                    <td><label class="form-check-label" for="mercados">Mercados</label>&nbsp;&nbsp;</td>
-
-                    <td><input type="checkbox" class="form-check-input" id="news-bs" checked></td>
-                    <td><label class="form-check-label" for="news-bs">News Buy-Side</label>&nbsp;&nbsp;</td>
-
-                    <td><input type="checkbox" class="form-check-input" id="news" checked></td>
-                    <td><label class="form-check-label" for="news">News</label>&nbsp;&nbsp;</td>
-
-                    <td><input type="checkbox" class="form-check-input" id="analises" checked></td>
-                    <td><label class="form-check-label" for="analises">Análises</label></td>
-                </tr>
+                    <input type="checkbox" class="form-check-input" id="trade" checked>
+                    <label class="form-check-label" for="trade" >Trade</label>
+            </div>
+            <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="trade-aai" checked>
+                    <label class="form-check-label" for="trade-aai">Trade AAI </label>&nbsp;&nbsp;
+            </div>
+            <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="conjuntura" checked>
+                    <label class="form-check-label" for="conjuntura">Conjuntura</label>&nbsp;&nbsp;
+            </div>
+            <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="mercados-bs" checked>
+                    <label class="form-check-label" for="mercados-bs">Mercados Buy-Side</label>&nbsp;&nbsp;
+            </div>
+            <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="mercados" checked>
+                    <label class="form-check-label" for="mercados">Mercados</label>&nbsp;&nbsp;
+            </div>
+            <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="news-bs" checked>
+                    <label class="form-check-label" for="news-bs">News Buy-Side</label>&nbsp;&nbsp;
+            </div>
+            <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="news" checked>
+                    <label class="form-check-label" for="news">News</label>&nbsp;&nbsp;
+            </div>
+            <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="analises" checked>
+                    <label class="form-check-label" for="analises">Análises</label>
             </div>
         </form>
         </br>    
@@ -302,8 +317,7 @@
                         </div>
                         </br>
                     </div>
-                    <!--Final do SubBloco Ações-->
-                    
+                    <!--Final do SubBloco Ações-->                    
                     <!--SubBloco Derivativos-->
                     <div class="row">
                         <div class="col-2">

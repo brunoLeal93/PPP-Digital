@@ -2,6 +2,13 @@
 
 {% block title%} BPRO: Terminal{%endblock%}
 
+{%block css %}
+<style>
+    body{ padding-top: 100px}
+
+</style>
+{%endblock%}
+
 {% block content %}
     <div>
     <div class="container-fluid">
@@ -213,9 +220,12 @@
       <!--Fim Pacotes-->
     </div>
     </div>
+{% endblock %}
 
-
-
-
-
+{%block scripts%}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.fixed').addClass('is-sticky');
+    });
+</script>
 {% endblock %}
