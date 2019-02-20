@@ -3,6 +3,8 @@
 {% block title%} Conteúdo vs Pacotes {%endblock%}
 
 {%block css %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 <link rel="stylesheet" href="{{url_for('static', filename='css/ppp.css')}}">
 {%endblock%}
 
@@ -75,32 +77,16 @@
         
         <div class="row destacar">
             <div class="col-2">
-                <p><a class="grupo" href="#Noticias-collapse" data-toggle="collapse" aria-controls="Noticias-collapse">Notícias</a></p>
+                <a class="text-decoration-non" href="#Noticias-collapse" data-toggle="collapse">Notícias</a>
             </div>
-            <div class="col text-center" id="n-trade">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="n-trade-aai">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="n-mercados-bs">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="n-conjuntura">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="n-mercados">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="n-news-bs">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="n-news">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="n-analises">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
+            <div class="col text-center" id="n-trade"><i class="fas fa-check"></i></div>
+            <div class="col text-center" id="n-trade-aai"><i class="fas fa-check"></i></div>
+            <div class="col text-center" id="n-mercados-bs"><i class="fas fa-check"></i></div>
+            <div class="col text-center" id="n-conjuntura"><i class="fas fa-check"></i></div>
+            <div class="col text-center" id="n-mercados"><i class="fas fa-check"></i></div>
+            <div class="col text-center" id="n-news-bs"><i class="fas fa-check"></i></div>
+            <div class="col text-center" id="n-news"><i class="fas fa-check"></i></div>
+            <div class="col text-center" id="n-analises"><i class="fas fa-check"></i></div>
         </div>
         <div class="collapse" id="Noticias-collapse">
             <!--Bloco que deve se repetir com os demais cadernos-->
@@ -531,7 +517,7 @@
                     <div class="col-2">
                         <a class="sub-item" href="#">Agência Bovespa</a>
                     </div>
-                    <div class="col text-center" id="n-ctbd-agbov-release-trade">
+                    <div class="col text-center" id="n-ctbd-agbov-trade">
                         <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
                     </div>
                     <div class="col text-center" id="n-ctbd-agbov-trade-aai">

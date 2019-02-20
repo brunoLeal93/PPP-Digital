@@ -35,6 +35,11 @@ a.change-css{
 	color:#ff0000 !important;
 }
 
+.col            {text-align: center;}
+.row            {border-bottom: 1px solid #dedede}
+i.fa-times      {color: red;}
+i.fa-check      {color: green;}
+
  /*.row {
           border: 1px solid red;
         } */
