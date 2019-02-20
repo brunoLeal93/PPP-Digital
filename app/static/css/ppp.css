@@ -14,7 +14,7 @@ body{
 .subgrupo{
 	font-size: 16px;
 }
-.col-2 a, a:active, a:hover{
+a{
 	color:#ff0000 !important;
 }
 
