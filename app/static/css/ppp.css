@@ -19,6 +19,9 @@ a.item{
 .row{
 	margin-left:10px;
 }
+.collapse{
+	margin-left: 10px;
+}
 a.sub-item{
 	margin-left:15px;
 	font-size: 15px;	
