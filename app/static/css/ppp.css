@@ -7,7 +7,16 @@ body{
 	background:#777c8469
 }
 
+.grupo{
+	font-size: 17px;
+}
 
+.subgrupo{
+	font-size: 16px;
+}
+#col-2 > a{
+	color:red;
+}
 
  /*.row {
           border: 1px solid red;
