@@ -14,8 +14,8 @@ body{
 .subgrupo{
 	font-size: 16px;
 }
-#col-2 > a{
-	color:red;
+.col-2 a{
+	color:#ff0000;
 }
 
  /*.row {
