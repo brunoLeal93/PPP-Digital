@@ -1,8 +1,9 @@
 $(document).ready(function() {
         $('.fixed').addClass('is-sticky');
     });
-
-
+    
+    
+    
 
     $('#trade').click(function() {
         $("#trade-lb").toggle(this.checked);
