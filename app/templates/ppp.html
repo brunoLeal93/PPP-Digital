@@ -9,11 +9,13 @@
 {%endblock%}
 
 {% block content %}
-    <div class="content-fluid">
-        <h1>Macro de Conteúdos vs Pacotes</h1>
-        <form>
+<div class="menu">
 
-            <div class="row">
+        <div class="container">
+            <h1>Macro de Conteúdos vs Pacotes</h1>
+            <form>
+
+            <div class="row align-items-center">
                 <div class="col-3">        
                     <div class="form-group">
                         <label for="selectPlataforma">Selecione a Plataforma</label>
@@ -24,1536 +26,1062 @@
                         </select>
                     </div>
                 </div>
+                <div class="col-3">
+                    <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="checkAll" checked>
+                            <label class="form-check-label" for="checkAll" >Exibir Todos</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="nocheckAll">
+                            <label class="form-check-label" for="nocheckAll">Ocultar Todos</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="content">
-                <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="trade" checked>
-                        <label class="form-check-label" for="trade" >Trade</label>
-                </div>
-                <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="trade-aai" checked>
-                        <label class="form-check-label" for="trade-aai">Trade AAI </label>
-                </div>
-                <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="conjuntura" checked>
-                        <label class="form-check-label" for="conjuntura">Conjuntura</label>
-                </div>
-                <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="mercados-bs" checked>
-                        <label class="form-check-label" for="mercados-bs">Mercados Buy-Side</label>
-                </div>
-                <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="mercados" checked>
-                        <label class="form-check-label" for="mercados">Mercados</label>
-                </div>
-                <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="news-bs" checked>
-                        <label class="form-check-label" for="news-bs">News Buy-Side</label>
-                </div>
-                <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="news" checked>
-                        <label class="form-check-label" for="news">News</label>
-                </div>
-                <div class="form-check form-check-inline">
+            <div class="container-fluid">
+                
+                    <div class="form-check form-check-inline">
+                            <h5>Pacotes:</h5>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="trade" checked>
+                            <label class="form-check-label" for="trade" >Trade</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="trade-aai" checked>
+                            <label class="form-check-label" for="trade-aai">Trade AAI </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="conjuntura" checked>
+                            <label class="form-check-label" for="conjuntura">Conjuntura</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="mercados-bs" checked>
+                            <label class="form-check-label" for="mercados-bs">Mercados Buy-Side</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="mercados" checked>
+                            <label class="form-check-label" for="mercados">Mercados</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="news-bs" checked>
+                            <label class="form-check-label" for="news-bs">News Buy-Side</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="news" checked>
+                            <label class="form-check-label" for="news">News</label>
+                    </div>
+                    <div class="form-check form-check-inline">
                         <input type="checkbox" class="form-check-input" id="analises" checked>
                         <label class="form-check-label" for="analises">Análises</label>
-                </div>
+                    </div>
+                
             </div>
         </form>
-        </br>    
-
-        <div class="row">
-            <div class="col-2 grupo">Conteúdos</div>
-            <div class="col text-center" id="trade-lb">Trade</div>
-            <div class="col text-center" id="trade-aai-lb">Trade AAI</div>
-            <div class="col text-center" id="conjuntura-lb">Conjuntura</div>
-            <div class="col text-center" id="mercados-bs-lb">Mercados</br>Buy-Side</div>
-            <div class="col text-center" id="mercados-lb">Mercados</div>
-            <div class="col text-center" id="news-bs-lb">News Buy-Side</div>
-            <div class="col text-center" id="news-lb">News</div>
-            <div class="col text-center" id="analises-lb">Análises</div>
+            </br> 
         </div>
-        
-        <div class="row destacar">
-            <div class="col-2">
-                <a class="text-decoration-non" href="#Noticias-collapse" data-toggle="collapse">Notícias</a>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-3">Conteúdos</div>
+                <div class="col" id="trade-lb">Trade</div>
+                <div class="col" id="trade-aai-lb">Trade AAI</div>
+                <div class="col" id="conjuntura-lb">Conjuntura</div>
+                <div class="col" id="mercados-bs-lb">Mercados</br>Buy-Side</div>
+                <div class="col" id="mercados-lb">Mercados</div>
+                <div class="col" id="news-bs-lb">News Buy-Side</div>
+                <div class="col" id="news-lb">News</div>
+                <div class="col" id="analises-lb">Análises</div>
             </div>
-            <div class="col text-center" id="n-trade"><i class="fas fa-check"></i></div>
-            <div class="col text-center" id="n-trade-aai"><i class="fas fa-check"></i></div>
-            <div class="col text-center" id="n-mercados-bs"><i class="fas fa-check"></i></div>
-            <div class="col text-center" id="n-conjuntura"><i class="fas fa-check"></i></div>
-            <div class="col text-center" id="n-mercados"><i class="fas fa-check"></i></div>
-            <div class="col text-center" id="n-news-bs"><i class="fas fa-check"></i></div>
-            <div class="col text-center" id="n-news"><i class="fas fa-check"></i></div>
-            <div class="col text-center" id="n-analises"><i class="fas fa-check"></i></div>
+        </div>
+        <!-- notícias-->
+        <div class="container-fluid">
+            <div class="row align-items-center destacar">
+                <div class="col-3"><i id="iconN" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconNoticia()" class="text-decoration-none" data-toggle="collapse" href="#Noticias-collapse">Notícias</a></div>
+                <div class="col" id="n-trade"><i class="fas fa-check"></i></div>
+                <div class="col" id="n-trade-aai"><i class="fas fa-check"></i></div>
+                <div class="col" id="n-conjuntura"><i class="fas fa-check"></i></div>
+                <div class="col" id="n-mercados-bs" ><i class="fas fa-check"></i></div>
+                <div class="col" id="n-mercados"><i class="fas fa-check"></i></div>
+                <div class="col" id="n-news-bs"><i class="fas fa-check"></i></div>
+                <div class="col" id="n-news"><i class="fas fa-check"></i></div>
+                <div class="col" id="n-analises"><i class="fas fa-check"></i></div>
+            </div>
         </div>
         <div class="collapse" id="Noticias-collapse">
-            <!--Bloco que deve se repetir com os demais cadernos-->
-            <!--AE NEWS + TOP NEWS-->
-            <div class="row destacar">
-                <div class="col-2">
-                    <a  class="item" href="#">AE News + Top News</a>
-                </div>
-                <div class="col text-center" id="n-aenews-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-aenews-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-aenews-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-aenews-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-aenews-mercados">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-aenews-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-aenews-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-aenews-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Final do Bloco que deve se repetir com os demais cadernos-->
-           <!--Empresas e Setores-->
-            <div class="row destacar">
-                <div class="col-2">
-                    <a class="item" href="#">Empresas e Setores</a>
-                </div>
-                <div class="col text-center" id="n-empset-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-empset-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-empset-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-empset-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-empset-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-empset-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-empset-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-empset-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Conjuntura e Finanças-->
-            <div class="row destacar">
-                <div class="col-2">
-                    <a class="item" href="#">Conjuntura e Finanças</a>
-                </div>
-                <div class="col text-center" id="n-conjfin-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-conjfin-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-conjfin-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-conjfin-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-conjfin-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-conjfin-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-conjfin-news">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-conjfin-analises">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-            </div>
-            <!--Conjuntura e Negócios-->
-            <div class="row destacar">
-                <div class="col-2">
-                    <a class="item" href="#">Conjuntura e Negócios</a>
-                </div>
-                <div class="col text-center" id="n-conjneg-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-conjneg-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-conjneg-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-conjneg-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-conjneg-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-conjneg-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-conjneg-news">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-conjneg-analises">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-            </div>
-            <!--Newspaper (caderno)-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#">Newspaper (caderno)</a>
-                </div>
-                <div class="col text-center" id="n-cadnewspaper-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-cadnewspaper-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-cadnewspaper-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-cadnewspaper-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-cadnewspaper-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-cadnewspaper-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-cadnewspaper-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-cadnewspaper-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Projeções Broadcast-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#">Projeções Broadcast</a>
-                </div>
-                <div class="col text-center" id="n-projecoes-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-projecoes-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-projecoes-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-projecoes-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-projecoes-mercados">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-projecoes-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-projecoes-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-projecoes-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Colunistas-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a  class="item" href="#">Colunistas (Broadcast e Estadão)</a>
-                </div>
-                <div class="col text-center" id="n-colunistas-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-colunistas-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-colunistas-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-colunistas-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-colunistas-mercados">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-colunistas-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-colunistas-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-colunistas-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Artigos-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#">Artigos</a>
-                </div>
-                <div class="col text-center" id="n-artigos-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-artigos-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-artigos-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-artigos-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-artigos-mercados">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-artigos-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-artigos-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-artigos-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Broadcast TV-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#">Broadcast TV</a>
-                </div>
-                <div class="col text-center" id="n-bctv-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-bctv-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-bctv-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-bctv-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-bctv-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-bctv-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-bctv-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-bctv-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Economia-->
-            <div class="row destacar">
-                <div class="col-2">
-                    <a  class="item" href="#">Economia</a>
-                </div>
-                <div class="col text-center" id="n-economia-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-economia-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-economia-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-economia-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-economia-mercados">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-economia-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-economia-news">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-economia-analises">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-            </div>
-            <!--Política-->
-            <div class="row destacar">  
-                <div class="col-2">
-                    <a class="item" href="#">Política</a>
-                </div>
-                <div class="col text-center" id="n-politica-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-politica-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-politica-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-politica-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-politica-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-politica-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-politica-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-politica-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Esportes-->
-            <div class="row destacar">  
-                <div class="col-2">
-                    <a class="item" href="#">Esportes</a>
-                </div>
-                <div class="col text-center" id="n-esportes-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-esportes-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="n-esportes-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-esportes-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-esportes-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-esportes-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-esportes-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-esportes-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Release-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#">Release</a>
-                </div>
-                <div class="col text-center" id="n-release-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-release-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-release-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-release-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-release-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-release-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-release-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-release-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--SubBloco Noticias Contribuidores-->
-            <div class="row destacar">
-                <div class="col-2">
-                <a class="item" href="#Noticias-ctbd-collapse" data-toggle="collapse" aria-controls="Noticias-ctbd-collapse">Contribuidores</a>
-                </div>
-                <div class="col text-center" id="n-ctbd-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-ctbd-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-ctbd-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-ctbd-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-ctbd-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-ctbd-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-ctbd-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="n-ctbd-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <div class="collapse" id="Noticias-ctbd-collapse">
-                <!--Agência Bovespa-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">Agência Bovespa</a>
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agbov-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agbov-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agbov-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agbov-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agbov-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agbov-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agbov-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agbov-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                </div>
-                <!--Agência CEBDS-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">Agência CEBDS</a>
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcebds-release-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcebds-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcebds-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcebds-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcebds-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcebds-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcebds-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcebds-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                </div>
-                <!--Agência CNA/SENAR-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">Agência CNA/SENAR</a>
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcnasenar-release-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcnasenar-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcnasenar-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcnasenar-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcnasenar-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcnasenar-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcnasenar-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agcnasenar-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                </div>
-                <!--Agência STJ-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">Agência STJ</a>
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agstj-release-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agstj-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agstj-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agstj-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agstj-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agstj-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agstj-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-agstj-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                </div>
-                <!--CEAGESP-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">CEAGESP</a>
-                    </div>
-                    <div class="col text-center" id="n-ctbd-ceagesp-release-trade">
-                        <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-ceagesp-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-ceagesp-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-ceagesp-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-ceagesp-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-ceagesp-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-ceagesp-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-ceagesp-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                </div>
-                <!--Relatórios Bradesco-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">Relatórios Bradesco</a>
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relbra-release-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relbra-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relbra-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relbra-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relbra-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relbra-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relbra-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relbra-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                </div>
-                <!--Relatórios Research-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">Relatórios Research</a>
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relresearch-release-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relresearch-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relresearch-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relresearch-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relresearch-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relresearch-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relresearch-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="n-ctbd-relresearch-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="container-fluid">
+                <!--AE NEWS + TOP NEWS-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5">AE News + Top News</div>
+                    <div class="col" id="n-aenews-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-aenews-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-aenews-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-aenews-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-aenews-mercados"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-aenews-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-aenews-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-aenews-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Empresas e Setores-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5">Empresas e Setores</div>
+                    <div class="col" id="n-empset-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-empset-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-empset-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-empset-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-empset-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-empset-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-empset-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-empset-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Conjuntura e Finanças-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5">Conjuntura e Finanças</div>
+                    <div class="col" id="n-conjfin-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjfin-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjfin-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjfin-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjfin-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjfin-news-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjfin-news"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjfin-analises"><i class="fas fa-times"></i></div>
+                </div>
+                <!--Conjuntura e Negócios-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5">Conjuntura e Negócios</div>
+                    <div class="col" id="n-conjneg-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjneg-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjneg-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjneg-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjneg-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-conjneg-news-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjneg-news"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-conjneg-analises"><i class="fas fa-times"></i></div>
+                </div>
+                <!--Newspaper (caderno)-->
+                <div class="row align-items-center destacar">
 
-        <!--Bloco Cotação-->
-        <div class="row destacar">
-            <div class="col-2">
-                <p><a class="item" href="#Cotacao-collapse" data-toggle="collapse" aria-controls="Cotacao-collapse">Cotações</a></p>
-            </div>
-            <div class="col text-center" id="c-trade">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="c-trade-aai">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="c-mercados-bs">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="c-conjuntura">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="c-mercados">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="c-news-bs">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="c-news">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="c-analises">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
+                    <div class="col-3 px-lg-5 ">
+                        Newspaper
+                    </div>
+                    <div class="col" id="n-cadnewspaper-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-cadnewspaper-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Projeções Broadcast-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5">Projeções Broadcast</div>
+                    <div class="col" id="n-projecoes-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-projecoes-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-projecoes-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-projecoes-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-projecoes-mercados"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-projecoes-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-projecoes-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-projecoes-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Colunistas (Broadcast e Estadão)-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5">Colunistas (Broadcast e Estadão)</div>
+                    <div class="col" id="n-colunistas-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-colunistas-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-colunistas-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-colunistas-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-colunistas-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-colunistas-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-colunistas-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-colunistas-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Artigos-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5">Artigos</div>
+                    <div class="col" id="n-artigos-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-artigos-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-artigos-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-artigos-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-artigos-mercados"><i class="fas fa-times"></i></div>
+                    <div class="col" id="n-artigos-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-artigos-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-artigos-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Broadcast TV)-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5">Broadcast TV</div>
+                    <div class="col" id="n-bctv-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Release-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5">Release</div>
+                    <div class="col" id="n-release-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-release-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Broadcast TV)-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5">Broadcast TV</div>
+                    <div class="col" id="n-bctv-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-mercados"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="n-bctv-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5"><i id="iconNContri" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconNoticiaContri()"class="text-decoration-none" data-toggle="collapse" href="#Noticias-ctbd-collapse">Contribuidores</a></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                </div>
+                <!-- Contribuidores Noticias-->
+                <div class="collapse" id="Noticias-ctbd-collapse">
+                    <div class="container-fluid">
+                        <!--Agência Bovespa-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5">Agência Bovespa</div>
+                            <div class="col" id="n-ctbd-agbov-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov--trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agbov-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Agência CEBDS-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5">Agência CEBDS</div>
+                            <div class="col" id="n-ctbd-agcebds-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcebds-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Agência CNA/SENAR-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5">Agência CNA/SENAR</div>
+                            <div class="col" id="n-ctbd-agcnasenar-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agcnasenar-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Agência STJ-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5">Agência STJ</div>
+                            <div class="col" id="n-ctbd-agstj-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-agstj-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--NGO Corretora-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Relatórios com foco em Câmbio">NGO Corretora</div>
+                            <div class="col" id="n-ctbd-ngo-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ngo-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ngo-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ngo-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ngo-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ngo-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ngo-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ngo-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--CEAGESP
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5">CEAGESP</div>
+                            <div class="col" id="n-ctbd-ceagesp-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-conjuntura"><i class="fas fa-times"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-ceagesp-analises"><i class="fas fa-check"></i></div>
+                        </div> -->
+                        <!--Relatórios Macroeconômicos-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Contribuidores: Bradesco, Itau e SmartBrain">Relatórios Macroeconômicos</div>
+                            <div class="col" id="n-ctbd-relmacro-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relmacro-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relmacro-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relmacro-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relmacro-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relmacro-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relmacro-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relmacro-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Relatórios Research-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Contribuidores: Ativa Investimentos, Banco Votorantim, Eleven Financial, Elite Investimentos, H.Commcor, Mirae Asset, Modalmais, Necton Corretora, Planner Corretora, Rico Investimentos, Socopa, Terra Investimentos e Toro Investimentos">Relatórios de Research</div>
+                            <div class="col" id="n-ctbd-relresearch-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relresearch-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Relatórios Agrícolas-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Contribuidores: AgResource, Bradesco e Cepea">Relatórios Agrícolas</div>
+                            <div class="col" id="n-ctbd-relagricolas-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relagricolas-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relagricolas-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relagricolas-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relagricolas-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relagricolas-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relagricolas-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relagricolas-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Relatórios Criptomoedas-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Contribuidores: ABCripto, Coinext e Cointimes">Relatórios Criptomoedas</div>
+                            <div class="col" id="n-ctbd-relcriptomoedas-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relcriptomoedas-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relcriptomoedas-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relcriptomoedas-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relcriptomoedas-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relcriptomoedas-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relcriptomoedas-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="n-ctbd-relcriptomoedas-analises"><i class="fas fa-check"></i></div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
-        
+        <!--Cotações-->
+        <div class="container-fluid">
+            <div class="row align-items-center destacar">
+                <div class="col-3"><i id="iconCotacao" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCotacao()"class="text-decoration-none" data-toggle="collapse" title="teste" href="#Cotacao-collapse">Cotações</a></div>
+                <div class="col" id="c-trade"><i class="fas fa-check"></i></div>
+                <div class="col" id="c-trade-aai"><i class="fas fa-check"></i></div>
+                <div class="col" id="c-mercados-bs"><i class="fas fa-check"></i></div>
+                <div class="col" id="c-conjuntura"><i class="fas fa-check"></i></div>
+                <div class="col" id="c-mercados"><i class="fas fa-check"></i></div>
+                <div class="col" id="c-news-bs"><i class="fas fa-check"></i></div>
+                <div class="col" id="c-news"><i class="fas fa-check"></i></div>
+                <div class="col" id="c-analises"><i class="fas fa-check"></i></div>
+            </div>
+        </div>
         <div class="collapse" id="Cotacao-collapse">
-            
-            <div class="row">
-                <div class="col-12">
-                    <h5 style="font-size: 14px">¹ Cotação em Delay 15~20 min. Cotação em RT somente mediante contratação adicional</h5>
+            <div  class="container-fluid">
+                <!--AE TAxas Mini-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="Pacote que reúne alguns dos principais indicadores de inflação, taxa de juros, cambio e commodities">AE Taxas Mini</div>
+                    <div class="col" id="c-taxasmini-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasmini-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasmini-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasmini-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasmini-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasmini-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasmini-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasmini-analises"><i class="fas fa-check"></i></div>
                 </div>
-                    
-            </div>
-            <!--BM&F (com Agro, Fundos ETF e Imobiliários)-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    &nbsp;&nbsp;<a class="item" href="#">BM&F (com Agro, Fundos ETF e Imobiliários)</a>¹
+                 <!--AE TAxas Full-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="AE Taxas Mini + diversos indicadores financeiros, taxas do Banco Central e de outras instituições contabilizando mais de 2.400 ativos">AE Taxas Full</div>
+                    <div class="col" id="c-taxasfull-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-taxasfull-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasfull-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-taxasfull-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasfull-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasfull-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasfull-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-taxasfull-analises"><i class="fas fa-check"></i></div>
                 </div>
-                <div class="col text-center" id="c-bmf-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
+                <!--B3-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5"><i id="iconCB3" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCotacaoB3()"class="text-decoration-none" data-toggle="collapse" href="#Cotacao-b3-collapse">B3</a></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
                 </div>
-                <div class="col text-center" id="c-bmf-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bmf-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bmf-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bmf-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bmf-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bmf-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bmf-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Bovespa (com Índice, Opções, Fundos ETF e Imobiliários)-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    
-                    <a class="item" href="#">Bovespa (com Índice, Opções, Fundos ETF e Imobiliários)¹</a>
-                </div>
-                <div class="col text-center" id="c-bov-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bov-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bov-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bov-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bov-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bov-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bov-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-bov-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--CME Group-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <p><a class="item" href="#Cotacao-cmegroup-collapse" data-toggle="collapse" aria-controls="Cotacao-cmegroup-collapse">CME Group</a></p>
-                </div>
-                <div class="col text-center" id="c-cmegroup-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-cmegroup-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-cmegroup-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-cmegroup-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-cmegroup-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-cmegroup-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-cmegroup-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-cmegroup-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <div class="collapse" id="Cotacao-cmegroup-collapse">
-                <!--CBOT - Chicago Board of Trade-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">CBOT - Chicago Board of Trade¹</a>
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cbot-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cbot-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cbot-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cbot-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cbot-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cbot-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cbot-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cbot-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
+            <!--/div>
+            <div class="container-fluid"-->
+                <div class="collapse" id="Cotacao-b3-collapse">
+                    <div>
+                        <!--BM&F (com Agro, Fundos ETF e Imobiliários)-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="**DELAY** com Agro, Fundos ETF e Imobiliários">BM&F</div>
+                            <div class="col" id="c-b3-bmf-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bmf-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bmf-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bmf-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bmf-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bmf-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bmf-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bmf-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Bovespa (com Índice, Opções, Fundos ETF e Imobiliários)¹S-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="**DELAY** com com Índice, Opções, Fundos ETF e Imobiliários">Bovespa</div>
+                            <div class="col" id="c-b3-bov-trade"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bov-trade-aai"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bov-conjuntura"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bov-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bov-mercados"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bov-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bov-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-b3-bov-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        
                     </div>
                 </div>
-                <!--CME - Chicago Mercantile Exchange-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">CME - Chicago Mercantile Exchange¹</a>
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cme-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cme-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cme-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cme-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cme-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cme-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cme-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-cme-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
+                <!--CETIP-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="Informações de Cotações, Negociações e Leilãos">CETIP</div>
+                    <div class="col" id="c-cetip-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cetip-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cetip-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cetip-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cetip-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cetip-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cetip-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cetip-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--CBOT-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="**DELAY** Chicago Board of Trade (CBOT) é uma Bolsa da CME Group">CBOT</div>
+                    <div class="col" id="c-cbot-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cbot-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cbot-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cbot-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cbot-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cbot-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cbot-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cbot-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--CME-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="**DELAY** Chicago Mercantile Exchange (CME) é uma Bolsa da CME Group">CME</div>
+                    <div class="col" id="c-cme-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cme-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cme-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cme-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cme-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cme-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cme-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-cme-analises"><i class="fas fa-check"></i></div>
                 </div>
                 <!--Comex-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">Comex¹</a>
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-comex-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-comex-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-comex-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-comex-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-comex-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-comex-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-comex-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-comex-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="**DELAY** Comex é uma Bolsa da CME Group">Comex</div>
+                    <div class="col" id="c-comex-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-comex-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-comex-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-comex-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-comex-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-comex-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-comex-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-comex-analises"><i class="fas fa-check"></i></div>
                 </div>
-                <!--Nymex-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item"  href="#">Nymex¹</a>
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-nymex-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-nymex-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-nymex-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-nymex-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-nymex-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-nymex-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-nymex-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-cmegroup-nymex-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
+                <!--Forward Moedas-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="Taxas de câmbios para serem liquidadas em uma data no futuro">Forward Moedas</div>
+                    <div class="col" id="c-forward-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-forward-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-forward-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-forward-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-forward-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-forward-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-forward-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-forward-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Fundos Anbima-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="">Fundos Anbima</div>
+                    <div class="col" id="c-fundanbima-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-fundanbima-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-fundanbima-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-fundanbima-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-fundanbima-mercado"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-fundanbima-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-fundanbima-news"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-fundanbima-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Indicadores Cepea-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="Indicadores Agrícolas">Indicadores Cepea</div>
+                    <div class="col" id="c-indcepea-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcepea-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcepea-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcepea-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcepea-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcepea-news-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-indcepea-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcepea-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Índices CDS-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="Índices CDS (Credit Default Swap) realizado pela Markit">Índices CDS</div>
+                    <div class="col" id="c-indcds-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-indcds-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-indcds-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcds-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcds-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcds-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcds-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indcds-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Índices Mundiais-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="**DELAY** Pacote de índices composta por: Índices Asiáticos (ASX, Hangsen, Korea, Nikkei, Shangai, Thailand e TWI), Índice de Buenos Aires, ">Índices Mundiais</div>
+                    <div class="col" id="c-indmundi-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indmundi-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indmundi-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indmundi-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indmundi-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indmundi-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indmundi-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-indmundi-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--IPE-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="**DELAY** ICE Futures Europe - International Petroleum Exchange">IPE</div>
+                    <div class="col" id="c-ipe-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-ipe-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-ipe-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-ipe-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-ipe-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-ipe-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-ipe-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-ipe-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Latibex-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="**DELAY** Bolsa de Madri + Índice">Latibex</div>
+                    <div class="col" id="c-latibex-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-latibex-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-latibex-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-latibex-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-latibex-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-latibex-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-latibex-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-latibex-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Nasdaq-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="**DELAY** Bolsa Nasdaq + Índice">Nasdaq</div>
+                    <div class="col" id="c-nasdaq-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nasdaq-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nasdaq-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nasdaq-mercados-bs"><i class="fas fa-check"></i></div> 
+                    <div class="col" id="c-nasdaq-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nasdaq-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nasdaq-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nasdaq-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--NYBOT-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="**DELAY** ICE US - New York Board of Trade">NYBOT</div>
+                    <div class="col" id="c-nybot-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nybot-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nybot-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nybot-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nybot-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nybot-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nybot-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nybot-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--NYMEX-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="**DELAY** New York Mercantile Exchange (NYMEX) é uma Bolsa da CME Group">NYMEX</div>
+                    <div class="col" id="c-nymex-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nymex-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nymex-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nymex-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nymex-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nymex-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nymex-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nymex-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--NYSE-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="**DELAY** New York Stock Exchange (NYSE) com AMEX e GIFS">NYSE</div>
+                    <div class="col" id="c-nyse-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nyse-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nyse-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nyse-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nyse-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nyse-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nyse-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-nyse-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Spot Metais-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="Principais metais negociados no Mercado Balcão e preços LBMA">Spot Metais</div>
+                    <div class="col" id="c-metais-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-metais-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-metais-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-metais-mercados-bs"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-metais-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-metais-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-metais-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-metais-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Spot Moedas Mini-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="Contempla as principais paridades do mundo além de Líbor para dólar">Spot Moedas Mini</div>
+                    <div class="col" id="c-moedasmini-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasmini-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasmini-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasmini-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasmini-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasmini-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasmini-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasmini-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Spot Moedas Full-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="Spot Moedas Mini + demais paridades disponíveis contabilizando mais de 2.000 ativos">Spot Moedas Full</div>
+                    <div class="col" id="c-moedasfull-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-moedasfull-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-moedasfull-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-moedasfull-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasfull-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasfull-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasfull-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-moedasfull-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Títitulo Publico Anbima-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="">Títitulos Públicos Anbima</div>
+                    <div class="col" id="c-titpubanbima-trade"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-titpubanbima-trade-aai"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-titpubanbima-conjuntura"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-titpubanbima-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-titpubanbima-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-titpubanbima-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-titpubanbima-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-titpubanbima-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Treasuries Americanas-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5" title="">Treasuries Americanas</div>
+                    <div class="col" id="c-tresuaries-trade"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-tresuaries-trade-aai"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-tresuaries-conjuntura"><i class="fas fa-times"></i></div>
+                    <div class="col" id="c-tresuaries-mercados-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-tresuaries-mercado"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-tresuaries-news-bs"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-tresuaries-news"><i class="fas fa-check"></i></div>
+                    <div class="col" id="c-tresuaries-analises"><i class="fas fa-check"></i></div>
+                </div>
+                <!--Contribuidores Cotação-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5"><i id="iconCContri" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCotacaoContri()"class="text-decoration-none" data-toggle="collapse" href="#Cotacao-ctbd-collapse">Contribuidores</a></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-check"></i></div>
+                    <div class="col"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="collapse" id="Cotacao-ctbd-collapse">
+                    <div>
+                        <!--Câmbio-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="27 Contribuidores de Câmbios contribuindo com Spot, Casado e Turismo">Câmbio</div>
+                            <div class="col" id="c-ctbd-cambio-trade"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-cambio-trade-aai"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-cambio-conjuntura"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-cambio-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-cambio-mercado"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-cambio-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-cambio-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-cambio-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Criptomoedas-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="11 Contribuidores de Criptomoedas">Criptomoedas</div>
+                            <div class="col" id="c-ctbd-cripto-trade"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-cripto-trade-aai"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-cripto-conjuntura"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-cripto-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-cripto-mercado"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-cripto-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-cripto-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-cripto-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Renda Fixa-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="16 Contribuidores de Renda Fixa contribuindo com CDB, LCI, LCA, Debêntures e Tít. Públicos">Renda Fixa</div>
+                            <div class="col" id="c-ctbd-rfixa-trade"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-trade-aai"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-conjuntura"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-mercado"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-cambio-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Indicadores-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Indicadores de Agrícolas, Fundos e Inflação">Indicadores</div>
+                            <div class="col" id="c-ctbd-rfixa-trade"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-trade-aai"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-conjuntura"><i class="fas fa-times"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-mercados-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-mercado"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-news-bs"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-cambio-news"><i class="fas fa-check"></i></div>
+                            <div class="col" id="c-ctbd-rfixa-analises"><i class="fas fa-check"></i></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--ICE Group-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#Cotacao-icegroup-collapse" data-toggle="collapse" aria-controls="Cotacao-cmegroup-collapse">ICE Group</a>
-                </div>
-                <div class="col text-center" id="c-icegroup-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-icegroup-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-icegroup-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-icegroup-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-icegroup-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-icegroup-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-icegroup-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-icegroup-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row align-items-center destacar">
+                <div class="col-3"><i id="iconAddon" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconAddon()"class="text-decoration-none" data-toggle="collapse" title="teste" href="#Addon-collapse">Add-Ons</a></div>
+                <div class="col" id="ad-trade"><i class="fas fa-plus"></i></div>
+                <div class="col" id="ad-trade-aai"><i class="fas fa-plus"></i></div>
+                <div class="col" id="ad-mercados-bs"><i class="fas fa-plus"></i></div>
+                <div class="col" id="ad-conjuntura"><i class="fas fa-plus"></i></div>
+                <div class="col" id="ad-mercados"><i class="fas fa-plus"></i></div>
+                <div class="col" id="ad-news-bs"><i class="fas fa-plus"></i></div>
+                <div class="col" id="ad-news"><i class="fas fa-plus"></i></div>
+                <div class="col" id="ad-analises"><i class="fas fa-plus"></i></div>
             </div>
-            <div class="collapse" id="Cotacao-icegroup-collapse">
-                <!--IPE - International Petroleum Exchange-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                        <a class="sub-item" href="#">IPE - International Petroleum Exchange¹</a>
+        </div>
+        <div class="collapse" id="Addon-collapse">
+            <div class="container-fluid">
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5"><i id="iconModulos" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModulos()"class="text-decoration-none" data-toggle="collapse" title="" href="#Addon-mod-collapse">Módulos</a></div>
+                    <div class="col" id="ad-mod-trade"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-mod-trade-aai"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-mod-mercados-bs"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-mod-conjuntura"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-mod-mercados"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-mod-news-bs"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-mod-news"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-mod-analises"><i class="fas fa-plus"></i></div>
+                </div>
+                <div class="collapse" id="Addon-mod-collapse">
+                    <div>
+                        <!--ADD-on AGRO-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Cód.Serv: BA-19565 | Custo: R$ 284,17">Add-On Agro</div>
+                            <div class="col" id="ad-mod-agro-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-agro-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-agro-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-agro-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-agro-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-agro-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-agro-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-agro-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--ADD-on Político-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Cód.Serv: BC-19869 | Custo: R$ 360,00">Add-On Político</div>
+                            <div class="col" id="ad-mod-pol-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-analises"><i class="fas fa-check"></i></div>
+                        </div>
+                        <!--Análise Fundamentalista-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5"><i id="iconAnaFund" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconAnaFund()"class="text-decoration-none" data-toggle="collapse" title="Ferramenta de Análise Fundamentalista, com dados de empresas de capital aberto e fechado" href="#Addon-mod-af-collapse">Análise Fundamentalista</a></div>
+                            <div class="col" id="ad-mod-af-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-af-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-af-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-af-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-af-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-af-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-af-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-af-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="collapse" id="Addon-mod-af-collapse">
+                            <div>
+                                <!--Cap. Aberto e Cap. Fechado-->
+                                <div class="row align-items-center destacar">
+                                    <div class="col-3 px-lg-5" title="Cód.Serv: BC-19724 | Custo: R$ 450,00">Cap. Aberto e Cap. Fechado</div>
+                                    <div class="col" id="ad-mod-af-capabefech-trade"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-trade-aai"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-conjuntura"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-mercados-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-mercado"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-news-bs"><i class="fas fa-times"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-news"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-analises"><i class="fas fa-times"></i></div>
+                                </div>
+                                <!--Capital Aberto-->
+                                <div class="row align-items-center destacar">
+                                    <div class="col-3 px-lg-5" title="Cód.Serv: BC-14167 | Custo: R$ 136,40">Capital Aberto</div>
+                                    <div class="col" id="ad-mod-af-capabe-trade"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabe-trade-aai"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabe-conjuntura"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabe-mercados-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabe-mercado"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabe-news-bs"><i class="fas fa-times"></i></div>
+                                    <div class="col" id="ad-mod-af-capabe-news"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabe-analises"><i class="fas fa-times"></i></div>
+                                </div>
+                                <!--Capital Fechado-->
+                                <div class="row align-items-center destacar">
+                                    <div class="col-3 px-lg-5" title="Cód.Serv: BC-19726 | Custo: R$ 250,00">Capital Fechado</div>
+                                    <div class="col" id="ad-mod-af-capabefech-trade"><i class="fas fa-times"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-trade-aai"><i class="fas fa-times"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-conjuntura"><i class="fas fa-times"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-mercados-bs"><i class="fas fa-times"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-mercado"><i class="fas fa-times"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-news-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-news"><i class="fas fa-times"></i></div>
+                                    <div class="col" id="ad-mod-af-capabefech-analises"><i class="fas fa-plus"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Deal Data-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Cód.Serv: BC-15171 | Custo: R$ 425,00">Deal Data - Dados Transacionais</div>
+                            <div class="col" id="ad-mod-pol-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--Fundos de Investimentos-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Cód.Serv: BC-14166 | Custo: R$ 341,00">Fundos de Investimentos</div>
+                            <div class="col" id="ad-mod-pol-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-mod-pol-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5"><i id="iconModNoticias" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModNoticias()"class="text-decoration-none" data-toggle="collapse" title="" href="#Addon-n-collapse">Notícias</a></div>
+                    <div class="col" id="ad-n-trade"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-n-trade-aai"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-n-mercados-bs"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-n-conjuntura"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-n-mercados"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-n-news-bs"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-n-news"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-n-analises"><i class="fas fa-plus"></i></div>
+                </div>
+                <div class="collapse" id="Addon-n-collapse">
+                    <div>
+                        <!--Agro - Clima/Tempo-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Cód.Serv: BC-1947 | Custo: R$ 352,31">Agro - Clima/Tempo</div>
+                            <div class="col" id="ad-n-climatempo-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-climatempo-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-climatempo-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-climatempo-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-climatempo-mercados"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-climatempo-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-climatempo-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-climatempo-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--Análises Agrícolas-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Cód.Serv: BC-1150 | Custo: R$ 195,53">Análises Agrícolas CEPEA</div>
+                            <div class="col" id="ad-n-cepea-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-cepea-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-cepea-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-cepea-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-cepea-mercados"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-cepea-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-cepea-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-cepea-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--Arko America Latina-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Cód.Serv: BC-1669 | Custo: R$ 386,34">Arko America Latina</div>
+                            <div class="col" id="ad-n-arko-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-arko-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-arko-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-arko-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-arko-mercados"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-arko-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-arko-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-arko-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--Bom dia Mercado-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Cód.Serv: BC-1403 | Custo: R$ 83,43">Bom dia Mercado</div>
+                            <div class="col" id="ad-n-bdm-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-bdm-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-bdm-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-bdm-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-bdm-mercados"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-bdm-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-bdm-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-bdm-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--Feed Político-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Cód.Ser: BC-13783 | Custo: R$ 180,00">Feed Político</div>
+                            <div class="col" id="ad-n-pol-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-pol-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-pol-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-pol-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-pol-mercados"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-pol-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-pol-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-pol-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--Newsletter Milho & Soja-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Newsletter em formato PDF. Para vizualização dentro da Plataforma e por e-mail: Cód.Serv: BA-19081|Custo: R$ 79,57">Newsletter Milho & Soja</div>
+                            <div class="col" id="ad-n-nms-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-nms-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-nms-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-nms-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-nms-mercados"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-nms-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-nms-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-nms-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--Newsletter Pecuária-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Newsletter em formato PDF. Para vizualização dentro da Plataforma e por e-mail: Cód.Serv: BA-19080|Custo: R$ 64,00">Newsletter Pecuária</div>
+                            <div class="col" id="ad-n-npec-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-npec-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-npec-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-npec-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-npec-mercados"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-npec-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-npec-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-npec-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--Notiosos Dow Jones-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5"><i id="iconModNDJN" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModNDJN()"class="text-decoration-none" data-toggle="collapse" title="Conteúdo em Inglês" href="#Addon-n-djn-collapse">Notiosos Dow Jones</a></div>
+                            <div class="col" id="ad-n-djn-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-djn-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-djn-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-djn-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-djn-mercados"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-djn-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-djn-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-djn-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="collapse" id="Addon-n-djn-collapse">
+                            
+                            <div>
+                                <!--Commodities News-->
+                                <div class="row align-items-center">
+                                    <div class="col-3 px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Commodities News</div>
+                                    <div class="col" id="ad-n-djn-cn-trade"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-cn-trade-aai"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-cn-mercados-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-cn-conjuntura"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-cn-mercados"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-cn-news-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-cn-news"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-cn-analises"><i class="fas fa-plus"></i></div>
+                                </div>
+                                <!--Energy News-->
+                                <div class="row align-items-center">
+                                    <div class="col-3 px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Energy News</div>
+                                    <div class="col" id="ad-n-djn-enn-trade"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-enn-trade-aai"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-enn-mercados-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-enn-conjuntura"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-enn-mercados"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-enn-news-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-enn-news"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-enn-analises"><i class="fas fa-plus"></i></div>
+                                </div>
+                                <!--Equities News-->
+                                <div class="row align-items-center">
+                                    <div class="col-3 px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Equities News</div>
+                                    <div class="col" id="ad-n-djn-eqn-trade"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-eqn-trade-aai"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-eqn-mercados-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-eqn-conjuntura"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-eqn-mercados"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-eqn-news-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-eqn-news"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-eqn-analises"><i class="fas fa-plus"></i></div>
+                                </div>
+                                <!--Financial News-->
+                                <div class="row align-items-center">
+                                    <div class="col-3 px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Financial News</div>
+                                    <div class="col" id="ad-n-djn-fn-trade"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-fn-trade-aai"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-fn-mercados-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-fn-conjuntura"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-fn-mercados"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-fn-news-bs"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-fn-news"><i class="fas fa-plus"></i></div>
+                                    <div class="col" id="ad-n-djn-fn-analises"><i class="fas fa-plus"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Têndencias Online-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="Cód.Serv: BC-111|Custo: R$ 301,48">Têndencias Online</div>
+                            <div class="col" id="ad-n-tenon-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-tenon-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-tenon-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-tenon-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-tenon-mercados"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-tenon-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-tenon-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-n-tenon-analises"><i class="fas fa-plus"></i></div>
+                        </div>
                     </div>
-                    <div class="col text-center" id="c-icegroup-ipe-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-ipe-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-ipe-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-ipe-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-ipe-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-ipe-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-ipe-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-ipe-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
                 </div>
-                <!--NYBOT - New York Board of Trade-->
-                <div class="row destacar"> 
-                    <div class="col-2">
-                         <a class="sub-item" href="#">NYBOT - New York Board of Trade¹</a>
-                    </div>
-                    <div class="col text-center" id="c-icegroup-nybot-trade">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-nybot-trade-aai">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-nybot-conjuntura">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-nybot-mercados-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-nybot-mercados">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-nybot-news-bs">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-nybot-news">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                    <div class="col text-center" id="c-icegroup-nybot-analises">
-                        <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                    </div>
-                </div>
-            </div>
-            <!--NYSE - New York Stock Exchange-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#">NYSE - New York Stock Exchange¹</a>
-                </div>
-                <div class="col text-center" id="c-nyse-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-nyse-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-nyse-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-nyse-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-nyse-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-nyse-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-nyse-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-nyse-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Latibex - Bolsa de Madrid-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                   <a class="item" href="#">Latibex - Bolsa de Madrid¹</a>
-                </div>
-                <div class="col text-center" id="c-madri-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-madri-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-madri-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-madri-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-madri-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-madri-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-madri-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-madri-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Índices Mundiais-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#">Índices Mundiais¹</a>
-                </div>
-                <div class="col text-center" id="c-indmundiais-trade">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmundiais-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmundiais-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmundiais-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmundiais-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmundiais-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmundiais-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmundiais-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Credit Default Swap - Índices (Markit)-->
-            <div class="row" destacar> 
-                <div class="col-2">
-                    <a class="item" href="#">Credit Default Swap - Índices (Markit)</a>
-                </div>
-                <div class="col text-center" id="c-indmarkit-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-indmarkit-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-indmarkit-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmarkit-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmarkit-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmarkit-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmarkit-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-indmarkit-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Forward Moedas-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#">Forward Moedas</a>
-                </div>
-                <div class="col text-center" id="c-forward-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-forward-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-forward-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-forward-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-forward-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-forward-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-forward-news">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-forward-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Fundos Anbima-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                   <a class="item" href="#">Fundos Anbima</a>
-                </div>
-                <div class="col text-center" id="c-fundanbima-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-fundanbima-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-fundanbima-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-fundanbima-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-fundanbima-mercados">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-fundanbima-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-fundanbima-news">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-fundanbima-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Títulos Públicos Anbima-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#">Títulos Públicos Anbima</a>
-                </div>
-                <div class="col text-center" id="c-titpubanbima-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-titpubanbima-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-titpubanbima-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-titpubanbima-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-titpubanbima-mercados">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-titpubanbima-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-titpubanbima-news">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-titpubanbima-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Treasuries Americanas-->
-            <div class="row destacar"> 
-                <div class="col-2">
-                    <a class="item" href="#">Treasuries Americanas</a>
-                </div>
-                <div class="col text-center" id="c-treasuries-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-treasuries-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-treasuries-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-treasuries-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-treasuries-mercados">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-treasuries-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="c-treasuries-news">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="nocheck">
-                </div>
-                <div class="col text-center" id="c-treasuries-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
+            </div> 
             
         </div>
-        <!--Final do Bloco Cotação-->
-
-        <!--Inicio do Bloco Ferramentas-->
-        <div class="row">
-            <div class="col-2">
-                <p><a href="#Ferramentas-collapse" data-toggle="collapse" aria-controls="Ferramentas-collapse">Ferramentas</a></p>
-            </div>
-            <div class="col text-center" id="f-trade">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="f-trade-aai">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="f-mercados-bs">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="f-conjuntura">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="f-mercados">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="f-news-bs">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="f-news">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
-            <div class="col text-center" id="f-analises">
-                <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-            </div>
         </div>
-        <div class="collapse" id="Ferramentas-collapse">
-            <!--Bloco que deve se repetir com os demais cadernos-->
-            <div class="row">
-                <div class="col-2">
-                    &nbsp;&nbsp;<a href="#">Gráfico</a>
-                </div>
-                <div class="col text-center" id="f-chart-trade"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-chart-trade-aai"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-chart-conjuntura"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-chart-mercados-bs"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-chart-mercados"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-chart-news-bs"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-chart-news"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-chart-analises"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-            </div>
-            <!--Final do Bloco que deve se repetir com os demais cadernos-->
-            <div class="row">
-                <div class="col-2">
-                    &nbsp;&nbsp;<a href="#">Link com Excel</a>
-                </div>
-                <div class="col text-center" id="f-linkexcel-trade"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-trade-aai"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-conjuntura"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-mercados-bs"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-mercados"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-news-bs"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-news"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-                <div class="col text-center" id="f-linkexcel-analises"><img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check"></div>
-            </div>
-        </div>
-
-        <!--Inicio do Bloco ADDONs-->
-        <div class="row">
-            <div class="col-2">
-                <p> <a href="#Addons-collapse" data-toggle="collapse" aria-controls="Addons-collapse">Add-ons</a></p>
-            </div>
-             <div class="col text-center" id="add-trade">
-                <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="add">
-            </div>
-            <div class="col text-center" id="add-trade-aai">
-                <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="add">
-            </div>
-            <div class="col text-center" id="add-mercados-bs">
-                <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="add">
-            </div>
-            <div class="col text-center" id="add-conjuntura">
-                <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="add">
-            </div>
-            <div class="col text-center" id="ad-mercados">
-                <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="add">
-            </div>
-            <div class="col text-center" id="add-news-bs">
-                <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="add">
-            </div>
-            <div class="col text-center" id="add-news">
-                <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="add">
-            </div>
-            <div class="col text-center" id="add-analises">
-                <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="add">
-            </div>
-        </div>
-        <div class="collapse" id="Addons-collapse">
-            <!--Bloco que deve se repetir com os demais cadernos-->
-            <div class="row">
-                <div class="col-2">
-                    &nbsp;&nbsp;<a href="#">Broadcast Agro</a>
-                </div>
-                <div class="col text-center" id="add-agro-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-agro-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-agro-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-agro-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-agro-mercados">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-agro-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-agro-news">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-agro-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <!--Final do Bloco que deve se repetir com os demais cadernos-->
-            <div class="row">
-                <div class="col-2">
-                    &nbsp;&nbsp;<a href="#">Broadcast Político</a>
-                </div>
-                <div class="col text-center" id="add-pol-trade">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-pol-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/nocheck.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-pol-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-pol-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-pol-mercados">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-pol-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-pol-news">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check"
-                    ></div>
-                <div class="col text-center" id="add-pol-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    &nbsp;&nbsp;<a href="#">Análise Fundamentalista</a>
-                </div>
-                <div class="col text-center" id="add-afund-trade">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-afund-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-afund-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-afund-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-afund-mercados">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-afund-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-afund-news">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-afund-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    &nbsp;&nbsp;<a href="#">Deal Data</a>
-                </div>
-                <div class="col text-center" id="add-dd-trade">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-dd-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-dd-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-dd-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-dd-mercados">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-dd-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-dd-news">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-dd-analises">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    &nbsp;&nbsp;<a href="#">Fundos de Investimento</a>
-                </div>
-                <div class="col text-center" id="add-finvest-trade">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-finvest-trade-aai">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-finvest-conjuntura">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-finvest-mercados-bs">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-finvest-mercados">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-finvest-news-bs">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-finvest-news">
-                    <img src="{{url_for('static', filename='images/icons/add.png')}}" alt="check">
-                </div>
-                <div class="col text-center" id="add-finvest-analises">
-                    <img src="{{url_for('static', filename='images/icons/check.png')}}" alt="check">
-                </div>
-            </div>
-        </div>
-
     </div>
 {% endblock %}
 

@@ -1,5 +1,112 @@
+function iconNoticia(){
+    if($(document.getElementById("Noticias-collapse")).hasClass('show')){
+        $('#iconN').removeClass('fa-angle-down');
+
+        $('#iconN').addClass('fa-angle-right');
+
+        $('#icon').addClass('fa-angle-right');
+
+    } else{
+        $('#iconN').removeClass('fa-angle-right');
+        $('#iconN').addClass('fa-angle-down');
+    }
+}
+
+function iconNoticiaContri(){
+    if($(document.getElementById("Noticias-ctbd-collapse")).hasClass('show')){
+        $('#iconNContri').removeClass('fa-angle-down');
+        $('#iconNContri').addClass('fa-angle-right');
+    } else{
+        $('#iconNContri').removeClass('fa-angle-right');
+        $('#iconNContri').addClass('fa-angle-down');
+    }
+}
+
+function iconCotacao(){
+    if($(document.getElementById("Cotacao-collapse")).hasClass('show')){
+        $('#iconCotacao').removeClass('fa-angle-down');
+        $('#iconCotacao').addClass('fa-angle-right');
+    } else{
+        $('#iconCotacao').removeClass('fa-angle-right');
+        $('#iconCotacao').addClass('fa-angle-down');
+    }
+}
+
+function iconCotacaoB3(){
+    if($(document.getElementById("Cotacao-b3-collapse")).hasClass('show')){
+        $('#iconCB3').removeClass('fa-angle-down');
+        $('#iconCB3').addClass('fa-angle-right');
+    } else{
+        $('#iconCB3').removeClass('fa-angle-right');
+        $('#iconCB3').addClass('fa-angle-down');
+    }
+}
+
+function iconCotacaoContri(){
+    if($(document.getElementById("Cotacao-ctbd-collapse")).hasClass('show')){
+        $('#iconCContri').removeClass('fa-angle-down');
+        $('#iconCContri').addClass('fa-angle-right');
+    } else{
+        $('#iconCContri').removeClass('fa-angle-right');
+        $('#iconCContri').addClass('fa-angle-down');
+    }
+}
+
+function iconAddon(){
+    if($(document.getElementById("Addon-collapse")).hasClass('show')){
+        $('#iconAddon').removeClass('fa-angle-down');
+        $('#iconAddon').addClass('fa-angle-right');
+    } else{
+        $('#iconAddon').removeClass('fa-angle-right');
+        $('#iconAddon').addClass('fa-angle-down');
+    }
+}
+
+function iconModulos(){
+    if($(document.getElementById("Addon-mod-collapse")).hasClass('show')){
+        $('#iconModulos').removeClass('fa-angle-down');
+        $('#iconModulos').addClass('fa-angle-right');
+    } else{
+        $('#iconModulos').removeClass('fa-angle-right');
+        $('#iconModulos').addClass('fa-angle-down');
+    }
+}
+
+function iconAnaFund(){
+    if($(document.getElementById("Addon-mod-af-collapse")).hasClass('show')){
+        $('#iconAnaFund').removeClass('fa-angle-down');
+        $('#iconAnaFund').addClass('fa-angle-right');
+    } else{
+        $('#iconAnaFund').removeClass('fa-angle-right');
+        $('#iconAnaFund').addClass('fa-angle-down');
+    }
+}
+
+function iconModNoticias(){
+    if($(document.getElementById("Addon-n-collapse")).hasClass('show')){
+        $('#iconModNoticias').removeClass('fa-angle-down');
+        $('#iconModNoticias').addClass('fa-angle-right');
+    } else{
+        $('#iconModNoticias').removeClass('fa-angle-right');
+        $('#iconModNoticias').addClass('fa-angle-down');
+    }
+}
+
+function iconModNDJN(){
+    if($(document.getElementById("Addon-n-djn-collapse")).hasClass('show')){
+        $('#iconModNDJN').removeClass('fa-angle-down');
+        $('#iconModNDJN').addClass('fa-angle-right');
+    } else{
+        $('#iconModNDJN').removeClass('fa-angle-right');
+        $('#iconModNDJN').addClass('fa-angle-down');
+    }
+}
+
+
 $(document).ready(function() {
         $('.fixed').addClass('is-sticky');
+    
+
     });
     
     
@@ -118,18 +225,76 @@ $(document).ready(function() {
         $("#f-linkexcel-news").toggle(this.checked);
     });
     $('#analises').click(function() {
-        $("#analises-lb").toggle(this.checked);
-        $("#n-analises").toggle(this.checked);
-        $("#n-aenews-analises").toggle(this.checked);
-        $("#n-empset-analises").toggle(this.checked);
-        $("#c-analises").toggle(this.checked);
-        $("#c-a-analises").toggle(this.checked);
-        $("#c-a-bov-analises").toggle(this.checked);
-        $("#c-a-nyse-analises").toggle(this.checked);
-        $("#c-a-nyseamex-analises").toggle(this.checked);
-        $("#c-d-analises").toggle(this.checked);
-        $("#c-d-cbot-analises").toggle(this.checked);
-        $("#f-analises").toggle(this.checked);
-        $("#f-chart-analises").toggle(this.checked);
-        $("#f-linkexcel-analises").toggle(this.checked);
+         $("#ad-analises").toggle(this.checked);
+         $("#ad-mod-af-analises").toggle(this.checked);
+         $("#ad-mod-af-capabe-analises").toggle(this.checked);
+         $("#ad-mod-af-capabefech-analises").toggle(this.checked);
+         $("#ad-mod-agro-analises").toggle(this.checked);
+         $("#ad-mod-analises").toggle(this.checked);
+         $("#ad-mod-pol-analises").toggle(this.checked);
+         $("#ad-n-analises").toggle(this.checked);
+         $("#ad-n-arko-analises").toggle(this.checked);
+         $("#ad-n-bdm-analises").toggle(this.checked);
+         $("#ad-n-cepea-analises").toggle(this.checked);
+         $("#ad-n-climatempo-analises").toggle(this.checked);
+         $("#ad-n-djn-analises").toggle(this.checked);
+         $("#ad-n-djn-cn-analises").toggle(this.checked);
+         $("#ad-n-djn-enn-analises").toggle(this.checked);
+         $("#ad-n-djn-eqn-analises").toggle(this.checked);
+         $("#ad-n-djn-fn-analises").toggle(this.checked);
+         $("#ad-n-nms-analises").toggle(this.checked);
+         $("#ad-n-npec-analises").toggle(this.checked);
+         $("#ad-n-pol-analises").toggle(this.checked);
+         $("#ad-n-tenon-analises").toggle(this.checked);
+         $("#analises-lb").toggle(this.checked);
+         $("#c-analises").toggle(this.checked);
+         $("#c-b3-bmf-analises").toggle(this.checked);
+         $("#c-b3-bov-analises").toggle(this.checked);
+         $("#c-cbot-analises").toggle(this.checked);
+         $("#c-cetip-analises").toggle(this.checked);
+         $("#c-cme-analises").toggle(this.checked);
+         $("#c-comex-analises").toggle(this.checked);
+         $("#c-ctbd-cambio-analises").toggle(this.checked);
+         $("#c-ctbd-cripto-analises").toggle(this.checked);
+         $("#c-ctbd-rfixa-analises").toggle(this.checked);
+         $("#c-forward-analises").toggle(this.checked);
+         $("#c-fundanbima-analises").toggle(this.checked);
+         $("#c-indcds-analises").toggle(this.checked);
+         $("#c-indcepea-analises").toggle(this.checked);
+         $("#c-indmundi-analises").toggle(this.checked);
+         $("#c-ipe-analises").toggle(this.checked);
+         $("#c-latibex-analises").toggle(this.checked);
+         $("#c-metais-analises").toggle(this.checked);
+         $("#c-moedasfull-analises").toggle(this.checked);
+         $("#c-moedasmini-analises").toggle(this.checked);
+         $("#c-nasdaq-analises").toggle(this.checked);
+         $("#c-nybot-analises").toggle(this.checked);
+         $("#c-nymex-analises").toggle(this.checked);
+         $("#c-nyse-analises").toggle(this.checked);
+         $("#c-taxasfull-analises").toggle(this.checked);
+         $("#c-taxasmini-analises").toggle(this.checked);
+         $("#c-titpubanbima-analises").toggle(this.checked);
+         $("#c-tresuaries-analises").toggle(this.checked);
+         $("#n-aenews-analises").toggle(this.checked);
+         $("#n-analises").toggle(this.checked);
+         $("#n-artigos-analises").toggle(this.checked);
+         $("#n-bctv-analises").toggle(this.checked);
+         $("#n-cadnewspaper-analises").toggle(this.checked);
+         $("#n-colunistas-analises").toggle(this.checked);
+         $("#n-conjfin-analises").toggle(this.checked);
+         $("#n-conjneg-analises").toggle(this.checked);
+         $("#n-ctbd-agbov-analises").toggle(this.checked);
+         $("#n-ctbd-agcebds-analises").toggle(this.checked);
+         $("#n-ctbd-agcnasenar-analises").toggle(this.checked);
+         $("#n-ctbd-agstj-analises").toggle(this.checked);
+         $("#n-ctbd-ceagesp-analises").toggle(this.checked);
+         $("#n-ctbd-ngo-analises").toggle(this.checked);
+         $("#n-ctbd-relagricolas-analises").toggle(this.checked);
+         $("#n-ctbd-relcriptomoedas-analises").toggle(this.checked);
+         $("#n-ctbd-relmacro-analises").toggle(this.checked);
+         $("#n-ctbd-relresearch-analises").toggle(this.checked);
+         $("#n-empset-analises").toggle(this.checked);
+         $("#n-projecoes-analises").toggle(this.checked);
+         $("#n-release-analises").toggle(this.checked);
+
     });
