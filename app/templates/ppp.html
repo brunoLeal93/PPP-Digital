@@ -9,73 +9,73 @@
 {%endblock%}
 
 {% block content %}
-    <div class="menu">
-
+<div class="menu">
+        <!--Fomrs e checkbox da pagina-->
         <div class="container">
             <h1>Macro de Conteúdos vs Pacotes</h1>
             <form>
-
-            <div class="row align-items-center">
-                <div class="col-3">        
-                    <div class="form-group">
-                        <label for="selectPlataforma">Selecione a Plataforma</label>
-                        <select class="form-control" id="selectPlataforma">
-                            <option>Broadcast+</option>
-                            <option>Broadcast Agro</option>
-                            <option>Broadcast Web</option>
-                        </select>
+                <div class="row align-items-center">
+                    <div class="col-3">        
+                        <div class="form-group">
+                            <label for="selectPlataforma">Selecione a Plataforma</label>
+                            <select class="form-control" id="selectPlataforma">
+                                <option>Broadcast+</option>
+                                <option>Broadcast Agro</option>
+                                <option>Broadcast Web</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="checkAll" checked>
+                                <label class="form-check-label" for="checkAll" >Exibir Todos os Pacotes</label>
+                        </div>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="checkAll" checked>
-                            <label class="form-check-label" for="checkAll" >Exibir Todos os Pacotes</label>
-                    </div>
-                </div>
-            </div>
 
-            <div class="container-fluid">
-                
-                    <div class="form-check form-check-inline">
-                            <h5>Pacotes:</h5>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="trade" checked>
-                            <label class="form-check-label" for="trade" >Trade</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="trade-aai" checked>
-                            <label class="form-check-label" for="trade-aai">Trade AAI </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="conjuntura" checked>
-                            <label class="form-check-label" for="conjuntura">Conjuntura</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="mercados-bs" checked>
-                            <label class="form-check-label" for="mercados-bs">Mercados Buy-Side</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="mercados" checked>
-                            <label class="form-check-label" for="mercados">Mercados</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="news-bs" checked>
-                            <label class="form-check-label" for="news-bs">News Buy-Side</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="news" checked>
-                            <label class="form-check-label" for="news">News</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="analises" checked>
-                        <label class="form-check-label" for="analises">Análises</label>
-                    </div>
-                
-            </div>
-        </form>
+                <div class="container-fluid">
+                    
+                        <div class="form-check form-check-inline">
+                                <h5>Pacotes:</h5>
+                        </div>
+                        <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="trade" checked>
+                                <label class="form-check-label" for="trade" >Trade</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="trade-aai" checked>
+                                <label class="form-check-label" for="trade-aai">Trade AAI </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="conjuntura" checked>
+                                <label class="form-check-label" for="conjuntura">Conjuntura</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="mercados-bs" checked>
+                                <label class="form-check-label" for="mercados-bs">Mercados Buy-Side</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="mercados" checked>
+                                <label class="form-check-label" for="mercados">Mercados</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="news-bs" checked>
+                                <label class="form-check-label" for="news-bs">News Buy-Side</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="news" checked>
+                                <label class="form-check-label" for="news">News</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="analises" checked>
+                            <label class="form-check-label" for="analises">Análises</label>
+                        </div>  
+                </div>
+            </form>
             </br> 
         </div>
+
+        <!--Inicio do PPP #  Cabeçalho-->
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-3">Conteúdos</div>
@@ -768,6 +768,7 @@
                 </div>
             </div>
         </div>
+        <!--Addons-->
         <div class="container-fluid">
             <div class="row align-items-center destacar">
                 <div class="col-3"><i id="iconAddon" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconAddon()"class="text-decoration-none" data-toggle="collapse" title="teste" href="#Addon-collapse">Add-Ons</a></div>
@@ -1175,11 +1176,9 @@
                         </div>
                     </div>
                 </div>
-            </div> 
-            
-        </div>
-        </div>
-    </div>
+            </div>   
+        </div>   
+</div>
 {% endblock %}
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

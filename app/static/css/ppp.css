@@ -1,5 +1,6 @@
 body{ 
 	padding-top: 100px;
+	font-size: 1.2rem;
 }
 /*
 
@@ -39,7 +40,7 @@ a.change-css{
 .row            {border-bottom: 1px solid #dedede}
 i.fa-times      {color: red;}
 i.fa-check      {color: green;}
-i.fa-plus      {color: blue;}
+i.fa-plus      	{color: blue;}
 
 
  /*.row {
