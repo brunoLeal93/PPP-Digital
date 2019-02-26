@@ -9,7 +9,7 @@
 {%endblock%}
 
 {% block content %}
-<div class="menu">
+    <div class="menu">
 
         <div class="container">
             <h1>Macro de Conteúdos vs Pacotes</h1>
@@ -29,11 +29,7 @@
                 <div class="col-3">
                     <div class="form-check form-check-inline">
                             <input type="checkbox" class="form-check-input" id="checkAll" checked>
-                            <label class="form-check-label" for="checkAll" >Exibir Todos</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                            <input type="checkbox" class="form-check-input" id="nocheckAll">
-                            <label class="form-check-label" for="nocheckAll">Ocultar Todos</label>
+                            <label class="form-check-label" for="checkAll" >Exibir Todos os Pacotes</label>
                     </div>
                 </div>
             </div>
@@ -1075,6 +1071,107 @@
                             <div class="col" id="ad-n-tenon-news-bs"><i class="fas fa-plus"></i></div>
                             <div class="col" id="ad-n-tenon-news"><i class="fas fa-plus"></i></div>
                             <div class="col" id="ad-n-tenon-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Add Cotacao-->
+                <div class="row align-items-center destacar">
+                    <div class="col-3 px-lg-5"><i id="iconModCotacao" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModCotacao()"class="text-decoration-none" data-toggle="collapse" title="" href="#Addon-c-collapse">Cotações</a></div>
+                    <div class="col" id="ad-c-trade"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-c-trade-aai"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-c-mercados-bs"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-c-conjuntura"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-c-mercados"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-c-news-bs"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-c-news"><i class="fas fa-plus"></i></div>
+                    <div class="col" id="ad-c-analises"><i class="fas fa-plus"></i></div>
+                </div>
+                <div class="collapse" id="Addon-c-collapse">
+                    <div>
+                        <!--BM&F Level I RT-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="**REAL TIME** Cód.Serv: BC-160| Custo Fee: Ñ Profissional R$24,15 - Profissional R$120,71">BM&F Level I (Sem Livro)</div>
+                            <div class="col" id="ad-c-bmfi-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--BM&F Level II RT-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="**REAL TIME** Cód.Serv: BC-19083| Custo Fee: Ñ Profissional R$40,24 - Profissional R$174,36">BM&F Level II (Com Livro)</div>
+                            <div class="col" id="ad-c-bmfi-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--Bovespa Level I RT-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="**REAL TIME** Cód.Serv: BC-150| Custo Fee: Ñ Profissional R$4,03 - Profissional R$120,71">Bovespa Level I (Sem Livro)</div>
+                            <div class="col" id="ad-c-bmfi-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--Bovespa Level II RT-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="**REAL TIME** Cód.Serv: BC-19082| Custo Fee: Ñ Profissional R$6,70 - Profissional R$174,36">Bovespa Level II (Com Livro)</div>
+                            <div class="col" id="ad-c-bmfi-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--CBOT RT-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="**REAL TIME** Cód.Serv: BC-550| Custo Fee: U$142,02 / *Snapshot** Cód.Serv: BC-1998| Custo Fee: U$23,32">CBOT</div>
+                            <div class="col" id="ad-c-bmfi-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-analises"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <!--CBOT Snapshot
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5" title="**** Cód.Serv: BC-1998| Custo Fee: U$23,32">CBOT</div>
+                            <div class="col" id="ad-c-bmfi-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-mercado"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-bmfi-analises"><i class="fas fa-plus"></i></div>
+                        </div> -->
+                        <!--Indices Mundiais RT-->
+                        <div class="row align-items-center destacar">
+                            <div class="col-3 px-lg-5"><i id="iconModCIndices" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModCIndices()"class="text-decoration-none" data-toggle="collapse" title="" href="#Addon-c-indices-collapse">Notícias</a></div>
+                            <div class="col" id="ad-c-indices-trade"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-indices-trade-aai"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-indices-mercados-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-indices-conjuntura"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-indices-mercados"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-indices-news-bs"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-indices-news"><i class="fas fa-plus"></i></div>
+                            <div class="col" id="ad-c-indices-analises"><i class="fas fa-plus"></i></div>
                         </div>
                     </div>
                 </div>
