@@ -3,7 +3,9 @@ body{
 	font-size: 1.2rem;
 }
 
-
+h1{
+	color: #111;
+}
 .destacar:hover{
 	background:#777c8469
 }

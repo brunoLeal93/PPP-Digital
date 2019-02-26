@@ -1,4 +1,8 @@
 
+$(document).ready(function() {
+        $('.fixed').addClass('is-sticky');
+    });
+
 /* JS dos Checkbox */
 $('#checkAll').click(function(){
     var chkAll = document.getElementById('checkAll');
