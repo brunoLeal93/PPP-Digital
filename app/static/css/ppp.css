@@ -43,7 +43,13 @@ a.change-css{
 i.fa-times      {color: red;}
 i.fa-check      {color: green;}
 i.fa-plus      	{color: blue;}
-i.fa-clock     	{color: yellow;}
+i.fa-clock     	{color: #ff5722;}
+
+.tooltip-inner  {background-color: #e9ecef;}
+.tooltip.bs-tooltip-right .arrow:before     {border-right-color: #e9ecef !important;}
+.tooltip.bs-tooltip-left .arrow:before      {border-left-color: #e9ecef !important;}
+.tooltip.bs-tooltip-bottom .arrow:before    {border-bottom-color: #e9ecef !important;}
+.tooltip.bs-tooltip-top .arrow:before       {border-top-color: #e9ecef !important;}
 
 
  /*.row {
