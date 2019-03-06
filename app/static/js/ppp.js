@@ -116,16 +116,17 @@ $('#checkAll').click(function(){
 /* Funções para controlar movimentação dos icones da callopse*/
 
 function iconNoticia(){
+    
+
     if($(document.getElementById("Noticias-collapse")).hasClass('show')){
         $('#iconN').removeClass('fa-angle-down');
-
         $('#iconN').addClass('fa-angle-right');
-
-        $('#icon').addClass('fa-angle-right');
+        $("#n-trade").toggle( display === false);
 
     } else{
         $('#iconN').removeClass('fa-angle-right');
         $('#iconN').addClass('fa-angle-down');
+        $("#n-trade").toggle( display === true);
     }
 }
 
