@@ -121,12 +121,21 @@ function iconNoticia(){
     if($(document.getElementById("Noticias-collapse")).hasClass('show')){
         $('#iconN').removeClass('fa-angle-down');
         $('#iconN').addClass('fa-angle-right');
-        $("#n-trade").hide();
+        $("#n-trade").show();
+        $("#n-conjuntura").show();
+        $("#n-mercados").show();
+        $("#n-news").show();
+        $("#n-analises").show();
 
     } else{
         $('#iconN').removeClass('fa-angle-right');
         $('#iconN').addClass('fa-angle-down');
-        $("#n-trade").show();
+        
+        $("#n-trade").hide();
+        $("#n-conjuntura").hide();
+        $("#n-mercados").hide();
+        $("#n-news").hide();
+        $("#n-analises").hide();
     }
 }
 
