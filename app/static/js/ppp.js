@@ -121,12 +121,12 @@ function iconNoticia(){
     if($(document.getElementById("Noticias-collapse")).hasClass('show')){
         $('#iconN').removeClass('fa-angle-down');
         $('#iconN').addClass('fa-angle-right');
-        $("#n-trade").toggle( display === false);
+        $("#n-trade").hide();
 
     } else{
         $('#iconN').removeClass('fa-angle-right');
         $('#iconN').addClass('fa-angle-down');
-        $("#n-trade").toggle( display === true);
+        $("#n-trade").show();
     }
 }
 
