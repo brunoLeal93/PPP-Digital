@@ -19,7 +19,8 @@
 }
 
 .fixar {
-    position:fixed;
+    position:relative;
+    top: 100px;
     margin-top: 0px !important;
 }
 
