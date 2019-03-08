@@ -19,9 +19,11 @@
 }
 
 .fixar {
-    position:relative;
-    top: 100px;
+    position:fixed;
+    top: 75px;
+    background: #ffffffe6;
     margin-top: 0px !important;
+    z-index: 9999;
 }
 
 body{ 
