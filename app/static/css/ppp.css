@@ -1,3 +1,11 @@
+@media print{
+    .header{display:none;}
+    .footer{display:none;}
+    .menu{display:none;}
+    .form-check{display: none;}
+    .nprint{display: none;}
+}
+
 body{ 
 	padding-top: 100px;
 	font-size: 1rem;
