@@ -2,6 +2,16 @@
 $(document).ready(function() {
         $('.fixed').addClass('is-sticky');
         $('[data-toggle="tooltip"]').tooltip();
+
+        var offset = $('#headerPPP').offset().top;
+        var $headerPPP = $('#headerPPP'); // guardar o elemento na memoria para melhorar performance
+        $(document).on('scroll', function () {
+            if (offset <= $(window).scrollTop()) {
+                $headerPPP.addClass('fixar');
+            } else {
+                $headerPPP.removeClass('fixar');
+            }
+});
     });
 
 /* JS dos Checkbox */
