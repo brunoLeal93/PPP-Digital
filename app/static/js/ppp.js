@@ -3,7 +3,7 @@ $(document).ready(function() {
         $('.fixed').addClass('is-sticky');
         $('[data-toggle="tooltip"]').tooltip();
 
-        var offset = $('#headerPPP').offset().top + 100;
+        var offset = $('#headerPPP').offset().top -100;
         var $headerPPP = $('#headerPPP'); // guardar o elemento na memoria para melhorar performance
         $(document).on('scroll', function () {
             if (offset <= $(window).scrollTop()) {
