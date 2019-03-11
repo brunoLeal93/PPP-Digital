@@ -26,10 +26,14 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-8">
                         <div class="form-check form-check-inline">
                                 <input type="checkbox" class="form-check-input" id="checkAll" checked>
                                 <label class="form-check-label" for="checkAll" >Exibir Todos os Pacotes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="ckMostraPrecos" checked>
+                                <label class="form-check-label" for="ckMostraPrecos" >Mostrar Preços dos Pacotes</label>
                         </div>
                     </div>
                 </div>
@@ -72,6 +76,14 @@
         
         <!--Inicio do PPP #  Cabeçalho-->
         <div class="container-fluid" id="headerPPP">
+            <div class="row align-items-center" id="valores" >
+                <div class="col-3"></div>
+                <div class="col"  id="trade-valor"><b>R$ 260,00</b></div>
+                <div class="col"  id="conjuntura-valor"><b>R$ 460,00</b></div>
+                <div class="col"  id="mercados-valor"><b>R$ 770,00</b></div>
+                <div class="col"  id="news-valor"><b>R$ 1.500,00</b></div>
+                <div class="col"  id="analises-valor"><b>R$2.500,00</b></div>
+            </div>
             <div class="row align-items-center" >
                 <div class="col-3"><b>Conteúdos</b></div>
                 <div class="col"  id="trade-lb"><b>Trade</b></div>
@@ -84,7 +96,7 @@
                 <div class="col"  id="analises-lb"><b>Análises</b></div>
             </div>
         </div>
-        <div class="container-fluid" id="contentPPP">
+        
             <!-- notícias-->
             <div class="container-fluid">
                 <div class="row align-items-center destacar">
@@ -1164,7 +1176,7 @@
                     </div>
                 </div>   
             </div>
-        </div>
+        
 </div>
 {% endblock %}
 

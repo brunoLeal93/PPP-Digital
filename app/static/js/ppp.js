@@ -15,6 +15,16 @@ $(document).ready(function() {
     });
 
 /* JS dos Checkbox */
+$('#ckMostraPrecos').click(function(){
+    var ckPrecos = document.getElementById('ckMostraPrecos');
+    if(ckMPrecos.checked == true){
+        $('#valores').show();
+    }else{
+        $('#valores').hide();
+    }
+})
+
+
 $('#checkAll').click(function(){
     var chkAll = document.getElementById('checkAll');
     var ckTrade = document.getElementById('trade');
