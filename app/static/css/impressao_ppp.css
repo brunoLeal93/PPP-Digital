@@ -14,8 +14,14 @@
 	    height: auto;
     }
 
-    #headerPPP {
+   body{
+    margin: 0;
+    padding: 0;
+    line-height: :1.4em;
+   }
+
+   /* #headerPPP {
         display: table-header-group;
 
-    }
+    }*/
 }
