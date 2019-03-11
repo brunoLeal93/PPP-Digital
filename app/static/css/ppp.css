@@ -1,15 +1,3 @@
-@media print{
-    .header{display:none;}
-    .footer{display:none;}
-    .menu{display:none;}
-    .nprint{display: none;}
-    .container-fluid img {
-    	max-width:400px;
-	    max-height:300px;
-	    width: auto;
-	    height: auto;
-    }
-}
 
 .container-fluid img {
     max-width:200px;
