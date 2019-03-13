@@ -3,15 +3,29 @@ $(document).ready(function() {
         $('.fixed').addClass('is-sticky');
         $('[data-toggle="tooltip"]').tooltip();
 
-        var offset = $('#headerPPP').offset().top -100;
-        var $headerPPP = $('#headerPPP'); // guardar o elemento na memoria para melhorar performance
+/* Inicio do script que trava os header*/
+        var offset1 = $('#cont-incluso').offset().top -100;
+        var $contincluso = $('#cont-incluso'); // guardar o elemento na memoria para melhorar performance
         $(document).on('scroll', function () {
-            if (offset <= $(window).scrollTop()) {
-                $headerPPP.addClass('fixar');
+            if (offset1 <= $(window).scrollTop()) {
+                $contincluso.addClass('fixar');
             } else {
-                $headerPPP.removeClass('fixar');
+                $contincluso.removeClass('fixar');
+            }
+
+});
+/*
+        var offset2 = $('#cont-adc-pago').offset().top -100;
+        var $adcpago = $('#cont-adc-pago'); // guardar o elemento na memoria para melhorar performance
+        $(document).on('scroll', function () {
+            if (offset2 <= $(window).scrollTop()) {
+                $adcpago.addClass('fixar');
+            } else {
+                $adcpago.removeClass('fixar');
             }
 });
+ Fim do script que trava os header */
+
     });
 
 /* JS dos Checkbox */
@@ -220,6 +234,127 @@ function iconCotacaoB3(){
         $("#c-b3-analises").hide();
     }
 }
+
+function iconCotacaoBC(){
+    if($(document.getElementById("Cotacao-bc-collapse")).hasClass('show')){
+        $('#iconCBC').removeClass('fa-angle-down');
+        $('#iconCBC').addClass('fa-angle-right');
+        $("#c-bc-trade").show();
+        $("#c-bc-conjuntura").show();
+        $("#c-bc-mercados").show();
+        $("#c-bc-news").show();
+        $("#c-bc-analises").show();
+    } else{
+        $('#iconCBC').removeClass('fa-angle-right');
+        $('#iconCBC').addClass('fa-angle-down');
+        $("#c-bc-trade").hide();
+        $("#c-bc-conjuntura").hide();
+        $("#c-bc-mercados").hide();
+        $("#c-bc-news").hide();
+        $("#c-bc-analises").hide();
+    }
+}
+
+function iconCIndices(){
+    if($(document.getElementById("c-indices-collapse")).hasClass('show')){
+        $('#iconCIndices').removeClass('fa-angle-down');
+        $('#iconCIndices').addClass('fa-angle-right');
+        $("#c-indicesMundi-trade").show();
+        $("#c-indicesMundi-conjuntura").show();
+        $("#c-indicesMundi-mercados").show();
+        $("#c-indicesMundi-news").show();
+        $("#c-indicesMundi-analises").show();
+    } else{
+        $('#iconCIndices').removeClass('fa-angle-right');
+        $('#iconCIndices').addClass('fa-angle-down');
+        $("#c-indicesMundi-trade").hide();
+        $("#c-indicesMundi-conjuntura").hide();
+        $("#c-indicesMundi-mercados").hide();
+        $("#c-indicesMundi-news").hide();
+        $("#c-indicesMundi-analises").hide();
+    }
+}
+
+function iconCIndAsiaOcean(){
+    if($(document.getElementById("c-ind-ao-collapse")).hasClass('show')){
+        $('#iconCIndAsiaOcean').removeClass('fa-angle-down');
+        $('#iconCIndAsiaOcean').addClass('fa-angle-right');
+        $("#c-ind-ao-trade").show();
+        $("#c-ind-ao-conjuntura").show();
+        $("#c-ind-ao-mercados").show();
+        $("#c-ind-ao-news").show();
+        $("#c-ind-ao-analises").show();
+    } else{
+        $('#iconCIndAsiaOcean').removeClass('fa-angle-right');
+        $('#iconCIndAsiaOcean').addClass('fa-angle-down');
+        $("#c-ind-ao-trade").hide();
+        $("#c-ind-ao-conjuntura").hide();
+        $("#c-ind-ao-mercados").hide();
+        $("#c-ind-ao-news").hide();
+        $("#c-ind-ao-analises").hide();
+    }
+}
+
+function iconCIndEuropa(){
+    if($(document.getElementById("c-ind-euro-collapse")).hasClass('show')){
+        $('#iconCIndEuropa').removeClass('fa-angle-down');
+        $('#iconCIndEuropa').addClass('fa-angle-right');
+        $("#c-ind-euro-trade").show();
+        $("#c-ind-euro-conjuntura").show();
+        $("#c-ind-euro-mercados").show();
+        $("#c-ind-euro-news").show();
+        $("#c-ind-euro-analises").show();
+    } else{
+        $('#iconCIndEuropa').removeClass('fa-angle-right');
+        $('#iconCIndEuropa').addClass('fa-angle-down');
+        $("#c-ind-euro-trade").hide();
+        $("#c-ind-euro-conjuntura").hide();
+        $("#c-ind-euro-mercados").hide();
+        $("#c-ind-euro-news").hide();
+        $("#c-ind-euro-analises").hide();
+    }
+}
+
+function iconCIndLatam(){
+    if($(document.getElementById("c-ind-latam-collapse")).hasClass('show')){
+        $('#iconCIndLatam').removeClass('fa-angle-down');
+        $('#iconCIndLatam').addClass('fa-angle-right');
+        $("#c-ind-latam-trade").show();
+        $("#c-ind-latam-conjuntura").show();
+        $("#c-ind-latam-mercados").show();
+        $("#c-ind-latam-news").show();
+        $("#c-ind-latam-analises").show();
+    } else{
+        $('#iconCIndLatam').removeClass('fa-angle-right');
+        $('#iconCIndLatam').addClass('fa-angle-down');
+        $("#c-ind-latam-trade").hide();
+        $("#c-ind-latam-conjuntura").hide();
+        $("#c-ind-latam-mercados").hide();
+        $("#c-ind-latam-news").hide();
+        $("#c-ind-latam-analises").hide();
+    }
+}
+
+function iconCIndUSA(){
+    if($(document.getElementById("c-ind-usa-collapse")).hasClass('show')){
+        $('#iconCIndUSA').removeClass('fa-angle-down');
+        $('#iconCIndUSA').addClass('fa-angle-right');
+        $("#c-ind-usa-trade").show();
+        $("#c-ind-usa-conjuntura").show();
+        $("#c-ind-usa-mercados").show();
+        $("#c-ind-usa-news").show();
+        $("#c-ind-usa-analises").show();
+    } else{
+        $('#iconCIndUSA').removeClass('fa-angle-right');
+        $('#iconCIndUSA').addClass('fa-angle-down');
+        $("#c-ind-usd-trade").hide();
+        $("#c-ind-usa-conjuntura").hide();
+        $("#c-ind-usa-mercados").hide();
+        $("#c-ind-usa-news").hide();
+        $("#c-ind-usa-analises").hide();
+    }
+}
+
 
 function iconCotacaoContri(){
     if($(document.getElementById("Cotacao-ctbd-collapse")).hasClass('show')){

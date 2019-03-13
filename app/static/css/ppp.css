@@ -1,4 +1,7 @@
 
+b{
+	text-align: center;
+}
 .container-fluid img {
     max-width:200px;
     max-height:150px;
@@ -15,7 +18,7 @@
 }
 
 body{ 
-	padding-top: 100px;
+	padding-top: 75px;
 	font-size: 1rem;
 }
 
@@ -23,9 +26,23 @@ h1{
 	color: #111;
 }
 
+.n2{
+	padding-left: 50px;
+}
+
+.n3{
+	padding-left: 75px;
+}
+
+.n4{
+	padding-left: 100px;
+}
+
 .destacar:hover{
 	background:#777c8469
 }
+
+
 /*
 a.grupo{
 	margin-left:5px;
@@ -45,7 +62,7 @@ a.item{
 a.sub-item{
 	margin-left:15px;
 	font-size: 15px;	
-}
+} 
 
 .subgrupo{
 	font-size: 16px;
@@ -61,6 +78,35 @@ i.fa-times      {color: red;}
 i.fa-check      {color: green;}
 i.fa-plus      	{color: blue;}
 i.fa-clock     	{color: #007bff;}
+.realtime{
+	border:2px solid #48d053;
+	border-radius: 3px;
+	color: #48d053;
+	max-width:17px;
+    max-height:17px;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    padding-right: 15px;
+    padding-bottom: 16px;
+    display: inline-block;
+    
+}
+.endofday{
+	border: 2px solid #ff9800;
+    border-radius: 3px;
+    color: #ff9800;
+    max-width: 28px;
+    max-height: 17px;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    padding-right: 21px;
+    padding-bottom: 16px;
+    padding-left: 2px;
+    display: inline-block;
+    
+}
 
 .tooltip-inner  {background-color: #e9ecef; color: black;}
 .tooltip.bs-tooltip-right .arrow:before     {border-right-color: #e9ecef !important;}

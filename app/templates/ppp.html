@@ -12,11 +12,16 @@
 {% block content %}
 <div class="ppp">
         <!--Fomrs e checkbox da pagina-->
-        <div class="container nprint">
-            <h2 style="color: #111">Conteúdos vs Pacotes</h2>
+        <div class="container-fluid">
+            <h2 style="color: #111" class="nprint">Conteúdos vs Pacotes</h2>
             <form>
-                <div class="row align-items-center">
-                    <div class="col-4">        
+                <div class="row align-items-center a">
+                    <div col="col-3">
+                        <div class="container-fluid">
+                                <img src="../static/img/broadcast+.png">
+                        </div>
+                    </div>
+                    <div class="col-3 nprint">        
                         <div class="form-group">
                             <label for="selectPlataforma">Selecione a Plataforma</label>
                             <select class="form-control" id="selectPlataforma">
@@ -26,7 +31,8 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-6 nprint">
+                        
                         <div class="form-check form-check-inline">
                                 <input type="checkbox" class="form-check-input" id="checkAll" checked>
                                 <label class="form-check-label" for="checkAll" >Exibir Todos os Pacotes</label>
@@ -40,8 +46,6 @@
             </form>
         </div>
         <div class="container-fluid">
-            <img src="../static/img/broadcast+.png">
-            </br>
             <form>   
                     <div class="form-check form-check-inline">
                             <h5>Pacotes:</h5>
@@ -71,13 +75,11 @@
                     </div>  
             </form>
         </div>
-            
-        </br> 
         
-        <!--Inicio do PPP #  Cabeçalho-->
-        <div class="container-fluid" id="headerPPP">
-            <div class="row align-items-center" id="valores" >
-                <div class="col-3"></div>
+        <!--Inicio do Conteúdo Incluso #  Cabeçalho-->
+        <div class="container-fluid" id="cont-incluso">
+            <div class="row align-items-center" id="valores" style="border-bottom: 1px solid white" >
+                <div class="col-4"><div class="realtime"><b>RT</b></div> Real Time &nbsp;&nbsp;<i class="fas fa-clock"></i> Delay &nbsp; <div class="endofday"><b>EoD</b></div> End of Day</div>
                 <div class="col"  id="trade-valor"><b>R$ 260,00</b></div>
                 <div class="col"  id="conjuntura-valor"><b>R$ 460,00</b></div>
                 <div class="col"  id="mercados-valor"><b>R$ 770,00</b></div>
@@ -85,7 +87,7 @@
                 <div class="col"  id="analises-valor"><b>R$2.500,00</b></div>
             </div>
             <div class="row align-items-center" >
-                <div class="col-3"><b>Conteúdos</b></div>
+                <div class="col-4"><b>Conteúdos Inclusos</b></div>
                 <div class="col"  id="trade-lb"><b>Trade</b></div>
                 
                 <div class="col"  id="conjuntura-lb"><b>Conjuntura</b></div>
@@ -100,7 +102,7 @@
             <!-- notícias-->
             <div class="container-fluid">
                 <div class="row align-items-center destacar">
-                    <div class="col-3"><i id="iconN" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconNoticia()" class="text-decoration-none" data-toggle="collapse" href="#Noticias-collapse"><b>Notícias</b></a></div>
+                    <div class="col-4"><i id="iconN" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconNoticia()" class="text-decoration-none" data-toggle="collapse" href="#Noticias-collapse"><b>Notícias</b></a></div>
                     <div class="col"  id="n-trade"><i class="fas fa-check"></i></div>
                     
                     <div class="col"  id="n-conjuntura"><i class="fas fa-check"></i></div>
@@ -115,7 +117,7 @@
                 <div class="container-fluid">
                     <!--AE NEWS + TOP NEWS-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5">AE News + Top News</div>
+                        <div class="col-4  px-lg-5">AE News + Top News</div>
                         <div class="col"  id="n-aenews-trade"><i class="fas fa-times"></i></div>
                         
                         <div class="col"  id="n-aenews-conjuntura"><i class="fas fa-times"></i></div>
@@ -127,7 +129,7 @@
                     </div>
                     <!--Empresas e Setores-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5">Empresas e Setores</div>
+                        <div class="col-4  px-lg-5">Empresas e Setores</div>
                         <div class="col"  id="n-empset-trade"><i class="fas fa-times"></i></div>
                         
                         <div class="col"  id="n-empset-conjuntura"><i class="fas fa-times"></i></div>
@@ -139,7 +141,7 @@
                     </div>
                     <!--Conjuntura e Finanças-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5">Conjuntura e Finanças</div>
+                        <div class="col-4  px-lg-5">Conjuntura e Finanças</div>
                         <div class="col"  id="n-conjfin-trade"><i class="fas fa-times"></i></div>
                         
                         <div class="col"  id="n-conjfin-conjuntura"><i class="fas fa-check"></i></div>
@@ -151,7 +153,7 @@
                     </div>
                     <!--Conjuntura e Negócios-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5">Conjuntura e Negócios</div>
+                        <div class="col-4  px-lg-5">Conjuntura e Negócios</div>
                         <div class="col"  id="n-conjneg-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="n-conjneg-conjuntura"><i class="fas fa-check"></i></div>
@@ -164,7 +166,7 @@
                     <!--Newspaper (caderno)-->
                     <div class="row align-items-center destacar">
 
-                        <div class="col-3  px-lg-5 ">
+                        <div class="col-4  px-lg-5 ">
                             Newspaper
                         </div>
                         <div class="col"  id="n-cadnewspaper-trade"><i class="fas fa-check"></i></div>
@@ -178,7 +180,7 @@
                     </div>
                     <!--Projeções Broadcast-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5">Projeções Broadcast</div>
+                        <div class="col-4  px-lg-5">Projeções Broadcast</div>
                         <div class="col"  id="n-projecoes-trade"><i class="fas fa-times"></i></div>
                         
                         <div class="col"  id="n-projecoes-conjuntura"><i class="fas fa-times"></i></div>
@@ -190,7 +192,7 @@
                     </div>
                     <!--Colunistas (Broadcast e Estadão)-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5">Colunistas (Broadcast e Estadão)</div>
+                        <div class="col-4  px-lg-5">Colunistas (Broadcast e Estadão)</div>
                         <div class="col"  id="n-colunistas-trade"><i class="fas fa-times"></i></div>
                         
                         <div class="col"  id="n-colunistas-conjuntura"><i class="fas fa-times"></i></div>
@@ -202,7 +204,7 @@
                     </div>
                     <!--Artigos-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5">Artigos</div>
+                        <div class="col-4  px-lg-5">Artigos</div>
                         <div class="col"  id="n-artigos-trade"><i class="fas fa-times"></i></div>
                         
                         <div class="col"  id="n-artigos-conjuntura"><i class="fas fa-times"></i></div>
@@ -214,7 +216,7 @@
                     </div>
                     <!--Broadcast TV)-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5">Broadcast TV</div>
+                        <div class="col-4  px-lg-5">Broadcast TV</div>
                         <div class="col"  id="n-bctv-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="n-bctv-conjuntura"><i class="fas fa-check"></i></div>
@@ -226,7 +228,7 @@
                     </div>
                     <!--Release-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5">Release</div>
+                        <div class="col-4  px-lg-5">Release</div>
                         <div class="col"  id="n-release-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="n-release-conjuntura"><i class="fas fa-check"></i></div>
@@ -238,7 +240,7 @@
                     </div>
                     
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5"><i id="iconNContri" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconNoticiaContri()"class="text-decoration-none" data-toggle="collapse" href="#Noticias-ctbd-collapse"><b>Contribuidores</b></a></div>
+                        <div class="col-4  px-lg-5"><i id="iconNContri" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconNoticiaContri()"class="text-decoration-none" data-toggle="collapse" href="#Noticias-ctbd-collapse"><b>Contribuidores</b></a></div>
                         <div class="col" id="n-ctbd-trade"><i class="fas fa-check"></i></div>
                         <div class="col" id="n-ctbd-conjuntura"><i class="fas fa-times"></i></div>
                         <div class="col" id="n-ctbd-mercados"><i class="fas fa-check"></i></div>
@@ -251,7 +253,7 @@
                         <div class="container-fluid">
                             <!--Agência Bovespa-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5">Agência Bovespa</div>
+                                <div class="col-4  px-lg-5">Agência Bovespa</div>
                                 <div class="col"  id="n-ctbd-agbov-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-agbov-conjuntura"><i class="fas fa-check"></i></div>
@@ -263,7 +265,7 @@
                             </div>
                             <!--Agência CEBDS-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5">Agência CEBDS</div>
+                                <div class="col-4  px-lg-5">Agência CEBDS</div>
                                 <div class="col"  id="n-ctbd-agcebds-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-agcebds-conjuntura"><i class="fas fa-check"></i></div>
@@ -275,7 +277,7 @@
                             </div>
                             <!--Agência CNA/SENAR-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5">Agência CNA/SENAR</div>
+                                <div class="col-4  px-lg-5">Agência CNA/SENAR</div>
                                 <div class="col"  id="n-ctbd-agcnasenar-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-agcnasenar-conjuntura"><i class="fas fa-check"></i></div>
@@ -287,7 +289,7 @@
                             </div>
                             <!--Agência STJ-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5">Agência STJ</div>
+                                <div class="col-4  px-lg-5">Agência STJ</div>
                                 <div class="col"  id="n-ctbd-agstj-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-agstj-conjuntura"><i class="fas fa-check"></i></div>
@@ -299,7 +301,7 @@
                             </div>
                             <!--NGO Corretora-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Relatórios com foco em Câmbio">NGO Corretora</div>
+                                <div class="col-4  px-lg-5" title="Relatórios com foco em Câmbio">NGO Corretora</div>
                                 <div class="col"  id="n-ctbd-ngo-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-ngo-conjuntura"><i class="fas fa-check"></i></div>
@@ -311,7 +313,7 @@
                             </div>
                             <!--CEAGESP
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5">CEAGESP</div>
+                                <div class="col-4  px-lg-5">CEAGESP</div>
                                 <div class="col"  id="n-ctbd-ceagesp-trade"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="n-ctbd-ceagesp-trade-aai"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="n-ctbd-ceagesp-conjuntura"><i class="fas fa-times"></i></div>
@@ -323,7 +325,7 @@
                             </div> -->
                             <!--Relatórios Macroeconômicos-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Contribuidores: Bradesco, Itau e SmartBrain">Relatórios Macroeconômicos</div>
+                                <div class="col-4  px-lg-5" title="Contribuidores: Bradesco, Itau e SmartBrain">Relatórios Macroeconômicos</div>
                                 <div class="col"  id="n-ctbd-relmacro-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-relmacro-conjuntura"><i class="fas fa-check"></i></div>
@@ -335,7 +337,7 @@
                             </div>
                             <!--Relatórios Research-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Contribuidores: Ativa Investimentos, Banco Votorantim, Eleven Financial, Elite Investimentos, H.Commcor, Mirae Asset, Modalmais, Necton Corretora, Planner Corretora, Rico Investimentos, Socopa, Terra Investimentos e Toro Investimentos">Relatórios de Research</div>
+                                <div class="col-4  px-lg-5" title="Contribuidores: Ativa Investimentos, Banco Votorantim, Eleven Financial, Elite Investimentos, H.Commcor, Mirae Asset, Modalmais, Necton Corretora, Planner Corretora, Rico Investimentos, Socopa, Terra Investimentos e Toro Investimentos">Relatórios de Research</div>
                                 <div class="col"  id="n-ctbd-relresearch-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-relresearch-conjuntura"><i class="fas fa-check"></i></div>
@@ -347,7 +349,7 @@
                             </div>
                             <!--Relatórios Agrícolas-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Contribuidores: AgResource, Bradesco e Cepea">Relatórios Agrícolas</div>
+                                <div class="col-4  px-lg-5" title="Contribuidores: AgResource, Bradesco e Cepea">Relatórios Agrícolas</div>
                                 <div class="col"  id="n-ctbd-relagricolas-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-relagricolas-conjuntura"><i class="fas fa-check"></i></div>
@@ -359,7 +361,7 @@
                             </div>
                             <!--Relatórios Criptomoedas-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Contribuidores: ABCripto, Coinext e Cointimes">Relatórios Criptomoedas</div>
+                                <div class="col-4  px-lg-5" title="Contribuidores: ABCripto, Coinext e Cointimes">Relatórios Criptomoedas</div>
                                 <div class="col"  id="n-ctbd-relcriptomoedas-trade"><i class="fas fa-check"></i></div>
                                 
                                 <div class="col"  id="n-ctbd-relcriptomoedas-conjuntura"><i class="fas fa-check"></i></div>
@@ -377,7 +379,7 @@
             <!--Cotações-->
             <div class="container-fluid">
                 <div class="row align-items-center destacar">
-                    <div class="col-3"><i id="iconCotacao" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCotacao()"class="text-decoration-none" data-toggle="collapse" title="teste" href="#Cotacao-collapse"><b>Cotações</b></a></div>
+                    <div class="col-4"><i id="iconCotacao" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCotacao()"class="text-decoration-none" data-toggle="collapse" title="teste" href="#Cotacao-collapse"><b>Cotações</b></a></div>
                     <div class="col"  id="c-trade"><i class="fas fa-check"></i></div>
                     <div class="col"  id="c-conjuntura"><i class="fas fa-check"></i></div>
                     <div class="col"  id="c-mercados"><i class="fas fa-check"></i></div>
@@ -387,98 +389,158 @@
             </div>
             <div class="collapse" id="Cotacao-collapse">
                 <div  class="container-fluid">
-                    <!--AE TAxas Mini-->
-                    <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" title="Pacote que reúne alguns dos principais indicadores de inflação, taxa de juros, cambio e commodities">AE Taxas Mini</div>
-                        <div class="col"  id="c-taxasmini-trade"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-taxasmini-conjuntura"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-taxasmini-mercado"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-taxasmini-news"><i class="fas fa-check"></i></div>
-                        <div class="col"  id="c-taxasmini-analises"><i class="fas fa-check"></i></div>
-                    </div>
-                     <!--AE TAxas Full-->
-                    <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" title="AE Taxas Mini + diversos indicadores financeiros, taxas do Banco Central e de outras instituições contabilizando mais de 2.400 ativos">AE Taxas Full</div>
-                        <div class="col"  id="c-taxasfull-trade"><i class="fas fa-times"></i></div>
-                        
-                        <div class="col"  id="c-taxasfull-conjuntura"><i class="fas fa-times"></i></div>
-                        
-                        <div class="col"  id="c-taxasfull-mercado"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-taxasfull-news"><i class="fas fa-check"></i></div>
-                        <div class="col"  id="c-taxasfull-analises"><i class="fas fa-check"></i></div>
-                    </div>
                     <!--B3-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5"><i id="iconCB3" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCotacaoB3()"class="text-decoration-none" data-toggle="collapse" href="#Cotacao-b3-collapse"><b>B3</b></a></div>
+                        <div class="col-4  n2"><i id="iconCB3" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCotacaoB3()"class="text-decoration-none" data-toggle="collapse" href="#Cotacao-b3-collapse"><b>B3</b> <i class="far fa-clock" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Delay</u></b></br>Disponível em <u>TODOS</u> os pacotes"></i></a></div>
                         <div class="col"  id="c-b3-trade"><i class="fas fa-check"></i></div>
                         <div class="col"  id="c-b3-conjuntura"><i class="fas fa-check"></i></div>
                         <div class="col"  id="c-b3-mercados"><i class="fas fa-check"></i></div>
                         <div class="col"  id="c-b3-news"><i class="fas fa-check"></i></div>
                         <div class="col"  id="c-b3-analises"><i class="fas fa-check"></i></div>
-
                     </div>
-                <!--/div>
-                <div class="container-fluid"-->
                     <div class="collapse" id="Cotacao-b3-collapse">
                         <div>
                             <!--BM&F (com Agro, Fundos ETF e Imobiliários)-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-19083 Level I (Sem Livro)</br><b>Fee:</b> ÑP: R$24,15 - P: R$120,71</br><b>Cód.Serv:</b> BC-160 Level II (Com Livro)</br><b>Fee:</b> ÑP: R$40,24 - P: R$174,36</br><b>Cód.Serv:</b> BC-19084 Agro Level II (Com Livro)</br><b>Fee:</b> R$40,24">BM&F (com Agro, Fundos ETF e Imobiliários) <i class="far fa-clock"></i></div>
+                                <div class="col-4  n3">BM&F - Derivativos Agro e Financeiros <i class="far fa-clock" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Delay</u></b></br>Disponível em <u>TODOS</u> os pacotes"></i> <div class="realtime nprint" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></b></br>Disponível <u>SOMENTE</u> mediante contratação de um dos serviços abaixos:</br><b>Cód.Serv:</b> BC-19083 Level I (Sem Livro)</br><b>Fee:</b> ÑP: R$24,15 - P: R$120,71</br><b>Cód.Serv:</b> BC-160 Level II (Com Livro)</br><b>Fee:</b> ÑP: R$40,24 - P: R$174,36</br><b>Cód.Serv:</b> BC-19084 Agro Level II (Com Livro)</br><b>Fee:</b> R$40,24"><b>RT</b></div></div>
                                 <div class="col"  id="c-b3-bmf-trade"><i class="fas fa-check"></i></div>
-                                
                                 <div class="col"  id="c-b3-bmf-conjuntura"><i class="fas fa-check"></i></div>
-                                
                                 <div class="col"  id="c-b3-bmf-mercados"><i class="fas fa-check"></i></div>
-                                
                                 <div class="col"  id="c-b3-bmf-news"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="c-b3-bmf-analises"><i class="fas fa-check"></i></div>
                             </div>
                             <!--Bovespa (com Índice, Opções, Fundos ETF e Imobiliários)¹S-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5"  data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-150 Level I (Sem Livro)</br><b>Fee:</b> ÑP: R$4,03 - P: R$120,71</br><b>Cód.Serv:</b> BC-19082 Level II (Livro)</br><b>Fee:</b> ÑP: R$6,70 - P: R$174,36">Bovespa (com Índice, Opções, Fundos ETF e Imobiliários) <i class="far fa-clock"></i></div>
+                                <div class="col-4  n3">
+                                    Bovespa - Índices e ações 
+                                    <i class="far fa-clock" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Delay</u></b></br>Disponível em <u>TODOS</u> os pacotes"></i> 
+                                    <div class="realtime nprint" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></b></br>Disponível <u>SOMENTE</u> mediante contratação de um dos serviços abaixos:</br><b>Cód.Serv:</b> BC-150 Level I (Sem Livro)</br><b>Fee:</b> ÑP: R$4,03 - P: R$120,71</br><b>Cód.Serv:</b> BC-19082 Level II (Livro)</br><b>Fee:</b> ÑP: R$6,70 - P: R$174,36">
+                                        <b>RT</b>
+                                    </div>
+                                </div>
                                 <div class="col"  id="c-b3-bov-trade"><i class="fas fa-check"></i></div>
-                                
                                 <div class="col"  id="c-b3-bov-conjuntura"><i class="fas fa-check"></i></div>
-                                
                                 <div class="col"  id="c-b3-bov-mercados"><i class="fas fa-check"></i></div>
-                                
                                 <div class="col"  id="c-b3-bov-news"><i class="fas fa-check"></i></div>
                                 <div class="col"  id="c-b3-bov-analises"><i class="fas fa-check"></i></div>
                             </div>
-                            
                         </div>
                     </div>
-                    <!--CETIP-->
+                    <!--Broadcast-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" title="Informações de Cotações, Negociações e Leilãos">CETIP</div>
-                        <div class="col"  id="c-cetip-trade"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-cetip-conjuntura"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-cetip-mercado"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-cetip-news"><i class="fas fa-check"></i></div>
-                        <div class="col"  id="c-cetip-analises"><i class="fas fa-check"></i></div>
+                        <div class="col-4  n2"><i id="iconCBC" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCotacaoBC()"class="text-decoration-none" data-toggle="collapse" href="#Cotacao-bc-collapse"><b>Broadcast</b> <div class="realtime"><b>RT</b></div></a></div>
+                        <div class="col"  id="c-bc-trade"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-bc-conjuntura"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-bc-mercados"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-bc-news"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-bc-analises"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="collapse" id="Cotacao-bc-collapse">
+                        <div>
+                            <!--AE TAxas Mini-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  n3" title="Pacote que reúne alguns dos principais indicadores de inflação, taxa de juros, cambio e commodities">AE Taxas Mini <div class="realtime"><b>RT</b></div>
+                                </div>
+                                <div class="col"  id="c-bc-taxasmini-trade"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-taxasmini-conjuntura"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-taxasmini-mercado"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-taxasmini-news"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-taxasmini-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                             <!--AE TAxas Full-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4 n3" title="AE Taxas Mini + diversos indicadores financeiros, taxas do Banco Central e de outras instituições contabilizando mais de 2.400 ativos">AE Taxas Full <div class="realtime"><b>RT</b></div>
+                                </div>
+                                <div class="col"  id="c-bc-taxasfull-trade"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-taxasfull-conjuntura"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-taxasfull-mercado"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-taxasfull-news"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-taxasfull-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                             <!--Agrotaxas - Preços Físicos e Fretes-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4 n3" title="">Agrotaxas - Preços Físicos e Fretes <div class="realtime"><b>RT</b></div>
+                                </div>
+                                <div class="col"  id="c-bc-agrotaxas-trade"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-agrotaxas-conjuntura"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-agrotaxas-mercado"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-agrotaxas-news"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-agrotaxas-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                            <!--Forward Moedas-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  n3" data-placement="right" data-toggle="tooltip" data-html="true" title="Taxas de câmbios para serem liquidadas em uma data no futuro">Forward Moedas <div class="realtime"><b>RT</b></div>
+                                </div>
+                                <div class="col"  id="c-bc-forward-trade"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-forward-conjuntura"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-forward-mercado"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-forward-news"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-forward-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                            <!--Spot Metais-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  n3" data-placement="right" data-toggle="tooltip" title="Principais metais negociados no Mercado Balcão e preços LBMA">Spot Metais <div class="realtime"><b>RT</b></div>
+                                </div>
+                                <div class="col"  id="c-bc-metais-trade"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-metais-conjuntura"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-metais-mercado"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-metais-news"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-metais-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                            <!--Spot Moedas Mini-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  n3" title="Contempla as principais paridades do mundo além de Líbor para dólar">Spot Moedas Mini <div class="realtime"><b>RT</b></div>
+                                </div>
+                                <div class="col"  id="c-bc-moedasmini-trade"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-moedasmini-conjuntura"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-moedasmini-mercado"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-moedasmini-news"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-moedasmini-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                            <!--Spot Moedas Full-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  n3" title="Spot Moedas Mini + demais paridades disponíveis contabilizando mais de 2.000 ativos">Spot Moedas Full <div class="realtime"><b>RT</b></div>
+                                </div>
+                                <div class="col"  id="c-bc-moedasfull-trade"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-moedasfull-conjuntura"><i class="fas fa-times"></i></div>
+                                <div class="col"  id="c-bc-moedasfull-mercado"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-moedasfull-news"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-bc-moedasfull-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--CBOE-->
+                    <div class="row align-items-center destacar">
+                        <div class="col-4  n2" data-placement="right" data-toggle="tooltip" data-html="true" title="Chicago Board of Options Exchange Indexes">CBOE Indices <i class="far fa-clock"></i></div>
+                        <div class="col"  id="c-cboe-trade"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-cboe-conjuntura"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-cboe-mercado"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-cboe-news"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-cboe-analises"><i class="fas fa-check"></i></div>
                     </div>
                     <!--CBOT-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-550</br><b>Fee:</b> US$142,02 </br><b><u>Snapshot</u></br> Cód.Serv:</b> BC-1998</br><b>Fee:</b> US$23,32">Chicago Board of Trade (CBOT) <i class="far fa-clock"></i></div>
+                        <div class="col-4  n2" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-550</br><b>Fee:</b> US$142,02 </br><b><u>Snapshot</u></br> Cód.Serv:</b> BC-1998</br><b>Fee:</b> US$23,32">CBOT - Chicago Board of Trade <i class="far fa-clock"></i></div>
                         <div class="col"  id="c-cbot-trade"><i class="fas fa-check"></i></div>
-                        
                         <div class="col"  id="c-cbot-conjuntura"><i class="fas fa-check"></i></div>
-                        
                         <div class="col"  id="c-cbot-mercado"><i class="fas fa-check"></i></div>
-                        
                         <div class="col"  id="c-cbot-news"><i class="fas fa-check"></i></div>
                         <div class="col"  id="c-cbot-analises"><i class="fas fa-check"></i></div>
+                    </div>      
+
+                    <!--CETIP-->
+                    <div class="row align-items-center destacar">
+                        <div class="col-4  n2" data-placement="right" data-toggle="tooltip" data-html="true" title="Informações de Cotações, Negociações e Leilãos">CETIP <i class="far fa-clock"></i></div>
+                        <div class="col"  id="c-cetip-trade"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-cetip-conjuntura"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-cetip-mercado"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-cetip-news"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-cetip-analises"><i class="fas fa-check"></i></div>
                     </div>
+                    
                     <!--CME-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5"  data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-552</br><b>Fee:</b> US$142,02">Chicago M. Exchange (CME) <i class="far fa-clock"></i></div>
+                        <div class="col-4  n2"  data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-552</br><b>Fee:</b> US$142,02">CME - Chicago Mercantile Exchange <i class="far fa-clock"></i></div>
                         <div class="col"  id="c-cme-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="c-cme-conjuntura"><i class="fas fa-check"></i></div>
@@ -490,7 +552,7 @@
                     </div>
                     <!--Comex-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-560</br><b>Fee:</b> US$142,02">Comex <i class="far fa-clock"></i></div>
+                        <div class="col-4  n2" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-560</br><b>Fee:</b> US$142,02">COMEX - Commodity Exchange <i class="far fa-clock"></i></div>
                         <div class="col"  id="c-comex-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="c-comex-conjuntura"><i class="fas fa-check"></i></div>
@@ -500,21 +562,10 @@
                         <div class="col"  id="c-comex-news"><i class="fas fa-check"></i></div>
                         <div class="col"  id="c-comex-analises"><i class="fas fa-check"></i></div>
                     </div>
-                    <!--Forward Moedas-->
+                    
+                    <!--Fundos Anbima
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="Taxas de câmbios para serem liquidadas em uma data no futuro">Forward Moedas</div>
-                        <div class="col"  id="c-forward-trade"><i class="fas fa-times"></i></div>
-                        
-                        <div class="col"  id="c-forward-conjuntura"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-forward-mercado"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-forward-news"><i class="fas fa-check"></i></div>
-                        <div class="col"  id="c-forward-analises"><i class="fas fa-check"></i></div>
-                    </div>
-                    <!--Fundos Anbima-->
-                    <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" title="">Fundos Anbima</div>
+                        <div class="col-4  px-lg-5" title="">Fundos Anbima</div>
                         <div class="col"  id="c-fundanbima-trade"><i class="fas fa-times"></i></div>
                         
                         <div class="col"  id="c-fundanbima-conjuntura"><i class="fas fa-times"></i></div>
@@ -523,10 +574,10 @@
                         
                         <div class="col"  id="c-fundanbima-news"><i class="fas fa-times"></i></div>
                         <div class="col"  id="c-fundanbima-analises"><i class="fas fa-check"></i></div>
-                    </div>
+                    </div> -->
                     <!--IPE-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-554</br><b>Fee:</b> US$153,30">ICE Europe (IPE) <i class="far fa-clock"></i></div>
+                        <div class="col-4  n2" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-554</br><b>Fee:</b> US$153,30">ICE Europe (IPE) <i class="far fa-clock"></i></div>
                         <div class="col"  id="c-ipe-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="c-ipe-conjuntura"><i class="fas fa-check"></i></div>
@@ -538,7 +589,7 @@
                     </div>
                     <!--NYBOT-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-564</br><b>Fee:</b> US$153,30">ICE US (NYBOT) <i class="far fa-clock"></i></div>
+                        <div class="col-4  n2" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-564</br><b>Fee:</b> US$153,30">ICE US (NYBOT) <i class="far fa-clock"></i></div>
                         <div class="col"  id="c-nybot-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="c-nybot-conjuntura"><i class="fas fa-check"></i></div>
@@ -548,9 +599,9 @@
                         <div class="col"  id="c-nybot-news"><i class="fas fa-check"></i></div>
                         <div class="col"  id="c-nybot-analises"><i class="fas fa-check"></i></div>
                     </div>
-                    <!--Indicadores Cepea-->
+                    <!--Indicadores Cepea
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" title="Indicadores Agrícolas">Indicadores Cepea</div>
+                        <div class="col-4  px-lg-5" title="Indicadores Agrícolas">Indicadores Cepea</div>
                         <div class="col"  id="c-indcepea-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="c-indcepea-conjuntura"><i class="fas fa-check"></i></div>
@@ -559,10 +610,320 @@
                         
                         <div class="col"  id="c-indcepea-news"><i class="fas fa-check"></i></div>
                         <div class="col"  id="c-indcepea-analises"><i class="fas fa-check"></i></div>
-                    </div>
-                    <!--Índices CDS-->
+                    </div> -->
+                    
+                    <!--Indices Mundiais-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" title="Índices CDS (Credit Default Swap) realizado pela Markit">Índices CDS</div>
+                        <div class="col-4  n2"><i id="iconCIndices" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCIndices()"class="text-decoration-none" data-toggle="collapse" title="Índices Mundiais" href="#c-indices-collapse"><b>Índices Mundiais</b></a></div>
+                        <div class="col"  id="c-indicesMundi-trade"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-indicesMundi-conjuntura"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-indicesMundi-mercados"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-indicesMundi-news"><i class="fas fa-check"></i></div>
+                        <div class="col"  id="c-indicesMundi-analises"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="collapse" id="c-indices-collapse">
+                        <div>
+                            <!--Ásia e Oceania-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  n3"><i id="iconCIndAsiaOcean" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCIndAsiaOcean()"class="text-decoration-none" data-toggle="collapse"  href="#c-ind-ao-collapse"><b>Ásia e Oceania</b></a></div>
+                                <div class="col"  id="c-ind-ao-trade"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-ao-conjuntura"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-ao-mercados"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-ao-news"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-ao-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                            <div class="collapse" id="c-ind-ao-collapse">
+                                <div>
+                                    <!--Australia Stock Exchange-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Australia Stock Exchange <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-ao-australia-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-australia-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-australia-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-australia-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-australia-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Hang Seng Indices-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Hang Seng Indices <div class="endofday"><b>EoD</b></div></div>
+                                        <div class="col"  id="c-ind-ao-hangseng-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-hangseng-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-hangseng-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-hangseng-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-hangseng-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Korea Exchange Indices-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Korea Exchange Indices <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-ao-korea-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-korea-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-korea-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-korea-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-korea-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Nikkei Indices-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Nikkei Indices <div class="endofday"><b>EoD</b></div></div>
+                                        <div class="col"  id="c-ind-ao-nikkei-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-nikkei-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-nikkei-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-nikkei-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-nikkei-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Shangai and Shenzhen Stock Exchange-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Shangai and Shenzhen Stock Exchange <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-ao-shangai-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-shangai-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-shangai-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-shangai-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-shangai-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Stock Exchange of Thailand-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Stock Exchange of Thailand <div class="endofday"><b>EoD</b></div></div>
+                                        <div class="col"  id="c-ind-ao-thailand-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-thailand-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-thailand-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-thailand-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-thailand-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Taiwan Stock Exchange-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Taiwan Stock Exchange <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-ao-taiwan-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-taiwan-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-taiwan-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-taiwan-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-ao-taiwan-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Europa-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  n3"><i id="iconCIndEuropa" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCIndEuropa()"class="text-decoration-none" data-toggle="collapse"  href="#c-ind-euro-collapse"><b>Europa</b></a></div>
+                                <div class="col"  id="c-ind-euro-trade"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-euro-conjuntura"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-euro-mercados"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-euro-news"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-euro-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                            <div class="collapse" id="c-ind-euro-collapse">
+                                <div>
+                                    <!--Deutsche Boerse Indices-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Deutsche Boerse Indices <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-euro-deutsche-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-deutsche-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-deutsche-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-deutsche-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-deutsche-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--FTSE Index Values-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">FTSE Index Values <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-euro-ftse-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-ftse-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-ftse-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-ftse-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-ftse-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--NYSE Euronext Indices-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">NYSE Euronext Indices <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-euro-euronext-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-euronext-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-euronext-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-euronext-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-euronext-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Madrid - IBEX Indice-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Madrid - IBEX Indice <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-euro-madrid-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-madrid-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-madrid-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-madrid-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-madrid-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Madrid - IBEX Indice-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Madrid - IBEX Indice <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-euro-madrid-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-madrid-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-madrid-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-madrid-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-madrid-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Swiss Exchange Indices-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Swiss Exchange Indices <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-euro-swiss-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-swiss-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-swiss-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-swiss-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-euro-swiss-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Latam-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  n3"><i id="iconCIndLatam" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCIndLatam()"class="text-decoration-none" data-toggle="collapse" href="#c-ind-latam-collapse"><b>Latam</b></a></div>
+                                <div class="col"  id="c-ind-latam-trade"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-latam-conjuntura"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-latam-mercados"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-latam-news"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-latam-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                            <div class="collapse" id="c-ind-latam-collapse">
+                                <div>
+                                    <!--Buenos Aires Stock Exchange-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Buenos Aires Stock Exchange <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-latam-buenos-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-buenos-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-buenos-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-buenos-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-buenos-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Mexico Indices-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Mexico Indices <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-latam-mex-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-mex-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-mex-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-mex-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-mex-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Santiago Stock Exchange-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Santiago Stock Exchange <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-latam-sant-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-sant-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-sant-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-sant-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-latam-sant-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--USA-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  n3"><i id="iconCIndUSA" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCIndUSA()"class="text-decoration-none" data-toggle="collapse" href="#c-ind-usa-collapse"><b>USA</b></a></div>
+                                <div class="col"  id="c-ind-usa-trade"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-usa-conjuntura"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-usa-mercados"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-usa-news"><i class="fas fa-check"></i></div>
+                                <div class="col"  id="c-ind-usa-analises"><i class="fas fa-check"></i></div>
+                            </div>
+                            <div class="collapse" id="c-ind-usa-collapse">
+                                <div>
+                                    <!--CBOE Indexes-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">CBOE Indexes <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-usa-cboe-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-cboe-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-cboe-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-cboe-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-cboe-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--CME S&P Indices
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">CME S&P Indices <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-usa-sp-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-sp-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-sp-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-sp-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-sp-analises"><i class="fas fa-check"></i></div>
+                                    </div> -->
+                                    <!--Nasdaq Índices-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">Nasdaq Indexes <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-usa-nasdaqind-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-nasdaqind-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-nasdaqind-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-nasdaqind-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-nasdaqind-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <!--Nasdaq Índices-->
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  n4">NYSE Global Index Feeds - GIFS <i class="far fa-clock"></i></div>
+                                        <div class="col"  id="c-ind-usa-gifs-trade"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-gifs-conjuntura"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-gifs-mercado"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-gifs-news"><i class="fas fa-check"></i></div>
+                                        <div class="col"  id="c-ind-usa-gifs-analises"><i class="fas fa-check"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Índice Bovespa-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Bovespa</div>
+                                <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-news"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-analises"><i class="fas fa-plus"></i></div>
+                            </div>
+                            
+                            <!--Índice Dow Jones-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Dow Jones</div>
+                                <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-news"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-analises"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <!--Índice Euronext-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Euronext</div>
+                                <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-news"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-analises"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <!--Índice FTSE-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice FTSE</div>
+                                <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-news"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-analises"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <!--Índice Madri-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Madri</div>
+                                <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-news"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-analises"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <!--Índice Nasdaq-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Nasdaq</div>
+                                <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-news"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-analises"><i class="fas fa-plus"></i></div>
+                            </div>
+                            <!--Índice S&P-->
+                            <div class="row align-items-center destacar">
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice S&P</div>
+                                <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-news"><i class="fas fa-plus"></i></div>
+                                <div class="col"  id="ad-c-indices-ibov-analises"><i class="fas fa-plus"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Markit CDS Índices-->
+                    <div class="row align-items-center destacar">
+                        <div class="col-4  px-lg-5" data-placement="right" data-toggle="tooltip" title="Indexes Credit Default Swap realizado pela Markit">Markit CDS Índices</div>
                         <div class="col"  id="c-indcds-trade"><i class="fas fa-times"></i></div>
                         
                         <div class="col"  id="c-indcds-conjuntura"><i class="fas fa-check"></i></div>
@@ -572,22 +933,9 @@
                         <div class="col"  id="c-indcds-news"><i class="fas fa-check"></i></div>
                         <div class="col"  id="c-indcds-analises"><i class="fas fa-check"></i></div>
                     </div>
-                    <!--Índices Mundiais-->
-                    <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="**DELAY** Pacote de índices composta por: Índices Asiáticos (ASX, Hangsen, Korea, Nikkei, Shangai, Thailand e TWI), Índice de Buenos Aires, ">Índices Mundiais <i class="far fa-clock"></i></div>
-                        <div class="col"  id="c-indmundi-trade"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-indmundi-conjuntura"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-indmundi-mercado"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-indmundi-news"><i class="fas fa-check"></i></div>
-                        <div class="col"  id="c-indmundi-analises"><i class="fas fa-check"></i></div>
-                    </div>
-                    
                     <!--Latibex-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-2064</br><b>Fee:</b> US$10,42">Latibex (Bolsa Madri) <i class="far fa-clock"></i></div>
+                        <div class="col-4  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-2064</br><b>Fee:</b> US$10,42">Latibex (Bolsa Madri) <i class="far fa-clock"></i></div>
                         <div class="col"  id="c-latibex-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="c-latibex-conjuntura"><i class="fas fa-check"></i></div>
@@ -599,7 +947,7 @@
                     </div>
                     <!--Nasdaq-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-7059</br><b>Fee:</b> ÑP: US$1,71 - P: US$40,29">Nasdaq + ADRs <i class="far fa-clock"></i></div>
+                        <div class="col-4  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-7059</br><b>Fee:</b> ÑP: US$1,71 - P: US$40,29">Nasdaq + ADRs <i class="far fa-clock"></i></div>
                         <div class="col"  id="c-nasdaq-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="c-nasdaq-conjuntura"><i class="fas fa-check"></i></div>
@@ -612,7 +960,7 @@
                     
                     <!--NYMEX-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-562</br><b>Fee:</b> US$142,02">NYMEX <i class="far fa-clock"></i></div>
+                        <div class="col-4  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title="<b><u>Tempo Real</u></br>Cód.Serv:</b> BC-562</br><b>Fee:</b> US$142,02">NYMEX <i class="far fa-clock"></i></div>
                         <div class="col"  id="c-nymex-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="c-nymex-conjuntura"><i class="fas fa-check"></i></div>
@@ -624,7 +972,7 @@
                     </div>
                     <!--NYSE-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title=" <b><u>Tempo Real</u></br> Cód.Serv:</b> BC-572 Nyse </br><b>Fee:</b> US$68,42 </br><b>Cód.Serv:</b> BC-14160 GIFS </br><b>Fee:</b> US$38,61</br><b>Cód.Serv:</b> BC-13843 MKT (Amex) </br><b>Fee:</b> US$34,97</br>">NYSE (com AMEX e GIFS) <i class="far fa-clock"></i>
+                        <div class="col-4  px-lg-5" data-placement="right" data-toggle="tooltip" data-html="true" title=" <b><u>Tempo Real</u></br> Cód.Serv:</b> BC-572 Nyse </br><b>Fee:</b> US$68,42 </br><b>Cód.Serv:</b> BC-14160 GIFS </br><b>Fee:</b> US$38,61</br><b>Cód.Serv:</b> BC-13843 MKT (Amex) </br><b>Fee:</b> US$34,97</br>">NYSE (com AMEX e GIFS) <i class="far fa-clock"></i>
                         </div>
                         <div class="col"  id="c-nyse-trade"><i class="fas fa-check"></i></div>
                         
@@ -635,45 +983,10 @@
                         <div class="col"  id="c-nyse-news"><i class="fas fa-check"></i></div>
                         <div class="col"  id="c-nyse-analises"><i class="fas fa-check"></i></div>
                     </div>
-                    <!--Spot Metais-->
-                    <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" data-placement="right" data-toggle="tooltip" title="Principais metais negociados no Mercado Balcão e preços LBMA">Spot Metais</div>
-                        <div class="col"  id="c-metais-trade"><i class="fas fa-times"></i></div>
-                        
-                        <div class="col"  id="c-metais-conjuntura"><i class="fas fa-times"></i></div>
-                        
-                        <div class="col"  id="c-metais-mercado"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-metais-news"><i class="fas fa-check"></i></div>
-                        <div class="col"  id="c-metais-analises"><i class="fas fa-check"></i></div>
-                    </div>
-                    <!--Spot Moedas Mini-->
-                    <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" title="Contempla as principais paridades do mundo além de Líbor para dólar">Spot Moedas Mini</div>
-                        <div class="col"  id="c-moedasmini-trade"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-moedasmini-conjuntura"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-moedasmini-mercado"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-moedasmini-news"><i class="fas fa-check"></i></div>
-                        <div class="col"  id="c-moedasmini-analises"><i class="fas fa-check"></i></div>
-                    </div>
-                    <!--Spot Moedas Full-->
-                    <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" title="Spot Moedas Mini + demais paridades disponíveis contabilizando mais de 2.000 ativos">Spot Moedas Full</div>
-                        <div class="col"  id="c-moedasfull-trade"><i class="fas fa-times"></i></div>
-                        
-                        <div class="col"  id="c-moedasfull-conjuntura"><i class="fas fa-times"></i></div>
-                        
-                        <div class="col"  id="c-moedasfull-mercado"><i class="fas fa-check"></i></div>
-                        
-                        <div class="col"  id="c-moedasfull-news"><i class="fas fa-check"></i></div>
-                        <div class="col"  id="c-moedasfull-analises"><i class="fas fa-check"></i></div>
-                    </div>
+                    
                     <!--Títitulo Publico Anbima-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" title="">Títitulos Públicos Anbima</div>
+                        <div class="col-4  px-lg-5" title="">Títitulos Públicos Anbima</div>
                         <div class="col"  id="c-titpubanbima-trade"><i class="fas fa-check"></i></div>
                         
                         <div class="col"  id="c-titpubanbima-conjuntura"><i class="fas fa-check"></i></div>
@@ -685,7 +998,7 @@
                     </div>
                     <!--Treasuries Americanas-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5" title="">Treasuries Americanas</div>
+                        <div class="col-4  px-lg-5" title="">Treasuries Americanas</div>
                         <div class="col"  id="c-tresuaries-trade"><i class="fas fa-times"></i></div>
                         
                         <div class="col"  id="c-tresuaries-conjuntura"><i class="fas fa-times"></i></div>
@@ -697,7 +1010,7 @@
                     </div>
                     <!--Contribuidores Cotação-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5"><i id="iconCContri" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCotacaoContri()"class="text-decoration-none" data-toggle="collapse" href="#Cotacao-ctbd-collapse"><b>Contribuidores</b></a></div>
+                        <div class="col-4  n2"><i id="iconCContri" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconCotacaoContri()"class="text-decoration-none" data-toggle="collapse" href="#Cotacao-ctbd-collapse"><b>Contribuidores</b></a></div>
                         <div class="col"  id="c-ctbd-trade"><i class="fas fa-times"></i></div>
                         <div class="col"  id="c-ctbd-conjuntura"><i class="fas fa-times"></i></div>
                         <div class="col"  id="c-ctbd-mercados"><i class="fas fa-check"></i></div>
@@ -709,7 +1022,7 @@
                         <div>
                             <!--Câmbio-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="27 Contribuidores de Câmbios contribuindo com Spot, Casado e Turismo">Câmbio</div>
+                                <div class="col-4  n3" title="27 Contribuidores de Câmbios contribuindo com Spot, Casado e Turismo">Câmbio</div>
                                 <div class="col"  id="c-ctbd-cambio-trade"><i class="fas fa-times"></i></div>
                                 <div class="col"  id="c-ctbd-cambio-conjuntura"><i class="fas fa-times"></i></div>
                                 <div class="col"  id="c-ctbd-cambio-mercado"><i class="fas fa-check"></i></div>
@@ -718,7 +1031,7 @@
                             </div>
                             <!--Criptomoedas-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="11 Contribuidores de Criptomoedas">Criptomoedas</div>
+                                <div class="col-4  n3" title="11 Contribuidores de Criptomoedas">Criptomoedas</div>
                                 <div class="col"  id="c-ctbd-cripto-trade"><i class="fas fa-times"></i></div>
                                 <div class="col"  id="c-ctbd-cripto-conjuntura"><i class="fas fa-times"></i></div>
                                 <div class="col"  id="c-ctbd-cripto-mercado"><i class="fas fa-check"></i></div>
@@ -727,7 +1040,7 @@
                             </div>
                             <!--Renda Fixa-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="16 Contribuidores de Renda Fixa contribuindo com CDB, LCI, LCA, Debêntures e Tít. Públicos">Renda Fixa</div>
+                                <div class="col-4  n3" title="16 Contribuidores de Renda Fixa contribuindo com CDB, LCI, LCA, Debêntures e Tít. Públicos">Renda Fixa</div>
                                 <div class="col"  id="c-ctbd-rfixa-trade"><i class="fas fa-times"></i></div>
                                 <div class="col"  id="c-ctbd-rfixa-conjuntura"><i class="fas fa-times"></i></div>
                                 <div class="col"  id="c-ctbd-rfixa-mercado"><i class="fas fa-check"></i></div>
@@ -736,7 +1049,7 @@
                             </div>
                             <!--Indicadores-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Indicadores de Agrícolas, Fundos e Inflação">Indicadores</div>
+                                <div class="col-4  n3" title="Indicadores de Agrícolas, Fundos e Inflação">Indicadores</div>
                                 <div class="col"  id="c-ctbd-rfixa-trade"><i class="fas fa-times"></i></div>
                                 <div class="col"  id="c-ctbd-rfixa-conjuntura"><i class="fas fa-times"></i></div>
                                 <div class="col"  id="c-ctbd-rfixa-mercado"><i class="fas fa-check"></i></div>
@@ -747,10 +1060,36 @@
                     </div>
                 </div>
             </div>
+        <!--Fim do Conteúdo Incluso #  Cabeçalho-->
+</br>
+</br>  
+        <!--Inicio do Conteúdos Adicionais Pagos #  Cabeçalho-->
+        <div class="container-fluid" id="cont-adc-pago">
+            <div class="row align-items-center" id="valores2" style="border-bottom: 1px solid white" >
+                <div class="col-4"><div class="realtime"><b>RT</b></div> Tempo Real &nbsp;&nbsp;&nbsp;<i class="fas fa-clock"></i> Delay</div>
+                <div class="col"  id="trade-valor"><b></b></div>
+                <div class="col"  id="conjuntura-valor"><b></b></div>
+                <div class="col"  id="mercados-valor"><b></b></div>
+                <div class="col"  id="news-valor"><b></b></div>
+                <div class="col"  id="analises-valor"><b></b></div>
+            </div>
+            <div class="row align-items-center" >
+                <div class="col-4"><b>Conteúdos Adicionais Pagos</b></div>
+                <div class="col"  id="trade-lb"><b>Trade</b></div>
+                
+                <div class="col"  id="conjuntura-lb"><b>Conjuntura</b></div>
+                
+                <div class="col"  id="mercados-lb"><b>Mercados</b></div>
+                
+                <div class="col"  id="news-lb"><b>News</b></div>
+                <div class="col"  id="analises-lb"><b>Análises</b></div>
+            </div>
+        </div>
+
             <!--Addons-->
             <div class="container-fluid">
                 <div class="row align-items-center destacar">
-                    <div class="col-3"><i id="iconAddon" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconAddon()"class="text-decoration-none" data-toggle="collapse" title="teste" href="#Addon-collapse"><b>Add-Ons</b></a></div>
+                    <div class="col-4"><i id="iconAddon" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconAddon()"class="text-decoration-none" data-toggle="collapse" title="teste" href="#Addon-collapse"><b>Add-Ons</b></a></div>
                     <div class="col"  id="ad-trade"><i class="fas fa-plus"></i></div>
                     <div class="col"  id="ad-conjuntura"><i class="fas fa-plus"></i></div>
                     <div class="col"  id="ad-mercados"><i class="fas fa-plus"></i></div>
@@ -761,7 +1100,7 @@
             <div class="collapse" id="Addon-collapse">
                 <div class="container-fluid">
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5"><i id="iconModulos" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModulos()"class="text-decoration-none" data-toggle="collapse" title="" href="#Addon-mod-collapse">Módulos</a></div>
+                        <div class="col-4  px-lg-5"><i id="iconModulos" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModulos()"class="text-decoration-none" data-toggle="collapse" title="" href="#Addon-mod-collapse">Módulos</a></div>
                         <div class="col"  id="ad-mod-trade"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-mod-conjuntura"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-mod-mercados"><i class="fas fa-plus"></i></div>
@@ -772,7 +1111,7 @@
                         <div>
                             <!--ADD-on AGRO-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Cód.Serv: BA-19565 | Custo: R$ 284,17">Add-On Agro</div>
+                                <div class="col-4  px-lg-5" title="Cód.Serv: BA-19565 | Custo: R$ 284,17">Add-On Agro</div>
                                 <div class="col"  id="ad-mod-agro-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-agro-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-agro-mercado"><i class="fas fa-plus"></i></div>
@@ -781,7 +1120,7 @@
                             </div>
                             <!--ADD-on Político-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Cód.Serv: BC-19869 | Custo: R$ 360,00">Add-On Político</div>
+                                <div class="col-4  px-lg-5" title="Cód.Serv: BC-19869 | Custo: R$ 360,00">Add-On Político</div>
                                 <div class="col"  id="ad-mod-pol-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-pol-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-pol-mercado"><i class="fas fa-plus"></i></div>
@@ -790,7 +1129,7 @@
                             </div>
                             <!--Análise Fundamentalista-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5"><i id="iconAnaFund" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconAnaFund()"class="text-decoration-none" data-toggle="collapse" title="Ferramenta de Análise Fundamentalista, com dados de empresas de capital aberto e fechado" href="#Addon-mod-af-collapse">Análise Fundamentalista</a></div>
+                                <div class="col-4  px-lg-5"><i id="iconAnaFund" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconAnaFund()"class="text-decoration-none" data-toggle="collapse" title="Ferramenta de Análise Fundamentalista, com dados de empresas de capital aberto e fechado" href="#Addon-mod-af-collapse">Análise Fundamentalista</a></div>
                                 <div class="col"  id="ad-mod-af-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-af-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-af-mercado"><i class="fas fa-plus"></i></div>
@@ -801,7 +1140,7 @@
                                 <div>
                                     <!--Cap. Aberto e Cap. Fechado-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="Cód.Serv: BC-19724 | Custo: R$ 450,00">Cap. Aberto + Cap. Fechado</div>
+                                        <div class="col-4  px-lg-5" title="Cód.Serv: BC-19724 | Custo: R$ 450,00">Cap. Aberto + Cap. Fechado</div>
                                         <div class="col"  id="ad-mod-af-capabefech-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-mod-af-capabefech-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-mod-af-capabefech-mercado"><i class="fas fa-plus"></i></div>
@@ -810,7 +1149,7 @@
                                     </div>
                                     <!--Capital Aberto-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="Cód.Serv: BC-14167 | Custo: R$ 136,40">Capital Aberto</div>
+                                        <div class="col-4  px-lg-5" title="Cód.Serv: BC-14167 | Custo: R$ 136,40">Capital Aberto</div>
                                         <div class="col"  id="ad-mod-af-capabe-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-mod-af-capabe-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-mod-af-capabe-mercado"><i class="fas fa-plus"></i></div>
@@ -819,7 +1158,7 @@
                                     </div>
                                     <!--Capital Fechado-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="Cód.Serv: BC-19726 | Custo: R$ 250,00">Capital Fechado</div>
+                                        <div class="col-4  px-lg-5" title="Cód.Serv: BC-19726 | Custo: R$ 250,00">Capital Fechado</div>
                                         <div class="col"  id="ad-mod-af-capabefech-trade"><i class="fas fa-times"></i></div>
                                         <div class="col"  id="ad-mod-af-capabefech-conjuntura"><i class="fas fa-times"></i></div>
                                         <div class="col"  id="ad-mod-af-capabefech-mercado"><i class="fas fa-times"></i></div>
@@ -830,7 +1169,7 @@
                             </div>
                             <!--Deal Data-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Cód.Serv: BC-15171 | Custo: R$ 425,00">Deal Data - Dados Transacionais</div>
+                                <div class="col-4  px-lg-5" title="Cód.Serv: BC-15171 | Custo: R$ 425,00">Deal Data - Dados Transacionais</div>
                                 <div class="col"  id="ad-mod-pol-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-pol-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-pol-mercado"><i class="fas fa-plus"></i></div>
@@ -839,7 +1178,7 @@
                             </div>
                             <!--Fundos de Investimentos-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Cód.Serv: BC-14166 | Custo: R$ 341,00">Fundos de Investimentos</div>
+                                <div class="col-4  px-lg-5" title="Cód.Serv: BC-14166 | Custo: R$ 341,00">Fundos de Investimentos</div>
                                 <div class="col"  id="ad-mod-pol-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-pol-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-mod-pol-mercado"><i class="fas fa-plus"></i></div>
@@ -849,7 +1188,7 @@
                         </div>   
                     </div>
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5"><i id="iconModNoticias" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModNoticias()"class="text-decoration-none" data-toggle="collapse" title="" href="#Addon-n-collapse">Notícias</a></div>
+                        <div class="col-4  px-lg-5"><i id="iconModNoticias" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModNoticias()"class="text-decoration-none" data-toggle="collapse" title="" href="#Addon-n-collapse">Notícias</a></div>
                         <div class="col"  id="ad-n-trade"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-conjuntura"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-n-mercados"><i class="fas fa-plus"></i></div>
@@ -860,7 +1199,7 @@
                         <div>
                             <!--Agro - Clima/Tempo-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Cód.Serv: BC-1947 | Custo: R$ 352,31">Agro - Clima/Tempo</div>
+                                <div class="col-4  px-lg-5" title="Cód.Serv: BC-1947 | Custo: R$ 352,31">Agro - Clima/Tempo</div>
                                 <div class="col"  id="ad-n-climatempo-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-climatempo-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-climatempo-mercados"><i class="fas fa-plus"></i></div>
@@ -869,7 +1208,7 @@
                             </div>
                             <!--Análises Agrícolas-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Cód.Serv: BC-1150 | Custo: R$ 195,53">Análises Agrícolas CEPEA</div>
+                                <div class="col-4  px-lg-5" title="Cód.Serv: BC-1150 | Custo: R$ 195,53">Análises Agrícolas CEPEA</div>
                                 <div class="col"  id="ad-n-cepea-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-cepea-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-cepea-mercados"><i class="fas fa-plus"></i></div>
@@ -878,7 +1217,7 @@
                             </div>
                             <!--Arko America Latina-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Cód.Serv: BC-1669 | Custo: R$ 386,34">Arko America Latina</div>
+                                <div class="col-4  px-lg-5" title="Cód.Serv: BC-1669 | Custo: R$ 386,34">Arko America Latina</div>
                                 <div class="col"  id="ad-n-arko-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-arko-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-arko-mercados"><i class="fas fa-plus"></i></div>
@@ -887,7 +1226,7 @@
                             </div>
                             <!--Bom dia Mercado-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Cód.Serv: BC-1403 | Custo: R$ 83,43">Bom dia Mercado</div>
+                                <div class="col-4  px-lg-5" title="Cód.Serv: BC-1403 | Custo: R$ 83,43">Bom dia Mercado</div>
                                 <div class="col"  id="ad-n-bdm-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-bdm-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-bdm-mercados"><i class="fas fa-plus"></i></div>
@@ -896,7 +1235,7 @@
                             </div>
                             <!--Feed Político-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Cód.Ser: BC-13783 | Custo: R$ 180,00">Feed Político</div>
+                                <div class="col-4  px-lg-5" title="Cód.Ser: BC-13783 | Custo: R$ 180,00">Feed Político</div>
                                 <div class="col"  id="ad-n-pol-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-pol-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-pol-mercados"><i class="fas fa-plus"></i></div>
@@ -905,7 +1244,7 @@
                             </div>
                             <!--Newsletter Milho & Soja-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Newsletter em formato PDF. Para vizualização dentro da Plataforma e por e-mail: Cód.Serv: BA-19081|Custo: R$ 79,57">Newsletter Milho & Soja</div>
+                                <div class="col-4  px-lg-5" title="Newsletter em formato PDF. Para vizualização dentro da Plataforma e por e-mail: Cód.Serv: BA-19081|Custo: R$ 79,57">Newsletter Milho & Soja</div>
                                 <div class="col"  id="ad-n-nms-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-nms-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-nms-mercados"><i class="fas fa-plus"></i></div>
@@ -914,7 +1253,7 @@
                             </div>
                             <!--Newsletter Pecuária-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Newsletter em formato PDF. Para vizualização dentro da Plataforma e por e-mail: Cód.Serv: BA-19080|Custo: R$ 64,00">Newsletter Pecuária</div>
+                                <div class="col-4  px-lg-5" title="Newsletter em formato PDF. Para vizualização dentro da Plataforma e por e-mail: Cód.Serv: BA-19080|Custo: R$ 64,00">Newsletter Pecuária</div>
                                 <div class="col"  id="ad-n-npec-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-npec-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-npec-mercados"><i class="fas fa-plus"></i></div>
@@ -923,7 +1262,7 @@
                             </div>
                             <!--Notiosos Dow Jones-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5"><i id="iconModNDJN" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModNDJN()"class="text-decoration-none" data-toggle="collapse" title="Conteúdo em Inglês" href="#Addon-n-djn-collapse">Notiosos Dow Jones</a></div>
+                                <div class="col-4  px-lg-5"><i id="iconModNDJN" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModNDJN()"class="text-decoration-none" data-toggle="collapse" title="Conteúdo em Inglês" href="#Addon-n-djn-collapse">Notiosos Dow Jones</a></div>
                                 <div class="col"  id="ad-n-djn-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-djn-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-djn-mercados"><i class="fas fa-plus"></i></div>
@@ -935,7 +1274,7 @@
                                 <div>
                                     <!--Commodities News-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Commodities News</div>
+                                        <div class="col-4  px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Commodities News</div>
                                         <div class="col"  id="ad-n-djn-cn-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-n-djn-cn-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-n-djn-cn-mercados"><i class="fas fa-plus"></i></div>
@@ -944,7 +1283,7 @@
                                     </div>
                                     <!--Energy News-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Energy News</div>
+                                        <div class="col-4  px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Energy News</div>
                                         <div class="col"  id="ad-n-djn-enn-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-n-djn-enn-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-n-djn-enn-mercados"><i class="fas fa-plus"></i></div>
@@ -953,7 +1292,7 @@
                                     </div>
                                     <!--Equities News-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Equities News</div>
+                                        <div class="col-4  px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Equities News</div>
                                         <div class="col"  id="ad-n-djn-eqn-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-n-djn-eqn-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-n-djn-eqn-mercados"><i class="fas fa-plus"></i></div>
@@ -961,8 +1300,8 @@
                                         <div class="col"  id="ad-n-djn-eqn-analises"><i class="fas fa-plus"></i></div>
                                     </div>
                                     <!--Financial News-->
-                                    <div class="row align-items-center destacar" style="border-bottom: 1px solid #70c9e4">
-                                        <div class="col-3  px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Financial News</div>
+                                    <div class="row align-items-center destacar">
+                                        <div class="col-4  px-lg-5" title="Cód.Serv: BC-1103 | Custo: R$95,00">Financial News</div>
                                         <div class="col"  id="ad-n-djn-fn-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-n-djn-fn-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-n-djn-fn-mercados"><i class="fas fa-plus"></i></div>
@@ -973,7 +1312,7 @@
                             </div>
                             <!--Têndencias Online-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="Cód.Serv: BC-111|Custo: R$ 301,48">Têndencias Online</div>
+                                <div class="col-4  px-lg-5" title="Cód.Serv: BC-111|Custo: R$ 301,48">Têndencias Online</div>
                                 <div class="col"  id="ad-n-tenon-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-tenon-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-n-tenon-mercados"><i class="fas fa-plus"></i></div>
@@ -985,7 +1324,7 @@
                     </div>
                     <!--Add Cotacao-->
                     <div class="row align-items-center destacar">
-                        <div class="col-3  px-lg-5"><i id="iconModCotacao" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModCotacao()"class="text-decoration-none" data-toggle="collapse" title="" href="#Addon-c-collapse">Cotações</a></div>
+                        <div class="col-4  px-lg-5"><i id="iconModCotacao" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModCotacao()"class="text-decoration-none" data-toggle="collapse" title="" href="#Addon-c-collapse">Cotações</a></div>
                         <div class="col"  id="ad-c-trade"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-c-conjuntura"><i class="fas fa-plus"></i></div>
                         <div class="col"  id="ad-c-mercados"><i class="fas fa-plus"></i></div>
@@ -996,7 +1335,7 @@
                         <div>
                             <!--BM&F Level I RT-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-160| Custo Fee: Ñ Profissional R$24,15 - Profissional R$120,71">BM&F Level I (Sem Livro)</div>
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-160| Custo Fee: Ñ Profissional R$24,15 - Profissional R$120,71">BM&F Level I (Sem Livro)</div>
                                 <div class="col"  id="ad-c-bmfi-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-bmfi-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-bmfi-mercado"><i class="fas fa-plus"></i></div>
@@ -1005,7 +1344,7 @@
                             </div>
                             <!--BM&F Level II RT-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19083| Custo Fee: Ñ Profissional R$40,24 - Profissional R$174,36">BM&F Level II (Com Livro)</div>
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19083| Custo Fee: Ñ Profissional R$40,24 - Profissional R$174,36">BM&F Level II (Com Livro)</div>
                                 <div class="col"  id="ad-c-bmfii-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-bmfii-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-bmfii-mercado"><i class="fas fa-plus"></i></div>
@@ -1014,7 +1353,7 @@
                             </div>
                             <!--Bovespa Level I RT-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-150| Custo Fee: Ñ Profissional R$4,03 - Profissional R$120,71">Bovespa Level I (Sem Livro)</div>
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-150| Custo Fee: Ñ Profissional R$4,03 - Profissional R$120,71">Bovespa Level I (Sem Livro)</div>
                                 <div class="col"  id="ad-c-bovi-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-bovi-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-bovi-mercado"><i class="fas fa-plus"></i></div>
@@ -1023,7 +1362,7 @@
                             </div>
                             <!--Bovespa Level II RT-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19082| Custo Fee: Ñ Profissional R$6,70 - Profissional R$174,36">Bovespa Level II (Com Livro)</div>
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19082| Custo Fee: Ñ Profissional R$6,70 - Profissional R$174,36">Bovespa Level II (Com Livro)</div>
                                 <div class="col"  id="ad-c-bovii-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-bovii-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-bovii-mercado"><i class="fas fa-plus"></i></div>
@@ -1032,7 +1371,7 @@
                             </div>
                             <!--CBOT RT-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-550| Custo Fee: U$142,02 / *Snapshot** Cód.Serv: BC-1998| Custo Fee: U$23,32">CBOT</div>
+                                <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-550| Custo Fee: U$142,02 / *Snapshot** Cód.Serv: BC-1998| Custo Fee: U$23,32">CBOT</div>
                                 <div class="col"  id="ad-c-CBOT-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-CBOT-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-CBOT-mercado"><i class="fas fa-plus"></i></div>
@@ -1041,7 +1380,7 @@
                             </div>
                             <!--CBOT Snapshot
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="**** Cód.Serv: BC-1998| Custo Fee: U$23,32">CBOT</div>
+                                <div class="col-4  px-lg-5" title="**** Cód.Serv: BC-1998| Custo Fee: U$23,32">CBOT</div>
                                 <div class="col"  id="ad-c-bmfi-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-bmfi-trade-aai"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-bmfi-conjuntura"><i class="fas fa-plus"></i></div>
@@ -1053,7 +1392,7 @@
                             </div> -->
                             <!--IPE-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="ICE Futures Europe - International Petroleum Exchange">ICE Europe (IPE)</div>
+                                <div class="col-4  px-lg-5" title="ICE Futures Europe - International Petroleum Exchange">ICE Europe (IPE)</div>
                                 <div class="col"  id="c-ipe-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="c-ipe-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="c-ipe-mercado"><i class="fas fa-plus"></i></div>
@@ -1062,7 +1401,7 @@
                             </div>
                             <!--NYBOT-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="ICE US - New York Board of Trade">ICE US (NYBOT)</div>
+                                <div class="col-4  px-lg-5" title="ICE US - New York Board of Trade">ICE US (NYBOT)</div>
                                 <div class="col"  id="c-nybot-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="c-nybot-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="c-nybot-mercado"><i class="fas fa-plus"></i></div>
@@ -1071,7 +1410,7 @@
                             </div>
                             <!--Indices Mundiais RT-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5"><i id="iconModCIndices" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModCIndices()"class="text-decoration-none" data-toggle="collapse" title="Índices Mundiais em Tempo Real" href="#Addon-c-indices-collapse">Índices Mundiais</a></div>
+                                <div class="col-4  px-lg-5"><i id="iconModCIndices" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconModCIndices()"class="text-decoration-none" data-toggle="collapse" title="Índices Mundiais em Tempo Real" href="#Addon-c-indices-collapse">Índices Mundiais</a></div>
                                 <div class="col"  id="ad-c-indices-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-indices-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="ad-c-indices-mercados"><i class="fas fa-plus"></i></div>
@@ -1082,7 +1421,7 @@
                                 <div>
                                     <!--Índice Bovespa-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Bovespa</div>
+                                        <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Bovespa</div>
                                         <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
@@ -1091,7 +1430,7 @@
                                     </div>
                                     <!--Índice Bovespa-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Deutsche Borse</div>
+                                        <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Deutsche Borse</div>
                                         <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
@@ -1100,7 +1439,7 @@
                                     </div>
                                     <!--Índice Bovespa-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice CBOE</div>
+                                        <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice CBOE</div>
                                         <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
@@ -1109,7 +1448,7 @@
                                     </div>
                                     <!--Índice Bovespa-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Dow Jones</div>
+                                        <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Dow Jones</div>
                                         <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
@@ -1118,7 +1457,7 @@
                                     </div>
                                     <!--Índice Bovespa-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Euronext</div>
+                                        <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Euronext</div>
                                         <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
@@ -1127,7 +1466,7 @@
                                     </div>
                                     <!--Índice Bovespa-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice FTSE</div>
+                                        <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice FTSE</div>
                                         <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
@@ -1136,7 +1475,7 @@
                                     </div>
                                     <!--Índice Bovespa-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Madri</div>
+                                        <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Madri</div>
                                         <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
@@ -1145,7 +1484,7 @@
                                     </div>
                                     <!--Índice Bovespa-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Nasdaq</div>
+                                        <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice Nasdaq</div>
                                         <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
@@ -1154,7 +1493,7 @@
                                     </div>
                                     <!--Índice Bovespa-->
                                     <div class="row align-items-center destacar">
-                                        <div class="col-3  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice S&P</div>
+                                        <div class="col-4  px-lg-5" title="**REAL TIME** Cód.Serv: BC-19077| Custo Fee: Ñ Profissional R$2,01 - Profissional R$4,03">Índice S&P</div>
                                         <div class="col"  id="ad-c-indices-ibov-trade"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-conjuntura"><i class="fas fa-plus"></i></div>
                                         <div class="col"  id="ad-c-indices-ibov-mercado"><i class="fas fa-plus"></i></div>
@@ -1165,7 +1504,7 @@
                             </div>
                              <!--NYBOT-->
                             <div class="row align-items-center destacar">
-                                <div class="col-3  px-lg-5" title="">JP Morgan (Risco País)</div>
+                                <div class="col-4  px-lg-5" title="">JP Morgan (Risco País)</div>
                                 <div class="col"  id="c-nybot-trade"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="c-nybot-conjuntura"><i class="fas fa-plus"></i></div>
                                 <div class="col"  id="c-nybot-mercado"><i class="fas fa-plus"></i></div>
