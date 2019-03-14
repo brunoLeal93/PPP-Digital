@@ -12,7 +12,7 @@ b{
 .fixar {
     position:fixed;
     top: 75px;
-    background: #ffffffe6;
+    background: white;
     margin-top: 0px !important;
     z-index: 9999;
 }
