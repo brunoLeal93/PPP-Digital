@@ -1,160 +1,6 @@
-
-$(document).ready(function() {
-        $('.fixed').addClass('is-sticky');
-        $('[data-toggle="tooltip"]').tooltip();
-
-/* Inicio do script que trava os header*/
-        var offset1 = $('#cont-incluso').offset().top -100;
-        var $contincluso = $('#cont-incluso'); // guardar o elemento na memoria para melhorar performance
-        $(document).on('scroll', function () {
-            if (offset1 <= $(window).scrollTop()) {
-                $contincluso.addClass('fixar');
-            } else {
-                $contincluso.removeClass('fixar');
-            }
-
-});
-/*
-        var offset2 = $('#cont-adc-pago').offset().top -100;
-        var $adcpago = $('#cont-adc-pago'); // guardar o elemento na memoria para melhorar performance
-        $(document).on('scroll', function () {
-            if (offset2 <= $(window).scrollTop()) {
-                $adcpago.addClass('fixar');
-            } else {
-                $adcpago.removeClass('fixar');
-            }
-});
- Fim do script que trava os header */
-
-    });
-
-/* JS dos Checkbox */
-$('#ckMostraPrecos').click(function(){
-    var ckPrecos = document.getElementById('ckMostraPrecos');
-    if(ckMPrecos.checked == true){
-        $('#valores').show();
-    }else{
-        $('#valores').hide();
-    }
-})
-
-
-$('#checkAll').click(function(){
-    var chkAll = document.getElementById('checkAll');
-    var ckTrade = document.getElementById('trade');
-    var ckConjuntura  = document.getElementById('conjuntura');
-    //var ckAAI  = document.getElementById('trade-aai');
-    var ckMercados  = document.getElementById('mercados');
-    //var ckMercadosBS  = document.getElementById('mercados-bs');
-    var ckNews  = document.getElementById('news');
-    //var ckNewsBS  = document.getElementById('news-bs');
-    var ckAnalises  = document.getElementById('analises');
-
-    if(chkAll.checked == true){
-
-        ckTrade.checked = true;
-        ckConjuntura.checked = true;
-        //ckAAI.checked = true;
-        ckMercados.checked = true;
-        //ckMercadosBS.checked = true;
-        ckNews.checked = true;
-        //ckNewsBS.checked = true;
-        ckAnalises.checked = true;
-
-    } else {
-
-        ckTrade.checked = false;
-        ckConjuntura.checked = false;
-        //ckAAI.checked = false;
-        ckMercados.checked = false;
-        //ckMercadosBS.checked = false;
-        ckNews.checked = false;
-        //ckNewsBS.checked = false;
-        ckAnalises.checked = false;
-    }
-});
-
- $('#trade').click(function() {
-        
-        var ckTrade = document.getElementById('trade');
-        if(ckTrade.checked == false){
-            var chkAll = document.getElementById('checkAll');
-            chkAll.checked = false;
-        };
-
-    });
-/*    $('#trade-aai').click(function() {
-        
-        var ckTrade = document.getElementById('trade-aai');
-        if(ckTrade.checked == false){
-            var chkAll = document.getElementById('checkAll');
-            chkAll.checked = false;
-        };
-
-    });
-*/
-    $('#conjuntura').click(function() {
-        
-        var ckTrade = document.getElementById('conjuntura');
-        if(ckTrade.checked == false){
-            var chkAll = document.getElementById('checkAll');
-            chkAll.checked = false;
-        };
-
-    });
-/*    $('#mercados-bs').click(function() {
-        
-        var ckTrade = document.getElementById('mercados-bs');
-        if(ckTrade.checked == false){
-            var chkAll = document.getElementById('checkAll');
-            chkAll.checked = false;
-        };
-
-    });
-*/
-    $('#mercados').click(function() {
-        
-        var ckTrade = document.getElementById('mercados');
-        if(ckTrade.checked == false){
-            var chkAll = document.getElementById('checkAll');
-            chkAll.checked = false;
-        };
-
-    });
-/*    $('#news-bs').click(function() {
-        
-        var ckTrade = document.getElementById('news-bs');
-        if(ckTrade.checked == false){
-            var chkAll = document.getElementById('checkAll');
-            chkAll.checked = false;
-        };
-
-    });
-*/
-    $('#news').click(function() {
-        
-        var ckTrade = document.getElementById('news');
-        if(ckTrade.checked == false){
-            var chkAll = document.getElementById('checkAll');
-            chkAll.checked = false;
-        };
-
-    });
-    $('#analises').click(function() {
-         
-        var ckTrade = document.getElementById('analises');
-        if(ckTrade.checked == false){
-            var chkAll = document.getElementById('checkAll');
-            chkAll.checked = false;
-        };
-
-    });
-
 /* Funções para controlar movimentação dos icones da callopse*/
 
 function iconNoticia(){
-    
-
     if($(document.getElementById("Noticias-collapse")).hasClass('show')){
         $('#iconN').removeClass('fa-angle-down');
         $('#iconN').addClass('fa-angle-right');
@@ -355,7 +201,6 @@ function iconCIndUSA(){
     }
 }
 
-
 function iconCotacaoContri(){
     if($(document.getElementById("Cotacao-ctbd-collapse")).hasClass('show')){
         $('#iconCContri').removeClass('fa-angle-down');
@@ -435,3 +280,200 @@ function iconModNDJN(){
         $('#iconModNDJN').addClass('fa-angle-down');
     }
 }
+
+/*JS Lisbox */
+
+function controlaNivel(){
+
+    var sel = document.getElementById('selectNivel');
+    var v0 = sel.options[sel.selectedIndex].value;
+    var v1 = sel.value;
+
+    console.log(v1);
+    if(sel.value == 0){
+        $('#Noticias-collapse').removeClass('show');
+        $('#Cotacao-collapse').removeClass('show');
+        iconCotacao();
+        iconNoticia();
+        console.log('teste0')
+    }else{
+        if(sel.value == 1) {
+            $('#Noticias-collapse').addClass('show');
+            $('#Cotacao-collapse').addClass('show');
+            iconCotacao();
+            iconNoticia();
+            console.log('teste1')
+
+        }else{
+            if(sel.value == 2){
+                iconNoticiaContri();
+                iconCotacaoB3();
+                iconCotacaoBC();
+                iconCIndices();
+                console.log('teste2')
+            }else{
+                if(sel.value == 3){
+                      iconCIndAsiaOcean();
+                      iconCIndEuropa();
+                      iconCIndLatam();
+                      iconCIndUSA();
+                      console.log('teste3')
+                }
+            }
+        }
+    }
+
+
+}
+
+
+$(document).ready(function() {
+        $('.fixed').addClass('is-sticky');
+        $('[data-toggle="tooltip"]').tooltip();
+
+/* Inicio do script que trava os header*/
+        var offset1 = $('#cont-incluso').offset().top -100;
+        var $contincluso = $('#cont-incluso'); // guardar o elemento na memoria para melhorar performance
+        $(document).on('scroll', function () {
+            if (offset1 <= $(window).scrollTop()) {
+                $contincluso.addClass('fixar');
+            } else {
+                $contincluso.removeClass('fixar');
+            }
+
+        });
+/*
+        var offset2 = $('#cont-adc-pago').offset().top -100;
+        var $adcpago = $('#cont-adc-pago'); // guardar o elemento na memoria para melhorar performance
+        $(document).on('scroll', function () {
+            if (offset2 <= $(window).scrollTop()) {
+                $adcpago.addClass('fixar');
+            } else {
+                $adcpago.removeClass('fixar');
+            }
+});
+ Fim do script que trava os header */
+    });
+
+/* JS dos Checkbox */
+
+$('#ckMostraPrecos').click(function(){
+    var ckPrecos = document.getElementById('ckMostraPrecos');
+    if(ckMPrecos.checked == true){
+        $('#valores').show();
+    }else{
+        $('#valores').hide();
+    }
+})
+
+
+$('#checkAll').click(function(){
+    var chkAll = document.getElementById('checkAll');
+    var ckTrade = document.getElementById('trade');
+    var ckConjuntura  = document.getElementById('conjuntura');
+    //var ckAAI  = document.getElementById('trade-aai');
+    var ckMercados  = document.getElementById('mercados');
+    //var ckMercadosBS  = document.getElementById('mercados-bs');
+    var ckNews  = document.getElementById('news');
+    //var ckNewsBS  = document.getElementById('news-bs');
+    var ckAnalises  = document.getElementById('analises');
+
+    if(chkAll.checked == true){
+
+        ckTrade.checked = true;
+        ckConjuntura.checked = true;
+        //ckAAI.checked = true;
+        ckMercados.checked = true;
+        //ckMercadosBS.checked = true;
+        ckNews.checked = true;
+        //ckNewsBS.checked = true;
+        ckAnalises.checked = true;
+
+    } else {
+
+        ckTrade.checked = false;
+        ckConjuntura.checked = false;
+        //ckAAI.checked = false;
+        ckMercados.checked = false;
+        //ckMercadosBS.checked = false;
+        ckNews.checked = false;
+        //ckNewsBS.checked = false;
+        ckAnalises.checked = false;
+    }
+});
+
+ $('#trade').click(function() {
+        
+        var ckTrade = document.getElementById('trade');
+        if(ckTrade.checked == false){
+            var chkAll = document.getElementById('checkAll');
+            chkAll.checked = false;
+        };
+
+    });
+/*    $('#trade-aai').click(function() {
+        
+        var ckTrade = document.getElementById('trade-aai');
+        if(ckTrade.checked == false){
+            var chkAll = document.getElementById('checkAll');
+            chkAll.checked = false;
+        };
+
+    });
+*/
+    $('#conjuntura').click(function() {
+        
+        var ckTrade = document.getElementById('conjuntura');
+        if(ckTrade.checked == false){
+            var chkAll = document.getElementById('checkAll');
+            chkAll.checked = false;
+        };
+
+    });
+/*    $('#mercados-bs').click(function() {
+        
+        var ckTrade = document.getElementById('mercados-bs');
+        if(ckTrade.checked == false){
+            var chkAll = document.getElementById('checkAll');
+            chkAll.checked = false;
+        };
+
+    });
+*/
+    $('#mercados').click(function() {
+        
+        var ckTrade = document.getElementById('mercados');
+        if(ckTrade.checked == false){
+            var chkAll = document.getElementById('checkAll');
+            chkAll.checked = false;
+        };
+
+    });
+/*    $('#news-bs').click(function() {
+        
+        var ckTrade = document.getElementById('news-bs');
+        if(ckTrade.checked == false){
+            var chkAll = document.getElementById('checkAll');
+            chkAll.checked = false;
+        };
+
+    });
+*/
+    $('#news').click(function() {
+        
+        var ckTrade = document.getElementById('news');
+        if(ckTrade.checked == false){
+            var chkAll = document.getElementById('checkAll');
+            chkAll.checked = false;
+        };
+
+    });
+    $('#analises').click(function() {
+         
+        var ckTrade = document.getElementById('analises');
+        if(ckTrade.checked == false){
+            var chkAll = document.getElementById('checkAll');
+            chkAll.checked = false;
+        };
+
+    });

@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label for="selectPlataforma">Selecione a Plataforma</label>
                             <select class="form-control" id="selectPlataforma">
-                                <option>Broadcast+</option>
+                                <option >Broadcast+</option>
                                 <option>Broadcast Agro</option>
                                 <option>Broadcast Web</option>
                             </select>
@@ -33,13 +33,13 @@
                     </div>
                     <div class="col-2 nprint">        
                         <div class="form-group">
-                            <label for="selectPlataforma">Ir para Nível:</label>
-                            <select class="form-control" id="selectNivel">
-                                <option>Nível 1</option>
-                                <option>Nível 2</option>
-                                <option>Nível 3</option>
-                                <option>Nível 4</option>
-                                
+                            <label for="selectPlataforma">Abrir Nível:</label>
+                            <select class="form-control" id="selectNivel" onchange="controlaNivel()">
+                                <option value="0">0º Nível</option>
+                                <option value="1">1º Nível</option>
+                                <option value="2">2º Nível</option>
+                                <option value="3">Todos</option>
+                                <option value="4"></option>
                             </select>
                         </div>
                     </div>
@@ -101,11 +101,8 @@
             <div class="row align-items-center" >
                 <div class="col-4"><b>Conteúdos Inclusos</b></div>
                 <div class="col"  id="trade-lb"><b>Trade</b></div>
-                
                 <div class="col"  id="conjuntura-lb"><b>Conjuntura</b></div>
-                
                 <div class="col"  id="mercados-lb"><b>Mercados</b></div>
-                
                 <div class="col"  id="news-lb"><b>News</b></div>
                 <div class="col"  id="analises-lb"><b>Análises</b></div>
             </div>
@@ -116,11 +113,8 @@
                 <div class="row align-items-center destacar">
                     <div class="col-4"><i id="iconN" class="fas fa-angle-right"></i>&nbsp;<a onclick="iconNoticia()" class="text-decoration-none" data-toggle="collapse" href="#Noticias-collapse"><b>Notícias</b></a></div>
                     <div class="col"  id="n-trade"><i class="fas fa-check"></i></div>
-                    
                     <div class="col"  id="n-conjuntura"><i class="fas fa-check"></i></div>
-                    
                     <div class="col"  id="n-mercados"><i class="fas fa-check"></i></div>
-                    
                     <div class="col"  id="n-news"><i class="fas fa-check"></i></div>
                     <div class="col"  id="n-analises"><i class="fas fa-check"></i></div>
                 </div>
