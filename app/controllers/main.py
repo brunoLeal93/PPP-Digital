@@ -1,7 +1,5 @@
 from flask import render_template, request, jsonify
 from app import app
-from app.controllers.auxiliar import Cotacao
-from app.models.Form import FiltroCot
 
 ## CRIAR PAGINA PARA SE LOGAR
 @app.route('/login', methods=('GET', 'POST'))
@@ -14,118 +12,12 @@ def ppp():
 @app.route('/Home', methods=('GET', 'POST'))
 @app.route('/', methods=('GET', 'POST'))
 def home():
-        form = FiltroCot()
+        
+        return render_template('index.html')
 
-        return render_template('index.html', form=form)
-
-
-@app.route('/cotacao', methods=('GET' , 'POST'))
-def cotacao():#(merc='', TpInst=''):
-
-        # opções do radiobotton que controla a visualização ( data['rdPesquisaPor'] ):
-        # 1 : Por Fonte (Fonte, Mercado, Classe Ativo)
-        # 2 : Por Mercados (Mercado, Fonte, Classe Ativo)
-        # 3 : Por Classe de Ativo (Classe Ativo, Mercado, Fonte)
-
-        coll = Cotacao()
-        form = FiltroCot()
-        results = coll.cotVisuPrin()
-        print(results)
-
-        if request.method == 'POST':
-                #opc = data['rdPesquisaPor']
-                #print(data['rdPesquisaPor'])
-                #texto = data['txtBusca']
-                #print(texto)
-                # print(TpInst)
-                # print(data['tp_instr'])
-                #results = Cotacao().buscaAtivo(texto)
-                #print(results)
-
-                return render_template('n2_cotacao.html', results=results, form=form)
-
-        return render_template('cotacao_v3.html', results=results, form=form)
-
-@app.route('/cotVisuPrin')
-def cotVisuPrin():
-        coll = Cotacao()
-        results = coll.cotVisuPrin()
-
-        return jsonify(data=results)
-
-@app.route('/nivel2/<param>', methods=('GET', 'POST'))
-def n2(param):
-        coll = Cotacao()
-
-        results = coll.cotVisuPrin()
-        teste = coll.nivel2(param)
-        param1 = param.split('-')
-        ref=''
-        if param1[2]=='1':
-                ref = 'Fonte: '+param1[0]+' Inf. Disponível: '+param1[1]
-
-        elif param1[2]=='2':
-                ref = 'Fonte: '+param1[0]+'  Mercado: '+param1[1]
-
-        elif param1[2]==3:
-                ref = 'Fonte: ' + param1[0] + ' Classe Ativo: ' + param1[1]
-
-        form = FiltroCot()
-        data = form.data
-        print(teste)
-
-        if request.method == 'POST':
-                opc = data['rdPesquisaPor']
-                print(data['rdPesquisaPor'])
-                texto = data['txtBusca']
-                print(texto)
-                # print(TpInst)
-                # print(data['tp_instr'])
-                results = Cotacao().buscaAtivo(texto)
-                print(results)
-
-                return render_template('n2_cotacao.html', results=results, form=form, opc=opc)
-
-        return render_template('n2_cotacao.html', results=teste, form=form, param1=param1)
-
-
-@app.route('/nivel3/<param>', methods=('GET', 'POST'))
-def n3(param):
-        coll = Cotacao()
-
-        #results = coll.cotVisuPrin()
-        teste = coll.nivel3(param)
-        param1= param.split('-')
-
-        form = FiltroCot()
-        data = form.data
-        print(teste)
-
-        #if request.method == 'POST':
-        #        opc = data['rdPesquisaPor']
-        #        print(data['rdPesquisaPor'])
-        #        texto = data['txtBusca']
-        #        print(texto)
-        #        # print(TpInst)
-        #        # print(data['tp_instr'])
-        #        results = Cotacao().buscaAtivo(texto)
-        #        print(results)
-
-        #        return render_template('n3_cotacao.html', results=results, form=form, opc=opc)
-
-        return render_template('n3_cotacao.html', results=teste, form=form, param1=param1)
-
-
-@app.route('/verAtivos/<param>', methods=('GET', 'POST'))
-def verAtivos(param):
-        coll = Cotacao()
-        results= coll.verAtivos(param)
-        param1 = param.split('-')
-        return render_template('verAtivos.html', results=jsonify(data=results), param1=param1)
-
-
- ####       
-
+@app.route('/noticiosos', methods=('GET' , 'POST'))
+def noticiosos():
+        return render_template('noticiosos.html')
 
 @app.route('/bpro-terminal', methods=('GET' , 'POST'))
 def bpro_terminal():

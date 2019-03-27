@@ -10,14 +10,18 @@
     .menu{display:none;}
     .nprint{display: none;}
     .container-fluid img {
-        max-width:200px;
-        max-height:150px;
-        width: auto;
-        height: auto;
+    	max-width:200px;
+	    max-height:150px;
+	    width: auto;
+	    height: auto;
     }
 
+    a:link{
+        text-decoration:none;
+    }
     .a {
         border-color: white;
+
     }
     .n2{
         padding-left: 25px;

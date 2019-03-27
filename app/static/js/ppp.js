@@ -243,7 +243,7 @@ function iconCIndUSA(){
 }
 
 function iconCNyse(){
-    if($(document.getElementById("c-ind-usa-collapse")).hasClass('show')){
+    if($(document.getElementById("c-nyse-collapse")).hasClass('show')){
         $('#iconCNyse-0').removeClass('fa-angle-down');
         $('#iconCNyse-0').addClass('fa-angle-right');
         $('#iconCNyse-1').show();
@@ -344,6 +344,119 @@ function iconModNDJN(){
     }
 }
 
+function iconAdCotacaoB3(){
+    if($(document.getElementById("ad-c-b3-collapse")).hasClass('show')){
+        $('#iconAdCB3-0').removeClass('fa-angle-down');
+        $('#iconAdCB3-0').addClass('fa-angle-right');
+        $('#iconAdCB3-1').show();
+        $("#ad-c-b3-trade").show();
+        $("#ad-c-b3-conjuntura").show();
+        $("#ad-c-b3-mercados").show();
+        $("#ad-c-b3-news").show();
+        $("#ad-c-b3-analises").show();
+    } else{
+        $('#iconAdCB3-0').removeClass('fa-angle-right');
+        $('#iconAdCB3-0').addClass('fa-angle-down');
+        $('#iconAdCB3-1').hide();
+        $("#ad-c-b3-trade").hide();
+        $("#ad-c-b3-conjuntura").hide();
+        $("#ad-c-b3-mercados").hide();
+        $("#ad-c-b3-news").hide();
+        $("#ad-c-b3-analises").hide();
+    }
+}
+
+function iconAdCIndices(){
+    if($(document.getElementById("ad-c-indices-collapse")).hasClass('show')){
+        $('#iconAdCIndices-0').removeClass('fa-angle-down');
+        $('#iconAdCIndices-0').addClass('fa-angle-right');
+        $("#iconAdCIndices-1").show();
+        $("#iconAdCIndices-2").show();
+        $("#ad-c-indicesMundi-trade").show();
+        $("#ad-c-indicesMundi-conjuntura").show();
+        $("#ad-c-indicesMundi-mercados").show();
+        $("#ad-c-indicesMundi-news").show();
+        $("#ad-c-indicesMundi-analises").show();
+    } else{
+        $('#iconAdCIndices-0').removeClass('fa-angle-right');
+        $('#iconAdCIndices-0').addClass('fa-angle-down');
+        $("#iconAdCIndices-1").hide();
+        $("#iconAdCIndices-2").hide();
+        $("#ad-c-indicesMundi-trade").hide();
+        $("#ad-c-indicesMundi-conjuntura").hide();
+        $("#ad-c-indicesMundi-mercados").hide();
+        $("#ad-c-indicesMundi-news").hide();
+        $("#ad-c-indicesMundi-analises").hide();
+    }
+}
+
+function iconAdCIndEuropa(){
+    if($(document.getElementById("ad-c-ind-euro-collapse")).hasClass('show')){
+        $('#iconAdCIndEuropa-0').removeClass('fa-angle-down');
+        $('#iconAdCIndEuropa-0').addClass('fa-angle-right');
+        $("#iconAdCIndEuropa-1").show();
+        $("#ad-c-ind-euro-trade").show();
+        $("#ad-c-ind-euro-conjuntura").show();
+        $("#ad-c-ind-euro-mercados").show();
+        $("#ad-c-ind-euro-news").show();
+        $("#ad-c-ind-euro-analises").show();
+    } else{
+        $('#iconAdCIndEuropa-0').removeClass('fa-angle-right');
+        $('#iconAdCIndEuropa-0').addClass('fa-angle-down');
+        $("#iconAdCIndEuropa-1").hide();
+        $("#ad-c-ind-euro-trade").hide();
+        $("#ad-c-ind-euro-conjuntura").hide();
+        $("#ad-c-ind-euro-mercados").hide();
+        $("#ad-c-ind-euro-news").hide();
+        $("#ad-c-ind-euro-analises").hide();
+    }
+}
+
+function iconAdCIndUSA(){
+    if($(document.getElementById("ad-c-ind-usa-collapse")).hasClass('show')){
+        $('#iconAdCIndUSA-0').removeClass('fa-angle-down');
+        $('#iconAdCIndUSA-0').addClass('fa-angle-right');
+        $('#iconAdCIndUSA-1').show();
+        $('#iconAdCIndUSA-2').show();
+        $("#ad-c-ind-usa-trade").show();
+        $("#ad-c-ind-usa-conjuntura").show();
+        $("#ad-c-ind-usa-mercados").show();
+        $("#ad-c-ind-usa-news").show();
+        $("#ad-c-ind-usa-analises").show();
+    } else{
+        $('#iconAdCIndUSA-0').removeClass('fa-angle-right');
+        $('#iconAdCIndUSA-0').addClass('fa-angle-down');
+        $('#iconAdCIndUSA-1').hide();
+        $('#iconAdCIndUSA-2').hide();
+        $("#ad-c-ind-usd-trade").hide();
+        $("#ad-c-ind-usa-conjuntura").hide();
+        $("#ad-c-ind-usa-mercados").hide();
+        $("#ad-c-ind-usa-news").hide();
+        $("#ad-c-ind-usa-analises").hide();
+    }
+}
+
+function iconAdCNyse(){
+    if($(document.getElementById("ad-c-nyse-collapse")).hasClass('show')){
+        $('#iconAdCNyse-0').removeClass('fa-angle-down');
+        $('#iconAdCNyse-0').addClass('fa-angle-right');
+        $('#iconAdCNyse-1').show();
+        $("#ad-c-nyse-trade").show();
+        $("#ad-c-nyse-conjuntura").show();
+        $("#ad-c-nyse-mercados").show();
+        $("#ad-c-nyse-news").show();
+        $("#ad-c-nyse-analises").show();
+    } else{
+        $('#iconAdCNyse-0').removeClass('fa-angle-right');
+        $('#iconAdCNyse-0').addClass('fa-angle-down');
+        $('#iconAdCNyse-1').hide();
+        $("#ad-c-nyse-trade").hide();
+        $("#ad-c-nyse-conjuntura").hide();
+        $("#ad-c-nyse-mercados").hide();
+        $("#ad-c-nyse-news").hide();
+        $("#ad-c-nyse-analises").hide();
+    }
+}
 /*JS Lisbox */
 
 function controlaNivel(){
